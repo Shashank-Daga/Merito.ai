@@ -4,16 +4,20 @@ import { Metrics } from "@/components/sections/metrics"
 import { TrustedCompanies } from "@/components/sections/trusted-companies"
 import { Testimonials } from "@/components/sections/testimonials"
 import { CTA } from "@/components/sections/cta"
+import TalentSection from "@/components/sections/talent-section"
+import WhyChooseUs from "@/components/sections/why-choose-us"
 
 export default function HomePage() {
   return (
     <>
       <Hero />
-      <Approach />
       <Metrics />
       <TrustedCompanies />
-      <Testimonials />
+      <Approach />
       <CTA />
+      <TalentSection />
+      <WhyChooseUs />
+      <Testimonials />
     </>
   )
 }
