@@ -7,6 +7,8 @@ import "./globals.css"
 import { Header } from "@/components/site/header"
 import { Footer } from "@/components/site/footer"
 import { Suspense } from "react"
+import { Testimonials } from "@/components/sections/testimonials"
+import { CTA } from "@/components/sections/cta"
 
 export const metadata: Metadata = {
   title: "Merito.ai",
@@ -26,6 +28,7 @@ export default function RootLayout({
         <Suspense fallback={<div>Loading...</div>}>
           <Header />
           <main>{children}</main>
+          <Testimonials />
           <Footer />
           <Analytics />
         </Suspense>

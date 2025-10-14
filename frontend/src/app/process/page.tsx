@@ -8,8 +8,6 @@ export default function ProcessPage() {
     <div className="space-y-16 md:space-y-24">
       <ProcessOverview />
       <DetailedProcess />
-      <Testimonials />
-      <CTA />
     </div>
   )
 }

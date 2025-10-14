@@ -1,7 +1,10 @@
 import { Button } from "@/components/ui/button"
-import Link from "next/link"
 
-export function CTA() {
+interface CTAProps {
+  onBookCall?: () => void
+}
+
+export function CTA({ onBookCall }: CTAProps) {
   return (
     <section className="border-t bg-secondary">
       <div className="mx-auto max-w-7xl px-4 py-14 md:py-20">
@@ -12,8 +15,8 @@ export function CTA() {
               <p className="mt-2 text-foreground/80">Get in touch with our team for your professionalized recruitment plan and hire highly qualified candidates.</p>
             </div>
             <div className="md:text-right">
-              <Button size="lg" asChild>
-                <Link href="/talent">Book a Discovery Call</Link>
+              <Button size="lg" onClick={onBookCall}>
+                Book a Discovery Call
               </Button>
             </div>
           </div>
