@@ -1,11 +1,11 @@
 export function Approach() {
   return (
-    <section>
+    <section className="bg-secondary">
       <div className="mx-auto max-w-7xl px-4 py-12 md:py-20">
         <div className="grid items-center gap-10 md:grid-cols-2">
           <div>
             <h2 className="text-2xl md:text-3xl font-semibold text-balance">Our Hiring Process, <span className="text-[#EC2229]">Simplified</span>
-              <a href="#next-section" className="text-primary ml-2 inline-flex items-center">
+              <a href="#next-section" className=" ml-2 inline-flex items-center">
                 <span>→</span>
               </a>
             </h2>

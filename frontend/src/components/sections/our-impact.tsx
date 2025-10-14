@@ -53,13 +53,13 @@ export function OurImpact() {
   return (
     <section className="py-16 px-4 md:px-8 bg-white">
       <div className="mx-auto max-w-7xl">
-        <h2 className="text-4xl md:text-5xl font-semibold text-center text-[#003366] mb-12">
+        <h2 className="text-4xl md:text-5xl font-semibold text-center text-foreground mb-12">
           Our Impact
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Client Types List */}
           <div className="md:col-span-1">
-            <h3 className="text-2xl font-semibold text-[#003366] mb-6">Client Types</h3>
+            <h3 className="text-2xl font-semibold text-foreground mb-6">Client Types</h3>
             <div className="space-y-3">
               {Object.keys(clientsByType).map((type) => (
                 <button
@@ -67,7 +67,7 @@ export function OurImpact() {
                   onClick={() => setSelectedType(type)}
                   className={`w-full text-left px-6 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 ${
                     selectedType === type
-                      ? "bg-[#00ADEF] text-white shadow-lg"
+                      ? "bg-accent-foreground text-white shadow-lg"
                       : "bg-gradient-to-r from-gray-50 to-gray-100 text-gray-700 hover:from-gray-100 hover:to-gray-200 hover:shadow-md"
                   }`}
                 >
@@ -82,15 +82,15 @@ export function OurImpact() {
 
           {/* Clients Display */}
           <div className="md:col-span-2">
-            <h3 className="text-2xl font-semibold text-[#003366] mb-6">{selectedType} Clients</h3>
+            <h3 className="text-2xl font-semibold text-foreground mb-6">{selectedType} Clients</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {clientsByType[selectedType as keyof typeof clientsByType].map((client, index) => (
                 <div
                   key={index}
-                  className="bg-gradient-to-br from-white to-gray-50 p-5 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-200 hover:border-[#00ADEF]/30"
+                  className="bg-gradient-to-br from-white to-gray-50 p-5 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-200 hover:border-accent-foreground/30"
                 >
                   <div className="flex items-center">
-                    <div className="w-3 h-3 bg-[#00ADEF] rounded-full mr-3 flex-shrink-0"></div>
+                    <div className="w-3 h-3 bg-accent-foreground rounded-full mr-3 flex-shrink-0"></div>
                     <span className="text-gray-800 font-medium">{client}</span>
                   </div>
                 </div>

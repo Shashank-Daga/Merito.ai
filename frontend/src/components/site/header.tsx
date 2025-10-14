@@ -17,7 +17,7 @@ export function Header() {
   ]
 
   return (
-    <header className="sticky top-0 z-40 border-b bg-background/70 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-40 border-b bg-white/70 backdrop-blur supports-[backdrop-filter]:bg-white/60">
       <div className="mx-auto max-w-7xl px-4 py-4 md:py-5">
         <div className="flex items-center justify-between">
           <Link href="/" className="font-semibold text-xl tracking-tight">

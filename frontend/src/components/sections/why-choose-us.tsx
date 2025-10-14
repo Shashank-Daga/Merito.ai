@@ -40,10 +40,10 @@ const comparisonData = [
 
 const WhyChooseUs: React.FC = () => {
   return (
-    <section className="bg-[#F5F7FA] py-16 px-4 md:px-8">
+    <section className="bg-secondary py-16 px-4 md:px-8">
       <div className="mx-auto max-w-7xl">
         {/* Section Title */}
-        <h2 className="text-3xl md:text-4xl font-semibold text-[#003366] text-center mb-12">
+        <h2 className="text-3xl md:text-4xl font-semibold text-foreground text-center mb-12">
           Why Choose Us
         </h2>
 
@@ -51,7 +51,7 @@ const WhyChooseUs: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Traditional Hiring Column */}
           <div className="bg-white rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 p-6">
-            <h3 className="text-xl font-semibold text-[#003366] mb-6 text-center">Traditional Hiring</h3>
+            <h3 className="text-xl font-semibold text-foreground mb-6 text-center">Traditional Hiring</h3>
             <div className="divide-y divide-gray-200">
               {comparisonData.map((item, index) => (
                 <div key={index} className="py-4 text-center">
@@ -75,11 +75,11 @@ const WhyChooseUs: React.FC = () => {
 
           {/* In-House Hiring Column */}
           <div className="bg-white rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 p-6">
-            <h3 className="text-xl font-semibold text-[#003366] mb-6 text-center">In-House Hiring</h3>
+            <h3 className="text-xl font-semibold text-foreground mb-6 text-center">In-House Hiring</h3>
             <div className="divide-y divide-gray-200">
               {comparisonData.map((item, index) => (
                 <div key={index} className="py-4 text-center">
-                  <p className="text-[#003366] font-medium">{item.inHouse}</p>
+                  <p className="text-foreground font-medium">{item.inHouse}</p>
                 </div>
               ))}
             </div>

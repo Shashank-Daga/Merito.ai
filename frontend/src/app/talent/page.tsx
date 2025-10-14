@@ -54,14 +54,14 @@ export default function TalentPage() {
       <div className="mx-auto max-w-7xl px-4 py-16">
         {/* Back to Home Link */}
         <div className="mb-8">
-          <Link href="/" className="text-[#003366] hover:text-[#00ADEF] transition-colors">
+          <Link href="/" className="text-foreground hover:text-accent-foreground transition-colors">
             ← Back to Home
           </Link>
         </div>
 
         {/* Page Title */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-semibold text-[#003366] mb-4">
+          <h1 className="text-4xl md:text-5xl font-semibold text-foreground mb-4">
             Industries We Serve
           </h1>
         </div>
@@ -73,7 +73,7 @@ export default function TalentPage() {
               key={industry}
               className="bg-gray-50 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-200"
             >
-              <h3 className="text-lg font-medium text-[#003366]">{industry}</h3>
+              <h3 className="text-lg font-medium text-foreground">{industry}</h3>
             </div>
           ))}
         </div>
@@ -88,11 +88,11 @@ export default function TalentPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Tech Roles */}
           <div className="text-center">
-            <h2 className="text-2xl font-semibold text-[#003366] mb-6">Tech Roles</h2>
+            <h2 className="text-2xl font-semibold text-foreground mb-6">Tech Roles</h2>
             <ul className="space-y-3 inline-block text-left">
               {techRoles.map((role) => (
                 <li key={role} className="text-gray-700 flex items-center">
-                  <span className="w-2 h-2 bg-[#00ADEF] rounded-full mr-3 flex-shrink-0"></span>
+                  <span className="w-2 h-2 bg-accent-foreground rounded-full mr-3 flex-shrink-0"></span>
                   {role}
                 </li>
               ))}
@@ -101,11 +101,11 @@ export default function TalentPage() {
 
           {/* Non-Tech Roles */}
           <div className="text-center">
-            <h2 className="text-2xl font-semibold text-[#003366] mb-6">Non-Tech Roles</h2>
+            <h2 className="text-2xl font-semibold text-foreground mb-6">Non-Tech Roles</h2>
             <ul className="space-y-3 inline-block text-left">
               {nonTechRoles.map((role) => (
                 <li key={role} className="text-gray-700 flex items-center">
-                  <span className="w-2 h-2 bg-[#00ADEF] rounded-full mr-3 flex-shrink-0"></span>
+                  <span className="w-2 h-2 bg-accent-foreground rounded-full mr-3 flex-shrink-0"></span>
                   {role}
                 </li>
               ))}
@@ -115,7 +115,7 @@ export default function TalentPage() {
 
         {/* Contact CTA */}
         <div className="text-center mt-16">
-          <button className="bg-[#00ADEF] text-white px-8 py-3 rounded-xl font-medium hover:bg-[#0099CC] transition-colors duration-300 shadow-lg hover:shadow-xl">
+          <button className="bg-accent-foreground text-white px-8 py-3 rounded-xl font-medium hover:bg-accent transition-colors duration-300 shadow-lg hover:shadow-xl">
             Book a Discovery Call
           </button>
         </div>

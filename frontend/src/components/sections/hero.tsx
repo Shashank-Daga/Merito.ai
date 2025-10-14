@@ -11,7 +11,7 @@ export function Hero({ onBookCall }: HeroProps) {
         <div className="grid items-center gap-10">
           <div className="text-white">
             <h1 className="text-4xl md:text-5xl font-semibold text-balance" style={{ fontFamily: 'Gilroy, sans-serif', fontWeight: 800 }}>
-              <span style={{ color: '#EC2229' }}>Expedite</span> Hiring
+              <span className="text-primary">Expedite</span> Hiring
             </h1>
             <p className="mt-4 text-foreground leading-relaxed">
               Human expertise meets intelligent technology <br/>to expedite hiring and <br/>connect the right talent with the right role.

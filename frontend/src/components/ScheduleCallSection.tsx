@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 
 const ScheduleCallSection: React.FC = () => {
   return (
-    <section className="py-16 px-6 bg-[#F9FAFB]">
+    <section className="py-16 px-6 bg-secondary">
       <div className="mx-auto max-w-5xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -14,11 +14,11 @@ const ScheduleCallSection: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-semibold text-[#003366] mb-4">
+          <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-4">
             Schedule a Call with Merito
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Let's discuss your hiring needs and show you how Merito connects you with top talent faster, smarter, and globally.
+            Let&apos;s discuss your hiring needs and show you how Merito connects you with top talent faster, smarter, and globally.
           </p>
         </motion.div>
 
