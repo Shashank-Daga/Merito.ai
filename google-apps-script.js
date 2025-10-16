@@ -1,18 +1,10 @@
 function doPost(e) {
   try {
-    // Parse the JSON data from the request
     const data = JSON.parse(e.postData.contents);
+    const sheet = SpreadsheetApp.openById("YOUR_SHEET_ID").getSheetByName("Sheet1");
 
-    // Open the Google Sheet (replace with your actual sheet ID)
-    const sheetId = 'YOUR_GOOGLE_SHEET_ID';
-    const sheet = SpreadsheetApp.openById(sheetId).getActiveSheet();
-
-    // Get current timestamp
-    const timestamp = new Date().toISOString();
-
-    // Prepare the row data in the order of form fields
-    const rowData = [
-      timestamp,
+    sheet.appendRow([
+      new Date(),
       data.fullName,
       data.contactNo,
       data.email,
@@ -22,20 +14,26 @@ function doPost(e) {
       data.expectedCtc,
       data.noticePeriod,
       data.resumeLink
-    ];
+    ]);
 
-    // Append the row to the sheet
-    sheet.appendRow(rowData);
-
-    // Return success response
-    return ContentService
-      .createTextOutput(JSON.stringify({ success: true }))
-      .setMimeType(ContentService.MimeType.JSON);
-
-  } catch (error) {
-    // Return error response
-    return ContentService
-      .createTextOutput(JSON.stringify({ success: false, error: error.toString() }))
-      .setMimeType(ContentService.MimeType.JSON);
+    return sendJSON({ success: true, message: "Data added successfully!" });
+  } catch (err) {
+    return sendJSON({ success: false, message: err.toString() });
   }
+}
+
+function doGet(e) {
+  return sendJSON({ message: "GET not supported" });
+}
+
+function doOptions(e) {
+  // Handle preflight OPTIONS requests
+  return sendJSON({});
+}
+
+// ✅ Helper that safely returns JSON output
+function sendJSON(obj) {
+  const output = ContentService.createTextOutput(JSON.stringify(obj));
+  output.setMimeType(ContentService.MimeType.JSON);
+  return output;
 }
