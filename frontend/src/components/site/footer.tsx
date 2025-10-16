@@ -6,7 +6,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-10">
         <div className="grid gap-8 md:grid-cols-3">
           <div>
-            <h3 className="text-lg font-semibold text-primary text-balance">Merito</h3>
+            <h3 className="text-lg font-semibold text-balance"><span className="text-[#EC2229]">M</span>erito</h3>
             <p className="mt-2 text-sm text-foreground/70 text-pretty">
               We connect great companies with exceptional talent—faster.
             </p>

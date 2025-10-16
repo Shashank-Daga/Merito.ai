@@ -35,9 +35,11 @@ export function Header() {
                 {item.label}
               </Link>
             ))}
-            <Button className="min-w-28" size="sm">
-              Apply
-            </Button>
+            <Link href="/apply">
+              <Button className="text-white rounded-xl px-6 py-2">
+                Apply
+              </Button>
+            </Link>
           </nav>
 
           <button
@@ -68,9 +70,11 @@ export function Header() {
                   {item.label}
                 </Link>
               ))}
-              <Button className="justify-center" size="sm">
-                Apply
-              </Button>
+              <Link href="/apply">
+                <Button className="text-white rounded-xl px-6 py-2">
+                  Apply
+                </Button>
+              </Link>
             </div>
           </div>
         )}
