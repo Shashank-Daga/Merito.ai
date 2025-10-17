@@ -9,7 +9,7 @@ export function Hero({ onBookCall }: HeroProps) {
     <section className="bg-[url('/home_page_banner.jpg')] bg-cover bg-center bg-secondary">
       <div className="mx-auto max-w-7xl px-4 py-16 md:py-24">
         <div className="grid items-center gap-10">
-          <div className="text-white">
+          <div className="text-black">
             <h1 className="text-4xl md:text-5xl font-semibold text-balance" style={{ fontFamily: 'Gilroy, sans-serif', fontWeight: 800 }}>
               <span className="text-[#EC2229]">Expedite</span> Hiring
             </h1>

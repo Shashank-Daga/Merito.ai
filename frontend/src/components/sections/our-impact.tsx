@@ -5,18 +5,27 @@ import { useState } from "react"
 export function OurImpact() {
   const clientsByType = {
     "Technology & IT": [
-      "PaySecure Inc.",
-      "CryptoFlow",
-      "LendWise",
-      "BlockChain Bank",
-      "FinTech Solutions"
+      "NETXD",
+      "Cuepilot AI",
+      "SimplyFI Softech",
+      "iNode",
+      "DQ",
+      "KU",
+      "Think 9",
+      "GTT",
+      "OSMOS",
+      "Exxat",
+      "Knowcross",
+      "Dynamind",
+      "WCP",
     ],
     "Manufacturing & Engineering": [
-      "InnovateLabs",
-      "ProductPro",
-      "AgileWorks",
-      "DevStudio",
-      "BuildRight"
+      "Shyam Steel",
+      "On2Cook",
+      "Rekise Marine",
+      "Sunlimited SolaR",
+      "Vadcore",
+      "Teertham",
     ],
     "Healthcare & Life Sciences": [
       "HealthAI Solutions",
@@ -26,32 +35,43 @@ export function OurImpact() {
       "WellnessTech"
     ],
     "Finance & Banking": [
-      "ConsultCorp",
-      "ServiceMasters",
-      "BizSolutions",
-      "ExpertHub",
-      "ProServices"
+      "Equirus",
+      "SimplyFI Softech"
     ],
     "Sales & Marketing": [
-      "ShopEase",
-      "RetailRocket",
-      "MarketPlace Pro",
-      "SellSmart",
-      "CommerceHub"
+      "Yoptima",
+      "GroupM",
+      "Collective Artists Network",
+      "Interskale",
+      "Zouk",
+      "Aza Fashions",
+      "The Baker&apos;s Dozen",
+      "Soulflower",
+      "Banjaras",
+      "Future Group",
+      "Joyspoon",
+      "VSnapU",
+      "PeelWorks",
     ],
     "Operations & Logistics": [
-      "LogiCorp",
-      "SupplyChain Pro",
-      "OpsMasters",
-      "FlowTech",
-      "DistriHub"
+      "ReCircle",
+      "Mosaic",
+      "ITP",
+      "Rekise Marine",
+      "Panchshil Realty"
+    ],
+    "Education": [
+      "Athena Education",
+      "MIT",
+      "MIT-Ethiqual",
+      "Wadhwani"
     ]
   }
 
   const [selectedType, setSelectedType] = useState(Object.keys(clientsByType)[0])
 
   return (
-    <section className="py-16 px-4 md:px-8 bg-white">
+    <section className="py-16 px-4 md:px-8 bg-secondary">
       <div className="mx-auto max-w-7xl">
         <h2 className="text-4xl md:text-5xl font-semibold text-center text-foreground mb-12">
           Our Impact
@@ -59,17 +79,16 @@ export function OurImpact() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Client Types List */}
           <div className="md:col-span-1">
-            <h3 className="text-2xl font-semibold text-foreground mb-6">Client Types</h3>
+            <h3 className="text-2xl font-semibold text-white mb-6">Client Types</h3>
             <div className="space-y-3">
               {Object.keys(clientsByType).map((type) => (
                 <button
                   key={type}
                   onClick={() => setSelectedType(type)}
-                  className={`w-full text-left px-6 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 ${
-                    selectedType === type
-                      ? "bg-accent-foreground text-white shadow-lg"
-                      : "bg-gradient-to-r from-gray-50 to-gray-100 text-gray-700 hover:from-gray-100 hover:to-gray-200 hover:shadow-md"
-                  }`}
+                  className={`w-full text-left px-6 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 ${selectedType === type
+                    ? "bg-gradient-to-br from-accent-foreground to-primary"
+                    : "bg-gradient-to-r from-gray-50 to-gray-100 text-gray-700 hover:from-gray-100 hover:to-gray-200 hover:shadow-md"
+                    }`}
                 >
                   <span className="font-medium">{type}</span>
                   <span className={`ml-2 text-sm ${selectedType === type ? 'text-white/80' : 'text-gray-500'}`}>
@@ -82,7 +101,7 @@ export function OurImpact() {
 
           {/* Clients Display */}
           <div className="md:col-span-2">
-            <h3 className="text-2xl font-semibold text-foreground mb-6">{selectedType} Clients</h3>
+            <h3 className="text-2xl font-semibold text-white mb-6">{selectedType} Clients</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {clientsByType[selectedType as keyof typeof clientsByType].map((client, index) => (
                 <div

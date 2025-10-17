@@ -5,11 +5,11 @@
 
 :root {
   /* Brand palette
-     Primary:  #AA01EA (purple)
-     Secondary: #FDE6FF (light purple/pink)
+     Primary:  #178582 (teal)
+     Secondary: #0A1828 (dark blue)
      Background: #fff0e2 (cream)
      Foreground: #263238 (dark gray)
-     Accent:   #AA01EA (primary)
+     Accent:   #178582 (primary)
   */
   --background: #fff0e2;
   --foreground: #263238;
@@ -20,16 +20,16 @@
   --popover: #ffffff;
   --popover-foreground: #263238;
 
-  --primary: #AA01EA;
+  --primary: #178582;
   --primary-foreground: #ffffff;
 
-  --secondary: #FDE6FF;
-  --secondary-foreground: #AA01EA;
+  --secondary: #0A1828;
+  --secondary-foreground: #ffffff;
 
   --muted: #f8f0ff; /* lighter purple */
-  --muted-foreground: #7a4d8a; /* subtle text on muted */
+  --muted-foreground: #178582; /* subtle text on muted */
 
-  --accent: #AA01EA; /* primary purple */
+  --accent: #178582; /* primary teal */
   --accent-foreground: #ffffff;
 
   --destructive: #c62828;
@@ -37,10 +37,10 @@
 
   --border: #e6d5ff; /* light purple border */
   --input: #e6d5ff;
-  --ring: #AA01EA;
+  --ring: #178582;
 
   /* charts can stay harmonious purples/pinks */
-  --chart-1: #AA01EA;
+  --chart-1: #178582;
   --chart-2: #C77DFF;
   --chart-3: #E1BEE7;
   --chart-4: #FDE6FF;
@@ -51,12 +51,12 @@
   /* sidebar (not used yet but keep consistent) */
   --sidebar: #fff0e2;
   --sidebar-foreground: #263238;
-  --sidebar-primary: #AA01EA;
+  --sidebar-primary: #178582;
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #AA01EA;
+  --sidebar-accent: #178582;
   --sidebar-accent-foreground: #ffffff;
   --sidebar-border: #e6d5ff;
-  --sidebar-ring: #AA01EA;
+  --sidebar-ring: #178582;
 }
 
 .dark {
@@ -69,28 +69,28 @@
   --popover: #2a1b3d;
   --popover-foreground: #ffffff;
 
-  --primary: #FDE6FF; /* light purple primary in dark mode */
-  --primary-foreground: #AA01EA;
+  --primary: #178582; /* teal primary in dark mode */
+  --primary-foreground: #ffffff;
 
-  --secondary: #AA01EA; /* primary purple secondary in dark mode */
-  --secondary-foreground: #FDE6FF;
+  --secondary: #0A1828; /* dark blue secondary in dark mode */
+  --secondary-foreground: #ffffff;
 
   --muted: #3a2a4d; /* muted dark purple */
   --muted-foreground: #FDE6FF; /* light purple text on muted */
 
-  --accent: #FDE6FF; /* light purple accent */
-  --accent-foreground: #AA01EA;
+  --accent: #178582; /* teal accent */
+  --accent-foreground: #ffffff;
 
   --destructive: #ff6b6b;
   --destructive-foreground: #ffffff;
 
   --border: #4a3a5d; /* dark purple border */
   --input: #4a3a5d;
-  --ring: #FDE6FF;
+  --ring: #178582;
 
   /* charts can stay harmonious purples/pinks */
-  --chart-1: #FDE6FF;
-  --chart-2: #AA01EA;
+  --chart-1: #178582;
+  --chart-2: #0A1828;
   --chart-3: #C77DFF;
   --chart-4: #E1BEE7;
   --chart-5: #F3E5F5;
@@ -100,12 +100,12 @@
   /* sidebar (not used yet but keep consistent) */
   --sidebar: #1a0d2e;
   --sidebar-foreground: #ffffff;
-  --sidebar-primary: #FDE6FF;
-  --sidebar-primary-foreground: #AA01EA;
-  --sidebar-accent: #FDE6FF;
-  --sidebar-accent-foreground: #AA01EA;
+  --sidebar-primary: #178582;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #178582;
+  --sidebar-accent-foreground: #ffffff;
   --sidebar-border: #4a3a5d;
-  --sidebar-ring: #FDE6FF;
+  --sidebar-ring: #178582;
 }
 
 @theme inline {

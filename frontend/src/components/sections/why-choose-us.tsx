@@ -43,7 +43,7 @@ const WhyChooseUs: React.FC = () => {
     <section className="bg-secondary py-16 px-4 md:px-8">
       <div className="mx-auto max-w-7xl">
         {/* Section Title */}
-        <h2 className="text-3xl md:text-4xl font-semibold text-foreground text-center mb-12">
+        <h2 className="text-3xl md:text-4xl font-semibold text-white text-center mb-12">
           Why Choose Us
         </h2>
 
@@ -62,12 +62,12 @@ const WhyChooseUs: React.FC = () => {
           </div>
 
           {/* Merito Column */}
-          <div className="bg-[#FFF6E0] rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 p-6 border-2 border-[#00ADEF]">
-            <h3 className="text-xl font-semibold text-[#003366] mb-6 text-center"><span className="text-[#EC2229]">M</span>erito</h3>
+          <div className="bg-[#B3D3D1] rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 p-6 border-2 border-[#00ADEF]">
+            <h3 className="text-xl font-semibold text-foreground mb-6 text-center"><span className="text-[#EC2229]">M</span>erito</h3>
             <div className="divide-y divide-gray-200">
               {comparisonData.map((item, index) => (
                 <div key={index} className="py-4 text-center">
-                  <p className="text-[#003366] font-medium">{item.merito}</p>
+                  <p className="text-black font-medium">{item.merito}</p>
                 </div>
               ))}
             </div>
