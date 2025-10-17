@@ -2,28 +2,25 @@ export function Podcasts() {
   const podcasts = [
     {
       id: 1,
-      title: "Talent Acquisition in the Digital Age",
-      description: "Join our experts as they discuss how technology is transforming the way companies find and hire top talent.",
+      title: "Acquired Intelliegence for Talent Problems",
       image: "/placeholder.jpg"
     },
     {
       id: 2,
-      title: "Building Company Culture That Attracts Talent",
-      description: "Learn from industry leaders about creating workplace cultures that naturally draw in the best candidates.",
+      title: "Think of Recuritment as Sales",
       image: "/placeholder.jpg"
     },
     {
       id: 3,
-      title: "The Skills Gap: Bridging the Divide",
-      description: "Exploring the current skills gap in various industries and strategies to address this growing challenge.",
+      title: "Do you have ICE in your hiring?",
       image: "/placeholder.jpg"
     }
   ]
 
   return (
-    <section className="py-16 px-4 md:px-8 bg-gray-50">
+    <section className="py-16 px-4 md:px-8 bg-secondary">
       <div className="mx-auto max-w-7xl">
-        <h2 className="text-3xl md:text-4xl font-semibold text-center text-foreground mb-12">
+        <h2 className="text-3xl md:text-4xl font-semibold text-center text-white mb-12">
           Featured Podcasts
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -50,9 +47,6 @@ export function Podcasts() {
                 <h3 className="text-xl font-semibold text-foreground mb-3 line-clamp-2">
                   {podcast.title}
                 </h3>
-                <p className="text-gray-600 line-clamp-3">
-                  {podcast.description}
-                </p>
                 <button className="mt-4 text-#263238 font-medium hover:text-accent transition-colors">
                   Listen Now →
                 </button>

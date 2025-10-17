@@ -2,20 +2,17 @@ export function Articles() {
   const articles = [
     {
       id: 1,
-      title: "The Future of Remote Work: Trends and Predictions",
-      description: "Explore how remote work is evolving and what it means for talent acquisition strategies in 2024 and beyond.",
+      title: "Pioneering Talent Acquisition for D2C Success in India",
       image: "/placeholder.jpg"
     },
     {
       id: 2,
-      title: "Building High-Performance Teams: A Guide for Leaders",
-      description: "Learn the key strategies for assembling and maintaining teams that consistently deliver exceptional results.",
+      title: "Crafting a Shorlist-worthy CV",
       image: "/placeholder.jpg"
     },
     {
       id: 3,
-      title: "Diversity in Tech: Why It Matters and How to Achieve It",
-      description: "Understanding the importance of diversity in technology and practical steps to create inclusive workplaces.",
+      title: "AI and Automation in HR",
       image: "/placeholder.jpg"
     }
   ]
@@ -43,9 +40,6 @@ export function Articles() {
                 <h3 className="text-xl font-semibold text-foreground mb-3 line-clamp-2">
                   {article.title}
                 </h3>
-                <p className="text-gray-600 line-clamp-3">
-                  {article.description}
-                </p>
                 <button className="mt-4 text-#263238 font-medium hover:text-accent transition-colors">
                   Read More →
                 </button>
