@@ -43,7 +43,7 @@ const WhyChooseUs: React.FC = () => {
     <section className="bg-secondary py-16 px-4 md:px-8">
       <div className="mx-auto max-w-7xl">
         {/* Section Title */}
-        <h2 className="text-3xl md:text-4xl font-semibold text-white text-center mb-12">
+        <h2 className="text-3xl md:text-4xl font-semibold text-[#121212] text-center mb-12">
           Why Choose Us
         </h2>
 

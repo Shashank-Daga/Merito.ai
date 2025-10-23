@@ -16,7 +16,7 @@ export function Metrics() {
   return (
     <section className="bg-secondary">
       <div className="mx-auto max-w-7xl px-4 py-12 md:py-16 text-center">
-        <h2 className="text-2xl md:text-3xl font-semibold text-balance text-[#ffffff]"><span className="text-[#EC2229]">Impact</span> in Numbers</h2>
+        <h2 className="text-2xl md:text-3xl font-semibold text-balance text-[#121212]"><span className="text-[#EC2229]">Impact</span> in Numbers</h2>
         <div className="mt-8 grid gap-4 sm:grid-cols-2 md:grid-cols-4">
           {METRICS.map((m) => (
             <CounterCard key={m.label} metric={m} />

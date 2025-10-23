@@ -20,7 +20,7 @@ export function Podcasts() {
   return (
     <section className="py-16 px-4 md:px-8 bg-secondary">
       <div className="mx-auto max-w-7xl">
-        <h2 className="text-3xl md:text-4xl font-semibold text-center text-white mb-12">
+        <h2 className="text-3xl md:text-4xl font-semibold text-center text-[#121212] mb-12">
           Featured Podcasts
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

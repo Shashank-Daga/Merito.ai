@@ -3,9 +3,9 @@ export function Approach() {
     <section className="bg-secondary">
       <div className="mx-auto max-w-7xl px-4 py-12 md:py-20">
         <div className="grid items-center gap-10">
-          <div className="text-white">
+          <div className="#121212">
             <h2 className="text-2xl md:text-3xl font-semibold text-balance">Our Hiring Process, <span className="text-[#EC2229]">Simplified</span>
-              <a href="/process" className="text-accent-foreground ml-2 inline-flex items-center hover:text-accent transition-colors">
+              <a href="/process" className="text-[#121212] ml-2 inline-flex items-center hover:text-accent transition-colors">
                 <span>→</span>
               </a>
             </h2>

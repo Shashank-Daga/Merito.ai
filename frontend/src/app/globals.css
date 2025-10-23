@@ -6,7 +6,7 @@
 :root {
   /* Brand palette
      Primary:  #178582 (teal)
-     Secondary: #0A1828 (dark blue)
+     Secondary: #faede9 (dark blue)
      Background: #fff0e2 (cream)
      Foreground: #263238 (dark gray)
      Accent:   #178582 (primary)
@@ -23,7 +23,7 @@
   --primary: #178582;
   --primary-foreground: #ffffff;
 
-  --secondary: #0A1828;
+  --secondary: #faede9;
   --secondary-foreground: #ffffff;
 
   --muted: #f8f0ff; /* lighter purple */
@@ -72,7 +72,7 @@
   --primary: #178582; /* teal primary in dark mode */
   --primary-foreground: #ffffff;
 
-  --secondary: #0A1828; /* dark blue secondary in dark mode */
+  --secondary: #faede9; /* dark blue secondary in dark mode */
   --secondary-foreground: #ffffff;
 
   --muted: #3a2a4d; /* muted dark purple */
@@ -90,7 +90,7 @@
 
   /* charts can stay harmonious purples/pinks */
   --chart-1: #178582;
-  --chart-2: #0A1828;
+  --chart-2: #faede9;
   --chart-3: #C77DFF;
   --chart-4: #E1BEE7;
   --chart-5: #F3E5F5;
@@ -154,7 +154,7 @@
     @apply border-border outline-ring/50;
   }
   html {
-    font-size: 125%;
+    font-size: 120%;
   }
   body {
     @apply bg-background text-foreground;

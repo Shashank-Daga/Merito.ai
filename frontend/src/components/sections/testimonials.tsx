@@ -29,7 +29,7 @@ export function Testimonials() {
   return (
     <section className="bg-secondary">
       <div className="mx-auto max-w-3xl px-4 py-12 md:py-20">
-        <h2 className="text-3xl md:text-4xl font-semibold text-white mb-4 text-center">
+        <h2 className="text-3xl md:text-4xl font-semibold text-[#121212] mb-4 text-center">
           Voices of <span className="text-[#EC2229]">Trust</span>
         </h2>
         <div className="rounded-2xl border bg-card p-6 md:p-10 bg-gradient-to-br from-accent-foreground to-primary">

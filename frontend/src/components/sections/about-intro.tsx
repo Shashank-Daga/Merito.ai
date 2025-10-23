@@ -69,11 +69,11 @@ export function AboutIntro() {
       <section className="bg-secondary">
         {/* Our Approach */}
         <div className="mx-auto max-w-7xl px-4 py-12 md:py-20">
-          <div className="text-center">
-            <h1 className="text-3xl md:text-4xl font-semibold text-balance text-white">
+          <div className="text-center text-[#121212]">
+            <h1 className="text-3xl md:text-4xl font-semibold text-balance">
               Our <span className="text-[#EC2229]">Approach</span>
             </h1>
-            <p className="mt-4 leading-relaxed text-pretty text-white max-w-3xl mx-auto">
+            <p className="mt-4 leading-relaxed text-pretty max-w-3xl mx-auto">
               We combine human expertise with intelligent technology to make hiring smarter, faster, and more reliable.
             </p>
 
