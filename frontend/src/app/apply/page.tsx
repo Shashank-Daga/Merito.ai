@@ -10,8 +10,11 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
+import { useToast } from "@/hooks/use-toast"
 
 export default function ApplyPage() {
+  const { toast } = useToast()
+  const [isSubmitting, setIsSubmitting] = useState(false)
   const [formData, setFormData] = useState({
     fullName: "",
     contactNo: "",
@@ -31,12 +34,29 @@ export default function ApplyPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
 
-    const scriptUrl = process.env.NEXT_PUBLIC_GOOGLE_APPS_SCRIPT_WEB_APP_URL
-    if (!scriptUrl) {
-      alert('Google Apps Script URL is not configured.')
+    // Check if all fields are filled
+    const requiredFields = ['fullName', 'contactNo', 'email', 'position', 'experience', 'currentCtc', 'expectedCtc', 'noticePeriod', 'resumeLink']
+    const missingFields = requiredFields.filter(field => !formData[field as keyof typeof formData])
+    if (missingFields.length > 0) {
+      toast({
+        title: "Validation Error",
+        description: `Please fill in all required fields: ${missingFields.join(', ')}`,
+        variant: "destructive",
+      })
       return
     }
 
+    const scriptUrl = process.env.NEXT_PUBLIC_GOOGLE_APPS_SCRIPT_WEB_APP_URL
+    if (!scriptUrl) {
+      toast({
+        title: "Configuration Error",
+        description: "Google Apps Script URL is not configured.",
+        variant: "destructive",
+      })
+      return
+    }
+
+    setIsSubmitting(true)
     try {
       // ✅ Use no-cors to bypass Google Apps Script CORS limitation
       await fetch(scriptUrl, {
@@ -46,7 +66,11 @@ export default function ApplyPage() {
         body: JSON.stringify(formData),
       })
 
-      alert('Form submitted successfully!')
+      toast({
+        title: "Success",
+        description: "Form submitted successfully!",
+        variant: "success",
+      })
       setFormData({
         fullName: "",
         contactNo: "",
@@ -59,14 +83,20 @@ export default function ApplyPage() {
         resumeLink: "",
       })
     } catch (error) {
-      alert('Error submitting form: ' + (error as Error).message)
+      toast({
+        title: "Submission Error",
+        description: `Error submitting form: ${(error as Error).message}`,
+        variant: "destructive",
+      })
+    } finally {
+      setIsSubmitting(false)
     }
   }
 
   return (
-    <section className="bg-secondary py-16">
+    <section className="bg-white py-16">
       <div className="container mx-auto px-4 max-w-2xl">
-        <div className="rounded-2xl border bg-card p-8 md:p-12">
+        <div className="rounded-2xl border bg-secondary p-8 md:p-12">
           <h1 className="text-4xl font-bold text-center mb-8">Apply Form</h1>
 
           <form onSubmit={handleSubmit} className="space-y-6">
@@ -212,9 +242,11 @@ export default function ApplyPage() {
               />
             </div>
 
-            <Button type="submit" className="w-full">
-              Submit
-            </Button>
+            <div className="flex justify-center">
+              <Button type="submit" className="w-50" disabled={isSubmitting}>
+                {isSubmitting ? "Submitting..." : "Submit"}
+              </Button>
+            </div>
           </form>
         </div>
       </div>

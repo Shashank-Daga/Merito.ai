@@ -8,7 +8,7 @@ import { Header } from "@/components/site/header"
 import { Footer } from "@/components/site/footer"
 import { Suspense } from "react"
 import { Testimonials } from "@/components/sections/testimonials"
-import { CTA } from "@/components/sections/cta"
+import { Toaster } from "@/components/ui/toaster"
 
 export const metadata: Metadata = {
   title: "Merito.ai",
@@ -32,6 +32,7 @@ export default function RootLayout({
           <Footer />
           <Analytics />
         </Suspense>
+        <Toaster />
       </body>
     </html>
   )
