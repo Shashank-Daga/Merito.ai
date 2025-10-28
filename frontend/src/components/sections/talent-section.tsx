@@ -3,33 +3,43 @@
 import React from "react"
 import Link from "next/link"
 
+const industries = [
+  "Technology & IT",
+  "Manufacturing & Engineering",
+  "Healthcare & Life Sciences",
+  "Finance & Banking",
+  "Sales & Marketing",
+  "Operations & Logistics",
+]
+
 const TalentSection: React.FC = () => {
   return (
-    <section className="bg-white">
-      <div className="mx-auto max-w-7xl px-4 py-12 md:py-20">
-        <div className="grid items-center gap-10">
-          <div>
-            <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-4">
-              <span className="text-[#EC2229]">Talent</span> Without Boundaries
-              <Link href="/talent" className="text-foreground ml-2 inline-flex items-center hover:text-accent transition-colors">
-                <span>→</span>
-              </Link>
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl">
-              Connecting the right people to the roles that matter across every industry.
-            </p>
-          </div>
-
-          {/* <div className="rounded-xl border bg-card p-4 md:p-6"> */}
-            <div className="aspect-[6/3] w-full overflow-hidden rounded-lg border bg-muted">
-              <img
-                src="/talent1.jpg"
-                alt="Recruiting team collaborating during interviews"
-                className="h-full w-full object-cover"
-              />
-            </div>
-          {/* </div> */}
+    <section className="py-15 px-4 md:px-8 bg-white">
+      <div className="mx-auto max-w-7xl">
+        {/* Page heading */}
+        <h2 className="text-4xl md:text-5xl font-semibold text-center text-merito-deep">
+          <span className="text-[#EC2229]">Industries</span> We Serve
+          <Link href="/talent" className="text-foreground ml-2 inline-flex items-center hover:text-accent transition-colors">
+            <span>→</span>
+          </Link>
+        </h2>
+        <div className="text-center mb-12">
+          <p className="mt-3 text-gray-700">Connecting the right people to the roles that matter across every industry.</p>
         </div>
+
+        {/* Industries Grid */}
+        <div className="text-center grid grid-cols-1 md:grid-cols-2 gap-10 mb-16">
+          {industries.map((industry) => (
+            <div
+              key={industry}
+              className="bg-gray-50 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-200"
+            >
+              <h3 className="text-lg font-medium text-foreground">{industry}</h3>
+            </div>
+          ))}
+        </div>
+
+        {/* #TODO: Add CTA button linking to "/talent" page */}
       </div>
     </section>
   )

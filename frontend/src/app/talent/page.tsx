@@ -1,15 +1,6 @@
 import React from "react"
 import Link from "next/link"
 
-const industries = [
-  "Technology & IT",
-  "Manufacturing & Engineering",
-  "Healthcare & Life Sciences",
-  "Finance & Banking",
-  "Sales & Marketing",
-  "Operations & Logistics",
-]
-
 const techRoles = [
   "CTO",
   "Product Managers",
@@ -51,31 +42,12 @@ const nonTechRoles = [
 export default function TalentPage() {
   return (
     <div className="min-h-screen bg-white">
-      <div className="mx-auto max-w-7xl px-4 py-16">
+      <div className="mx-auto max-w-7xl px-4 py-4">
         {/* Back to Home Link */}
-        <div className="mb-8">
-          <Link href="/" className="text-foreground hover:text-accent-foreground transition-colors">
-            ← Back to Home
+        <div className="mb-4">
+          <Link href="/" className="text-foreground">
+            ←
           </Link>
-        </div>
-
-        {/* Page Title */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-semibold text-foreground mb-4">
-            Industries We Serve
-          </h1>
-        </div>
-
-        {/* Industries Grid */}
-        <div className="text-center grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
-          {industries.map((industry) => (
-            <div
-              key={industry}
-              className="bg-gray-50 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-200"
-            >
-              <h3 className="text-lg font-medium text-foreground">{industry}</h3>
-            </div>
-          ))}
         </div>
 
         <div className="text-center mb-12">
@@ -115,7 +87,7 @@ export default function TalentPage() {
 
         {/* Contact CTA */}
         <div className="text-center mt-16">
-          <button className="bg-accent-foreground text-white px-8 py-3 rounded-xl font-medium hover:bg-accent transition-colors duration-300 shadow-lg hover:shadow-xl">
+          <button className="bg-accent-foreground text-black px-8 py-3 rounded-xl font-medium hover:bg-accent transition-colors duration-300 shadow-lg hover:shadow-xl">
             Book a Discovery Call
           </button>
         </div>

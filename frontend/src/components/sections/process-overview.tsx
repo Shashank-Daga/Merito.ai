@@ -28,7 +28,7 @@ export function ProcessOverview() {
   ]
 
   return (
-    <section className="py-16 px-4 md:px-8 bg-merito-pink">
+    <section className="bg-merito-pink">
       <div className="mx-auto max-w-7xl">
         {/* Page heading */}
         <h2 className="text-4xl md:text-5xl font-semibold text-center text-merito-deep">
