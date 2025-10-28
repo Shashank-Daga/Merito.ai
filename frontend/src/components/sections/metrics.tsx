@@ -65,7 +65,7 @@ function CounterCard({ metric }: { metric: Metric }) {
   }, [visible, metric.value, metric.duration])
 
   return (
-    <div ref={ref} className="rounded-xl border bg-card p-5 bg-gradient-to-br from-primary to-accent-foreground">
+    <div ref={ref} className="rounded-xl border bg-[#83b6b3] p-5">
       <div className="text-3xl font-semibold">
         {value}
         {metric.suffix || ""}

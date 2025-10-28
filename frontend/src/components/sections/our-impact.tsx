@@ -5,66 +5,66 @@ import { useState } from "react"
 export function OurImpact() {
   const clientsByType = {
     "Technology & IT": [
-      "NETXD",
-      "Cuepilot AI",
-      "SimplyFI Softech",
-      "iNode",
-      "DQ",
-      "KU",
-      "Think 9",
-      "GTT",
-      "OSMOS",
-      "Exxat",
-      "Knowcross",
-      "Dynamind",
-      "WCP",
+      { name: "NETXD", logo: "/netxd.png" },
+      { name: "Cuepilot AI", logo: "/cuepilot.png" },
+      { name: "SimplyFI Softech", logo: "/SimplyFi Softech.png" },
+      { name: "iNode", logo: "/placeholder-logo.png" },
+      { name: "DQ", logo: "/placeholder-logo.png" },
+      { name: "KU", logo: "/placeholder-logo.png" },
+      { name: "Think 9", logo: "/placeholder-logo.png" },
+      { name: "GTT", logo: "/placeholder-logo.png" },
+      { name: "OSMOS", logo: "/placeholder-logo.png" },
+      { name: "Exxat", logo: "/placeholder-logo.png" },
+      { name: "Knowcross", logo: "/placeholder-logo.png" },
+      { name: "Dynamind", logo: "/placeholder-logo.png" },
+      { name: "WCP", logo: "/placeholder-logo.png" },
     ],
     "Manufacturing & Engineering": [
-      "Shyam Steel",
-      "On2Cook",
-      "Rekise Marine",
-      "Sunlimited SolaR",
-      "Vadcore",
-      "Teertham",
+      { name: "Shyam Steel", logo: "/placeholder-logo.png" },
+      { name: "On2Cook", logo: "/placeholder-logo.png" },
+      { name: "Rekise Marine", logo: "/placeholder-logo.png" },
+      { name: "Sunlimited SolaR", logo: "/placeholder-logo.png" },
+      { name: "Vadcore", logo: "/placeholder-logo.png" },
+      { name: "Teertham", logo: "/placeholder-logo.png" },
     ],
     "Healthcare & Life Sciences": [
-      "HealthAI Solutions",
-      "MediTech",
-      "CareConnect",
-      "BioInnovate",
-      "WellnessTech"
+      { name: "HealthAI Solutions", logo: "/placeholder-logo.png" },
+      { name: "MediTech", logo: "/placeholder-logo.png" },
+      { name: "CareConnect", logo: "/placeholder-logo.png" },
+      { name: "BioInnovate", logo: "/placeholder-logo.png" },
+      { name: "WellnessTech", logo: "/placeholder-logo.png" }
     ],
     "Finance & Banking": [
-      "Equirus",
-      "SimplyFI Softech"
+      { name: "Equirus", logo: "/placeholder-logo.png" },
+      { name: "SimplyFI Softech", logo: "/SimplyFi Softech.png" }
     ],
     "Sales & Marketing": [
-      "Yoptima",
-      "GroupM",
-      "Collective Artists Network",
-      "Interskale",
-      "Zouk",
-      "Aza Fashions",
-      "The Baker&apos;s Dozen",
-      "Soulflower",
-      "Banjaras",
-      "Future Group",
-      "Joyspoon",
-      "VSnapU",
-      "PeelWorks",
+      { name: "Yoptima", logo: "/placeholder-logo.png" },
+      { name: "GroupM", logo: "/placeholder-logo.png" },
+      { name: "Collective Artists Network", logo: "/placeholder-logo.png" },
+      { name: "Interskale", logo: "/placeholder-logo.png" },
+      { name: "Zouk", logo: "/placeholder-logo.png" },
+      { name: "Aza Fashions", logo: "/placeholder-logo.png" },
+      { name: "The Baker&apos;s Dozen", logo: "/placeholder-logo.png" },
+      { name: "Soulflower", logo: "/placeholder-logo.png" },
+      { name: "Banjaras", logo: "/placeholder-logo.png" },
+      { name: "Future Group", logo: "/placeholder-logo.png" },
+      { name: "Joyspoon", logo: "/placeholder-logo.png" },
+      { name: "VSnapU", logo: "/placeholder-logo.png" },
+      { name: "PeelWorks", logo: "/placeholder-logo.png" },
     ],
     "Operations & Logistics": [
-      "ReCircle",
-      "Mosaic",
-      "ITP",
-      "Rekise Marine",
-      "Panchshil Realty"
+      { name: "ReCircle", logo: "/placeholder-logo.png" },
+      { name: "Mosaic", logo: "/placeholder-logo.png" },
+      { name: "ITP", logo: "/placeholder-logo.png" },
+      { name: "Rekise Marine", logo: "/placeholder-logo.png" },
+      { name: "Panchshil Realty", logo: "/placeholder-logo.png" }
     ],
     "Education": [
-      "Athena Education",
-      "MIT",
-      "MIT-Ethiqual",
-      "Wadhwani"
+      { name: "Athena Education", logo: "/placeholder-logo.png" },
+      { name: "MIT", logo: "/placeholder-logo.png" },
+      { name: "MIT-Ethiqual", logo: "/placeholder-logo.png" },
+      { name: "Wadhwani", logo: "/placeholder-logo.png" }
     ]
   }
 
@@ -106,11 +106,9 @@ export function OurImpact() {
               {clientsByType[selectedType as keyof typeof clientsByType].map((client, index) => (
                 <div
                   key={index}
-                  className="bg-gradient-to-br from-white to-gray-50 p-5 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-200 hover:border-accent-foreground/30"
                 >
-                  <div className="flex items-center">
-                    <div className="w-3 h-3 bg-accent-foreground rounded-full mr-3 flex-shrink-0"></div>
-                    <span className="text-gray-800 font-medium">{client}</span>
+                  <div className="bg-[#83b6b3]" style={{ padding: '20px', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100px' }}>
+                    <img src={client.logo} alt={client.name} className="rounded" />
                   </div>
                 </div>
               ))}

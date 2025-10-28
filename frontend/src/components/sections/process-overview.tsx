@@ -1,3 +1,4 @@
+// Replace your existing component with this
 export function ProcessOverview() {
   const steps = [
     {
@@ -27,100 +28,40 @@ export function ProcessOverview() {
   ]
 
   return (
-    <section aria-labelledby="process-title">
-      <div className="mx-auto max-w-7xl px-4 py-12 md:py-20">
-        <header className="max-w-2xl">
-          <h2 id="process-title" className="text-balance text-3xl md:text-4xl font-semibold">
-            Hiring Top 2% Talent, Every Time
-          </h2>
-          <p className="mt-2 text-pretty text-base md:text-lg text-foreground/80"></p>
-        </header>
-
-        {/* Mobile: Vertical timeline for simple scanning */}
-        <div className="mt-10 md:hidden">
-          <ol className="relative border-s border-foreground/10">
-            {steps.map((s, i) => (
-              <li key={s.title} className="ms-6 pb-8 last:pb-0">
-                <span
-                  className="absolute -start-3 flex h-6 w-6 items-center justify-center rounded-full bg-primary text-primary-foreground text-xs font-semibold ring-4 ring-background"
-                  aria-hidden="true"
-                >
-                  {i + 1}
-                </span>
-                <article
-                  tabIndex={0}
-                  aria-labelledby={`step-m-${i}`}
-                  className="rounded-xl bg-card p-4 shadow-sm ring-1 ring-border/60 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
-                >
-                  <h3 id={`step-m-${i}`} className="text-sm font-semibold">
-                    {s.title}
-                  </h3>
-                  <p className="mt-2 text-sm text-foreground/80">{s.desc}</p>
-                </article>
-              </li>
-            ))}
-          </ol>
+    <section className="py-16 px-4 md:px-8 bg-merito-pink">
+      <div className="mx-auto max-w-7xl">
+        {/* Page heading */}
+        <h2 className="text-4xl md:text-5xl font-semibold text-center text-merito-deep">
+          Hiring Top 2% Talent, <span className="text-[#EC2229]">Every Time</span>
+        </h2>
+        <div className="text-center mb-12">
+          <p className="mt-3 text-gray-700">A streamlined approach that expedites hiring while ensuring the perfect fit.</p>
         </div>
 
-        {/* Desktop: S-shaped flow with arrow connectors */}
-        <div className="mt-12 hidden md:block">
-          <div className="relative">
-            {/* Connectors layer (desktop only) */}
-            <svg
-              className="pointer-events-none absolute inset-0 h-full w-full"
-              viewBox="0 0 1200 540"
-              role="presentation"
-              aria-hidden="true"
+        {/* Columns: use divide-x for thin vertical dividers that span the grid's height */}
+        <div
+          className="grid grid-cols-1 md:grid-cols-6 divide-x divide-black group"
+          // give a minimum height so the dividers extend below the copy (matches reference)
+          style={{ minHeight: '360px' }}
+        >
+          {steps.map((step, index) => (
+            <div
+              key={index}
+              className="flex flex-col items-center text-center px-6 py-8 cursor-pointer transition-all duration-300 hover:bg-white hover:shadow-xl hover:scale-105 hover:-translate-y-4"
             >
-            </svg>
+              <div className="max-w-[260px]">
+                {/* Heading: heavy, uppercase */}
+                <h3 className="text-lg md:text-xl font-extrabold uppercase tracking-wider text-merito-deep mb-4 transition-colors duration-300 hover:text-merito-teal">
+                  {step.title}
+                </h3>
 
-
-            {/* Cards grid */}
-            <ol aria-label="Flowchart: hiring process" className="grid grid-cols-3 gap-6">
-              {steps.map((s, i) => {
-                // Compute grid position for S-shaped layout
-                const gridPos = [
-                  // Row 1 (left -> right)
-                  "col-start-1 row-start-1",
-                  "col-start-2 row-start-1",
-                  "col-start-3 row-start-1",
-                  // Row 2 (right -> left)
-                  "col-start-3 row-start-2",
-                  "col-start-2 row-start-2",
-                  "col-start-1 row-start-2",
-                ][i]
-
-                return (
-                  <li key={s.title} className={gridPos}>
-                    <article
-                      tabIndex={0}
-                      aria-labelledby={`step-d-${i}`}
-                      className="group rounded-2xl border bg-card p-5 shadow-sm transition-transform hover:-translate-y-0.5 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
-                    >
-                      <div className="flex items-center gap-3">
-                        <span
-                          className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-primary text-primary-foreground text-sm font-semibold"
-                          aria-hidden="true"
-                        >
-                          {i + 1}
-                        </span>
-                        <h3 id={`step-d-${i}`} className="text-base font-semibold">
-                          {s.title}
-                        </h3>
-                      </div>
-                      <p className="mt-3 text-sm text-foreground/80">{s.desc}</p>
-
-                      {/* Decorative divider */}
-                      <div
-                        aria-hidden="true"
-                        className="mt-4 h-px w-full bg-gradient-to-r from-transparent via-foreground/10 to-transparent"
-                      />
-                    </article>
-                  </li>
-                )
-              })}
-            </ol>
-          </div>
+                {/* Body: constrained width and comfortable leading */}
+                <p className="text-sm md:text-base text-gray-700 leading-7 transition-colors duration-300 hover:text-gray-900">
+                  {step.desc}
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
