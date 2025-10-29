@@ -1,3 +1,5 @@
+import Image from "next/image"
+
 export function Podcasts() {
   const podcasts = [
     {
@@ -30,10 +32,11 @@ export function Podcasts() {
               className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-200 overflow-hidden"
             >
               <div className="aspect-video bg-gray-200 relative">
-                <img
+                <Image
                   src={podcast.image}
                   alt={podcast.title}
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
                 />
                 <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
                   <button className="w-16 h-16 bg-accent-foreground rounded-full flex items-center justify-center hover:bg-accent transition-colors">
@@ -47,7 +50,7 @@ export function Podcasts() {
                 <h3 className="text-xl font-semibold text-foreground mb-3 line-clamp-2">
                   {podcast.title}
                 </h3>
-                <button className="mt-4 text-#263238 font-medium hover:text-accent transition-colors">
+                <button className="mt-4 text-[#263238] font-medium hover:text-accent transition-colors">
                   Listen Now →
                 </button>
               </div>

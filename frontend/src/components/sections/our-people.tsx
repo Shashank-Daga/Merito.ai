@@ -1,5 +1,7 @@
 "use client"
 
+import Image from "next/image"
+
 export function OurPeople() {
   const teamMembers = [
     { name: "John Doe", position: "Founder", image: "/placeholder-user.jpg" },
@@ -31,11 +33,12 @@ export function OurPeople() {
               key={index}
               className="bg-white rounded-2xl shadow-lg overflow-hidden w-full max-w-xs text-center transition-transform transform hover:scale-105"
             >
-              <div className="bg-gray-100 p-6">
-                <img
+              <div className="bg-gray-100 p-6 relative h-80">
+                <Image
                   src={member.image}
-                  alt={member.name}
-                  className="w-full h-80 object-cover rounded-xl"
+                  alt={`${member.name} - ${member.position}`}
+                  fill
+                  className="object-cover rounded-xl"
                 />
               </div>
               <div className="py-4">

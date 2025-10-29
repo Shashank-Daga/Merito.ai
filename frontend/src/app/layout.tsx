@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
 import { Analytics } from "@vercel/analytics/next"
+import Script from "next/script"
 import "./globals.css"
 import { Header } from "@/components/site/header"
 import { Footer } from "@/components/site/footer"
@@ -25,6 +26,14 @@ export default function RootLayout({
   return (
     <html lang="en" className="antialiased" suppressHydrationWarning={true}>
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`} suppressHydrationWarning={true}>
+        {/* Calendly script */}
+        <Script
+          src="https://assets.calendly.com/assets/external/widget.js"
+          strategy="afterInteractive"
+          async
+          data-auto-load="false"
+        />
+
         <Suspense fallback={<div>Loading...</div>}>
           <Header />
           <main>{children}</main>
@@ -32,6 +41,7 @@ export default function RootLayout({
           <Footer />
           <Analytics />
         </Suspense>
+
         <Toaster />
       </body>
     </html>

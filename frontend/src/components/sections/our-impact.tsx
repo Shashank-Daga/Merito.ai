@@ -1,63 +1,64 @@
 "use client"
 
 import { useState } from "react"
+import Image from "next/image"
 
 export function OurImpact() {
   const clientsByType = {
     "Technology & IT": [
-      { name: "Cuepilot AI", logo: "logos/Tech & IT/cuepilot.png" },
-      { name: "DQ", logo: "logos/Tech & IT/" },
-      { name: "Dynamind", logo: "logos/Tech & IT/dynamind.svg" },
-      { name: "Exxat", logo: "logos/Tech & IT/Exxat.jpeg" },
-      { name: "GTT", logo: "logos/Tech & IT/GTT.png" },
-      { name: "iNode", logo: "logos/Tech & IT/" },
-      { name: "Knowcross", logo: "logos/Tech & IT/" },
-      { name: "KU", logo: "logos/Tech & IT/KU.png" },
-      { name: "NETXD", logo: "logos/Tech & IT/netxd.png" },
-      { name: "OSMOS", logo: "logos/Tech & IT/Osmos.png" },
-      { name: "SimplyFI Softech", logo: "logos/Finance & Banking/SimplyFi Softech1.png" },
-      { name: "Think 9", logo: "logos/Tech & IT/Think 9.png" },
-      { name: "WCP", logo: "logos/Tech & IT/WCP.png" },
+      { name: "Cuepilot AI", logo: "/logos/Tech & IT/cuepilot.png" },
+      { name: "DQ", logo: "/logos/Tech & IT/" },
+      { name: "Dynamind", logo: "/logos/Tech & IT/dynamind.svg" },
+      { name: "Exxat", logo: "/logos/Tech & IT/Exxat.jpeg" },
+      { name: "GTT", logo: "/logos/Tech & IT/GTT.png" },
+      { name: "iNode", logo: "/logos/Tech & IT/Inode.png" },
+      { name: "Knowcross", logo: "/logos/Tech & IT/" },
+      { name: "KU", logo: "/logos/Tech & IT/KU.png" },
+      { name: "NETXD", logo: "/logos/Tech & IT/netxd.png" },
+      { name: "OSMOS", logo: "/logos/Tech & IT/Osmos.png" },
+      { name: "SimplyFI Softech", logo: "/logos/Finance & Banking/SimplyFi Softech1.png" },
+      { name: "Think 9", logo: "/logos/Tech & IT/Think 9.png" },
+      { name: "WCP", logo: "/logos/Tech & IT/WCP.png" },
     ],
     "Manufacturing & Engineering": [
-      { name: "On2Cook", logo: "logos/Manufacturing & Engg/on2cook.png" },
-      { name: "Rekise Marine", logo: "logos/Manufacturing & Engg/" },
-      { name: "Shyam Steel", logo: "logos/Manufacturing & Engg/Shyam Steel.jpg" },
-      { name: "Sunlimited SolaR", logo: "logos/Manufacturing & Engg/" },
-      { name: "Teertham", logo: "logos/Manufacturing & Engg/Teertham.png" },
-      { name: "Vadcore", logo: "logos/Manufacturing & Engg/" },
+      { name: "On2Cook", logo: "/logos/Manufacturing & Engg/on2cook.png" },
+      { name: "Rekise Marine", logo: "/logos/Manufacturing & Engg/" },
+      { name: "Shyam Steel", logo: "/logos/Manufacturing & Engg/Shyam Steel.jpg" },
+      { name: "Sunlimited SolaR", logo: "/logos/Manufacturing & Engg/sunlimited.png" },
+      { name: "Teertham", logo: "/logos/Manufacturing & Engg/Teertham.png" },
+      { name: "Vadcore", logo: "/logos/Manufacturing & Engg/" },
     ],
     "Finance & Banking": [
-      { name: "Equirus", logo: "logos/Finance & Banking/Equirus.svg" },
-      { name: "SimplyFI Softech", logo: "logos/Finance & Banking/SimplyFi Softech1.png" }
+      { name: "Equirus", logo: "/logos/Finance & Banking/Equirus.svg" },
+      { name: "SimplyFI Softech", logo: "/logos/Finance & Banking/SimplyFi Softech1.png" }
     ],
     "Sales & Marketing": [
-      { name: "Aza Fashions", logo: "logos/Sales & Marketing/aza1.png" },
-      { name: "Banjaras", logo: "logos/Sales & Marketing/Banjaras.webp" },
-      { name: "Collective Artists Network", logo: "logos/Sales & Marketing/Collective Artists Network.svg" },
-      { name: "Future Group", logo: "logos/Sales & Marketing/" },
-      { name: "GroupM", logo: "logos/Sales & Marketing/" },
-      { name: "Interskale", logo: "logos/Sales & Marketing/interskale.jpg" },
-      { name: "Joyspoon", logo: "logos/Sales & Marketing/joyspoon.avif" },
-      { name: "PeelWorks", logo: "logos/Sales & Marketing/" },
-      { name: "Soulflower", logo: "logos/Sales & Marketing/soulflower.avif" },
-      { name: "The Baker&apos;s Dozen", logo: "logos/Sales & Marketing/Bakers.avif" },
-      { name: "VSnapU", logo: "logos/Sales & Marketing/vsnapu.svg" },
-      { name: "Yoptima", logo: "logos/Sales & Marketing/yoptima.webp" },
-      { name: "Zouk", logo: "logos/Sales & Marketing/zouk.webp" },
+      { name: "Aza Fashions", logo: "/logos/Sales & Marketing/aza1.png" },
+      { name: "Banjaras", logo: "/logos/Sales & Marketing/Banjaras.webp" },
+      { name: "Collective Artists Network", logo: "/logos/Sales & Marketing/Collective Artists Network.svg" },
+      { name: "Future Group", logo: "/logos/Sales & Marketing/future.webp" },
+      { name: "GroupM", logo: "/logos/Sales & Marketing/groupM.png" },
+      { name: "Interskale", logo: "/logos/Sales & Marketing/interskale.jpg" },
+      { name: "Joyspoon", logo: "/logos/Sales & Marketing/joyspoon.avif" },
+      { name: "PeelWorks", logo: "/logos/Sales & Marketing/" },
+      { name: "Soulflower", logo: "/logos/Sales & Marketing/soulflower.avif" },
+      { name: "The Baker's Dozen", logo: "/logos/Sales & Marketing/Bakers.avif" },
+      { name: "VSnapU", logo: "/logos/Sales & Marketing/vsnapu.svg" },
+      { name: "Yoptima", logo: "/logos/Sales & Marketing/yoptima.webp" },
+      { name: "Zouk", logo: "/logos/Sales & Marketing/zouk.webp" },
     ],
     "Operations & Logistics": [
-      { name: "ITP", logo: "logos/Operations & Log/" },
-      { name: "Mosaic", logo: "logos/Operations & Log/Mosaic.png" },
-      { name: "Panchshil Realty", logo: "logos/Operations & Log/Panchshil.png" },
-      { name: "ReCircle", logo: "logos/Operations & Log/ReCircle.png" },
-      { name: "Rekise Marine", logo: "logos/Operations & Log/" },
+      { name: "ITP", logo: "/logos/Operations & Log/" },
+      { name: "Mosaic", logo: "/logos/Operations & Log/Mosaic.png" },
+      { name: "Panchshil Realty", logo: "/logos/Operations & Log/Panchshil.png" },
+      { name: "ReCircle", logo: "/logos/Operations & Log/ReCircle.png" },
+      { name: "Rekise Marine", logo: "/logos/Operations & Log/" },
     ],
     "Education": [
-      { name: "Athena Education", logo: "logos/Edu/Athena.png" },
-      { name: "MIT", logo: "logos/Edu/" },
-      { name: "MIT-Ethiqual", logo: "logos/Edu/" },
-      { name: "Wadhwani", logo: "logos/Edu/Wadhwani.webp" }
+      { name: "Athena Education", logo: "/logos/Edu/Athena.png" },
+      { name: "MIT", logo: "/logos/Edu/" },
+      { name: "MIT-Ethiqual", logo: "/logos/Edu/" },
+      { name: "Wadhwani", logo: "/logos/Edu/Wadhwani.webp" }
     ]
   }
 
@@ -100,8 +101,13 @@ export function OurImpact() {
                 <div
                   key={index}
                 >
-                  <div className="bg-[#83b6b3]" style={{ padding: '20px', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100px' }}>
-                    <img src={client.logo} alt={client.name} className="rounded" />
+                  <div className="bg-[#83b6b3] relative" style={{ padding: '20px', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100px' }}>
+                    <Image 
+                      src={client.logo} 
+                      alt={`${client.name} logo`} 
+                      fill
+                      className="rounded object-contain p-4"
+                    />
                   </div>
                 </div>
               ))}

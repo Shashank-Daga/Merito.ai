@@ -1,3 +1,5 @@
+import Image from "next/image"
+
 export function Articles() {
   const articles = [
     {
@@ -30,17 +32,18 @@ export function Articles() {
               className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-200 overflow-hidden"
             >
               <div className="aspect-video bg-gray-200 relative">
-                <img
+                <Image
                   src={article.image}
                   alt={article.title}
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
                 />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-foreground mb-3 line-clamp-2">
                   {article.title}
                 </h3>
-                <button className="mt-4 text-#263238 font-medium hover:text-accent transition-colors">
+                <button className="mt-4 text-[#263238] font-medium hover:text-accent transition-colors">
                   Read More →
                 </button>
               </div>

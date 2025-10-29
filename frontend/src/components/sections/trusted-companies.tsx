@@ -1,3 +1,5 @@
+import Image from "next/image"
+
 export function TrustedCompanies() {
   const logos = [
     { name: "Athena", src: "/logos/Edu/Athena.png", alt: "Athena logo" },
@@ -40,11 +42,12 @@ export function TrustedCompanies() {
         <div className="mt-6 overflow-hidden">
           <div className="flex animate-[scroll-x_25s_linear_infinite] gap-2 will-change-transform">
             {[...logos, ...logos].map((logo, idx) => (
-              <div key={`${logo.name}-${idx}`} className="shrink-0">
-                <img
+              <div key={`${logo.name}-${idx}`} className="shrink-0 relative h-12 w-[140px]">
+                <Image
                   src={logo.src}
                   alt={logo.alt}
-                  className="h-12 w-[140px] object-contain"
+                  fill
+                  className="object-contain"
                 />
               </div>
             ))}

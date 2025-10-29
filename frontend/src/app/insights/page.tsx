@@ -1,7 +1,6 @@
 import { Articles } from "@/components/sections/articles"
 import { CTA } from "@/components/sections/cta"
 import { Podcasts } from "@/components/sections/podcasts"
-import { Cat } from "lucide-react"
 
 export default function InsightsPage() {
   return (

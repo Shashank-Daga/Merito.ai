@@ -1,5 +1,17 @@
+"use client"
+
 import React from "react"
 import Link from "next/link"
+
+interface CalendlyWidget {
+  initPopupWidget: (options: { url: string }) => void
+}
+
+declare global {
+  interface Window {
+    Calendly?: CalendlyWidget
+  }
+}
 
 const techRoles = [
   "CTO",
@@ -40,6 +52,16 @@ const nonTechRoles = [
 ]
 
 export default function TalentPage() {
+  const handleBookCall = () => {
+    try {
+      console.log('Opening Calendly in new tab');
+      window.open('https://calendly.com/merito-discovery-call', '_blank');
+    } catch (error) {
+      console.error('Error opening Calendly:', error);
+      alert('Failed to open scheduling page. Please contact us directly.');
+    }
+  }
+
   return (
     <div className="min-h-screen bg-white">
       <div className="mx-auto max-w-7xl px-4 py-4">
@@ -87,7 +109,10 @@ export default function TalentPage() {
 
         {/* Contact CTA */}
         <div className="text-center mt-16">
-          <button className="bg-accent-foreground text-black px-8 py-3 rounded-xl font-medium hover:bg-accent transition-colors duration-300 shadow-lg hover:shadow-xl">
+          <button
+            onClick={handleBookCall}
+            className="bg-accent-foreground text-black px-8 py-3 rounded-xl font-medium hover:bg-accent transition-colors duration-300 shadow-lg hover:shadow-xl"
+          >
             Book a Discovery Call
           </button>
         </div>
