@@ -32,7 +32,7 @@ export function AboutIntro() {
               </p>
               <p className="text-gray-700 mb-4 leading-relaxed">
                 We realized the need for leveraging technology to transform people functions not just for hiring but
-                also for retaining and developing talent — and that's how <b>Merito.ai</b> was born. We support
+                also for retaining and developing talent — and that&apos;s how <b>Merito.ai</b> was born. We support
                 organizations in the growth phase by streamlining their recruitment, improving employee engagement,
                 skill mapping, performance management, and much more.
               </p>
@@ -102,8 +102,8 @@ export function AboutIntro() {
             </span> */}
             <h2 className="text-2xl md:text-3xl text-center font-semibold text-[#121212] mb-2">Mission</h2>
             <p className="text-gray-700 text-lg leading-relaxed">
-              "To empower individuals and organizations to reach their full potential through exceptional talent
-              services."
+              &quot;To empower individuals and organizations to reach their full potential through exceptional talent
+              services.&quot;
             </p>
           </div>
 
@@ -113,7 +113,7 @@ export function AboutIntro() {
             </span> */}
             <h2 className="text-2xl md:text-3xl text-center font-semibold text-[#121212] mb-2">Vision</h2>
             <p className="text-gray-700 text-lg leading-relaxed">
-              "To become a leader in talent services that enable individual and organizational growth."
+              &quot;To become a leader in talent services that enable individual and organizational growth.&quot;
             </p>
           </div>
         </div>
