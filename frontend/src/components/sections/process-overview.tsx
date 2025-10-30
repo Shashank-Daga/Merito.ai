@@ -1,5 +1,11 @@
+"use client"
+
+import { useRevealAnimation } from "@/hooks/useRevealAnimation"
+
 // Replace your existing component with this
 export function ProcessOverview() {
+  useRevealAnimation({ stagger: true })
+
   const steps = [
     {
       title: "Role Benchmarking",
@@ -31,16 +37,16 @@ export function ProcessOverview() {
     <section className="bg-merito-pink">
       <div className="mx-auto max-w-7xl">
         {/* Page heading */}
-        <h2 className="text-4xl md:text-5xl font-semibold text-center text-merito-deep">
+        <h2 className="reveal-element text-4xl md:text-5xl font-semibold text-center text-merito-deep">
           Hiring Top 2% Talent, <span className="text-[#EC2229]">Every Time</span>
         </h2>
         <div className="text-center mb-12">
-          <p className="mt-3 text-gray-700">A streamlined approach that expedites hiring while ensuring the perfect fit.</p>
+          <p className="reveal-element mt-3 text-gray-700">A streamlined approach that expedites hiring while ensuring the perfect fit.</p>
         </div>
 
         {/* Columns: use divide-x for thin vertical dividers that span the grid's height */}
         <div
-          className="grid grid-cols-1 md:grid-cols-6 divide-x divide-black group"
+          className="reveal-element grid grid-cols-1 md:grid-cols-6 divide-x divide-black group"
           // give a minimum height so the dividers extend below the copy (matches reference)
           style={{ minHeight: '360px' }}
         >

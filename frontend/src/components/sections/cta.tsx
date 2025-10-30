@@ -1,14 +1,19 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
+import { useRevealAnimation } from "@/hooks/useRevealAnimation"
 
 interface CTAProps {
   onBookCall?: () => void
 }
 
 export function CTA({ onBookCall }: CTAProps) {
+  useRevealAnimation({ stagger: true })
+
   return (
     <section className="border-t bg-white">
       <div className="mx-auto max-w-7xl px-4 py-14 md:py-20">
-        <div className="rounded-2xl border bg-card p-8 md:p-12 bg-gradient-to-br from-accent-foreground to-primary">
+        <div className="reveal-element rounded-2xl border bg-card p-8 md:p-12 bg-gradient-to-br from-accent-foreground to-primary">
           <div className="grid items-center gap-6 md:grid-cols-3">
             <div className="md:col-span-2">
               <h2 className="text-2xl md:text-3xl font-semibold text-balance ">Consult Our Recruitment Expert</h2>

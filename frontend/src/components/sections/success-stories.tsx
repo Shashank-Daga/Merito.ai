@@ -1,11 +1,17 @@
+"use client"
+
+import { useRevealAnimation } from "@/hooks/useRevealAnimation"
+
 export function SuccessStories() {
+  useRevealAnimation({ stagger: true })
+
   return (
     <section className="py-16 px-4 md:px-8 bg-gray-50">
       <div className="mx-auto max-w-7xl">
-        <h1 className="text-4xl md:text-5xl font-semibold text-center text-foreground mb-12">
+        <h1 className="reveal-element text-4xl md:text-5xl font-semibold text-center text-foreground mb-12">
           Success Stories
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="reveal-element grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Success Story 1 */}
           <div className="bg-white p-6 rounded-lg shadow-md">
             <h3 className="text-xl font-semibold text-foreground mb-4">Fintech Startup Scales Rapidly</h3>

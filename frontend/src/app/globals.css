@@ -163,3 +163,16 @@
     font-family: 'gilroyextrabold-400';
   }
 }
+
+/* Initial hidden state */
+.reveal-element {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Revealed state */
+.reveal-element.reveal {
+  opacity: 1;
+  transform: translateY(0);
+}

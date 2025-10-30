@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
+import { useRevealAnimation } from "@/hooks/useRevealAnimation"
 
 const DATA = [
   {
@@ -53,10 +54,12 @@ const DATA = [
 const duplicatedData = [...DATA, ...DATA]
 
 export function Testimonials() {
+  useRevealAnimation()
+
   return (
     <section className="bg-merito-pink py-20 px-6 overflow-hidden">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-4xl md:text-5xl font-semibold text-merito-deep mb-12">
+        <h2 className="reveal-element text-4xl md:text-5xl font-semibold text-merito-deep mb-12">
           Voices of <span className="text-[#EC2229]">Trust</span>
         </h2>
 

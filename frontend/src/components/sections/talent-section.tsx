@@ -2,6 +2,7 @@
 
 import React from "react"
 import Link from "next/link"
+import { useRevealAnimation } from "../../hooks/useRevealAnimation"
 
 const industries = [
   "Technology & IT",
@@ -13,18 +14,34 @@ const industries = [
 ]
 
 const TalentSection: React.FC = () => {
+  useRevealAnimation({ stagger: true })
+
   return (
     <section className="py-15 px-4 md:px-8 bg-white">
       <div className="mx-auto max-w-7xl">
         {/* Page heading */}
-        <h2 className="text-4xl md:text-5xl font-semibold text-center text-merito-deep">
+        <h2
+          className="reveal-element text-4xl md:text-5xl font-semibold text-center text-merito-deep"
+          tabIndex={0}
+          aria-label="Industries We Serve"
+        >
           <span className="text-[#EC2229]">Industries</span> We Serve
-          <Link href="/talent" className="text-foreground ml-2 inline-flex items-center hover:text-accent transition-colors">
+          <Link
+            href="/talent"
+            className="text-foreground ml-2 inline-flex items-center hover:text-accent transition-colors"
+          >
             <span>→</span>
           </Link>
         </h2>
+
         <div className="text-center mb-12">
-          <p className="mt-3 text-gray-700">Connecting the right people to the roles that matter across every industry.</p>
+          <p
+            className="reveal-element mt-3 text-gray-700"
+            tabIndex={0}
+            aria-label="Connecting the right people to the roles that matter across every industry."
+          >
+            Connecting the right people to the roles that matter across every industry.
+          </p>
         </div>
 
         {/* Industries Grid */}

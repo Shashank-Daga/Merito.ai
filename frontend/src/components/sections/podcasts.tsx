@@ -1,6 +1,11 @@
+"use client"
+
 import Image from "next/image"
+import { useRevealAnimation } from "@/hooks/useRevealAnimation"
 
 export function Podcasts() {
+  useRevealAnimation({ stagger: true })
+
   const podcasts = [
     {
       id: 1,
@@ -22,10 +27,10 @@ export function Podcasts() {
   return (
     <section className="py-16 px-4 md:px-8 bg-secondary">
       <div className="mx-auto max-w-7xl">
-        <h2 className="text-3xl md:text-4xl font-semibold text-center text-[#121212] mb-12">
+        <h2 className="reveal-element text-3xl md:text-4xl font-semibold text-center text-[#121212] mb-12">
           Featured Podcasts
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="reveal-element grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {podcasts.map((podcast) => (
             <article
               key={podcast.id}

@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import Image from "next/image"
+import { useRevealAnimation } from "@/hooks/useRevealAnimation"
 
 export function OurImpact() {
   const clientsByType = {
@@ -64,16 +65,28 @@ export function OurImpact() {
 
   const [selectedType, setSelectedType] = useState(Object.keys(clientsByType)[0])
 
+  useRevealAnimation({ stagger: true })
+
   return (
     <section className="py-16 px-4 md:px-8 bg-secondary">
       <div className="mx-auto max-w-7xl">
-        <h2 className="text-4xl md:text-5xl font-semibold text-center text-foreground mb-12">
+        <h2
+          className="reveal-element text-4xl md:text-5xl font-semibold text-center text-foreground mb-12"
+          tabIndex={0}
+          aria-label="Our Impact"
+        >
           Our Impact
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="reveal-element grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Client Types List */}
           <div className="md:col-span-1">
-            <h3 className="text-2xl font-semibold text-[#121212] mb-6">Client Types</h3>
+            <h3
+              className="text-2xl font-semibold text-[#121212] mb-6"
+              tabIndex={0}
+              aria-label="Client Types"
+            >
+              Client Types
+            </h3>
             <div className="space-y-3">
               {Object.keys(clientsByType).map((type) => (
                 <button
