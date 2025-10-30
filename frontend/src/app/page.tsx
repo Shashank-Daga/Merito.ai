@@ -7,6 +7,7 @@ import { TrustedCompanies } from "@/components/sections/trusted-companies"
 import TalentSection from "@/components/sections/talent-section"
 import WhyChooseUs from "@/components/sections/why-choose-us"
 import { CTA } from "@/components/sections/cta"
+import TrustedHiringPartner from "@/components/sections/trusted-hiring-partner"
 
 interface CalendlyWidget {
   initPopupWidget: (options: { url: string }) => void
@@ -34,6 +35,7 @@ export default function HomePage() {
       <Hero onBookCall={handleBookCall} />
       <Metrics />
       <TrustedCompanies />
+      <TrustedHiringPartner />
       <Approach />
       <TalentSection />
       <WhyChooseUs />

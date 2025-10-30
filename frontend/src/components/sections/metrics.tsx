@@ -7,7 +7,7 @@ type Metric = { label: string; value: number; suffix?: string; duration?: number
 
 const METRICS: Metric[] = [
   { label: "Specialists hired", value: 1000, suffix: "+" },
-  { label: "Avg. time-to-hire (days)", value: 15 },
+  { label: "Avg. time-to-hire (days)", value: 20 },
   { label: "Clients served", value: 50, suffix: "+" },
   // { label: "Client satisfaction (NPS)", value: 74 },
   { label: "Hiring accuracy", value: 90, suffix: "%" },
