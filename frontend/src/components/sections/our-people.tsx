@@ -30,7 +30,7 @@ export function OurPeople() {
         </div>
 
         {/* Team Cards */}
-        <div className="reveal-element grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 justify-items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 justify-items-center">
           {teamMembers.map((member, index) => (
             <div
               key={index}

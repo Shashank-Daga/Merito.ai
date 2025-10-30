@@ -21,7 +21,7 @@ export const useRevealAnimation = (options: UseRevealAnimationOptions = {}) => {
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.5 }
     );
 
     elements.forEach((el) => observer.observe(el));

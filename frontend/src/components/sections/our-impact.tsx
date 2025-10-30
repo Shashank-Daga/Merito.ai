@@ -93,7 +93,7 @@ export function OurImpact() {
                   key={type}
                   onClick={() => setSelectedType(type)}
                   className={`w-full text-left px-6 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 ${selectedType === type
-                    ? "bg-gradient-to-br from-accent-foreground to-primary"
+                    ? "bg-[#004250] text-white shadow-lg"
                     : "bg-gradient-to-r from-gray-50 to-gray-100 text-gray-700 hover:from-gray-100 hover:to-gray-200 hover:shadow-md"
                     }`}
                 >
@@ -114,7 +114,7 @@ export function OurImpact() {
                 <div
                   key={index}
                 >
-                  <div className="bg-[#83b6b3] relative" style={{ padding: '20px', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100px' }}>
+                  <div className=" relative" style={{ padding: '20px', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100px' }}>
                     <Image 
                       src={client.logo} 
                       alt={`${client.name} logo`} 

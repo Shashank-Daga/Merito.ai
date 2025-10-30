@@ -21,6 +21,7 @@ export default function ApplyPage() {
     email: "",
     position: "",
     experience: "",
+    currentLocation: "",
     currentCtc: "",
     expectedCtc: "",
     noticePeriod: "",
@@ -35,7 +36,7 @@ export default function ApplyPage() {
     e.preventDefault()
 
     // Check if all fields are filled
-    const requiredFields = ['fullName', 'contactNo', 'email', 'position', 'experience', 'currentCtc', 'expectedCtc', 'noticePeriod', 'resumeLink']
+    const requiredFields = ['fullName', 'contactNo', 'email', 'position', 'experience', 'currentLocation', 'currentCtc', 'expectedCtc', 'noticePeriod', 'resumeLink']
     const missingFields = requiredFields.filter(field => !formData[field as keyof typeof formData])
     if (missingFields.length > 0) {
       toast({
@@ -77,6 +78,7 @@ export default function ApplyPage() {
         email: "",
         position: "",
         experience: "",
+        currentLocation: "",
         currentCtc: "",
         expectedCtc: "",
         noticePeriod: "",
@@ -176,6 +178,20 @@ export default function ApplyPage() {
                   <SelectItem value="10+">10+</SelectItem>
                 </SelectContent>
               </Select>
+            </div>
+
+            {/* Current Location */}
+            <div>
+              <label htmlFor="currentLocation" className="block text-sm font-medium mb-2">
+                Current Location
+              </label>
+              <Input
+                id="currentLocation"
+                type="text"
+                value={formData.currentLocation}
+                onChange={(e) => handleInputChange("currentLocation", e.target.value)}
+                required
+              />
             </div>
 
             {/* Current CTC */}

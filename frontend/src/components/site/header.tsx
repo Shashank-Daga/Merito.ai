@@ -20,7 +20,7 @@ export function Header() {
     <header className="sticky top-0 z-40 border-b bg-secondary backdrop-blur supports-[backdrop-filter]:bg-white/60">
       <div className="mx-auto max-w-7xl px-4 py-4 md:py-5">
         <div className="flex items-center">
-          <Link href="/" className="flex-shrink-0 font-semibold text-xl tracking-tight">
+          <Link href="/" className="flex-shrink-0 font-semibold text-2xl tracking-tight">
             <span className="text-[#EC2229]">M</span>erito
             <span className="sr-only">Go to homepage</span>
           </Link>
@@ -30,7 +30,7 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-sm font-medium text-foreground/80 hover:text-foreground transition"
+                className="text-base font-medium text-foreground/80 hover:text-foreground transition"
               >
                 {item.label}
               </Link>

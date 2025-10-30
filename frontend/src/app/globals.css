@@ -168,7 +168,7 @@
 .reveal-element {
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition: opacity 2s ease-out, transform 2s ease-out;
 }
 
 /* Revealed state */

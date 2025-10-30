@@ -19,7 +19,7 @@ export function AboutIntro() {
           {/* The Merito Story */}
           <div className="reveal-element grid grid-cols-1 md:grid-cols-2 gap-12 items-center ml-29">
             {/* Left Text Section */}
-            <div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
               {/* <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-[#121212]">
                 The <span className="text-[#EC2229]">Merito Story</span>
               </h2> */}
@@ -153,9 +153,9 @@ export function AboutIntro() {
             ].map((item, index) => (
               <div
                 key={index}
-                className="bg-gradient-to-br from-primary to-accent-foreground p-6 rounded-lg shadow-sm border"
+                className="bg-white p-6 rounded-lg shadow-sm border"
               >
-                <h3 className="text-lg font-semibold text-foreground mb-2">{item.title}</h3>
+                <h3 className="text-lg font-bold text-foreground mb-2">{item.title}</h3>
                 <p className="text-gray-600">{item.desc}</p>
               </div>
             ))}
@@ -174,22 +174,22 @@ export function AboutIntro() {
               We combine human expertise with intelligent technology to make hiring smarter, faster, and more reliable.
             </p>
 
-            <div className="reveal-element mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="bg-gradient-to-br from-primary to-accent-foreground p-6 rounded-lg shadow-sm border">
-                <h3 className="text-lg font-semibold text-foreground mb-2">Hiring Insight</h3>
-                <p className="text-gray-600">
+            <div className="reveal-element mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-white">
+              <div className="bg-[#004250] p-6 rounded-lg shadow-sm border">
+                <h3 className="text-lg font-bold  mb-2">Hiring Insight</h3>
+                <p>
                   Years of hiring knowledge and industry understanding help us identify candidates who truly fit your needs.
                 </p>
               </div>
-              <div className="bg-gradient-to-br from-primary to-accent-foreground p-6 rounded-lg shadow-sm border">
-                <h3 className="text-lg font-semibold text-foreground mb-2">Smart Sourcing</h3>
-                <p className="text-gray-600">
+              <div className="bg-[#004250] p-6 rounded-lg shadow-sm border">
+                <h3 className="text-lg font-bold mb-2">Smart Sourcing</h3>
+                <p>
                   Our AI tools accelerate sourcing and shortlisting, letting experts focus on the right candidates.
                 </p>
               </div>
-              <div className="bg-gradient-to-br from-primary to-accent-foreground p-6 rounded-lg shadow-sm border">
-                <h3 className="text-lg font-semibold text-foreground mb-2">Expert Judgment</h3>
-                <p className="text-gray-600">
+              <div className="bg-[#004250] p-6 rounded-lg shadow-sm border">
+                <h3 className="text-lg font-bold mb-2">Expert Judgment</h3>
+                <p>
                   Human expertise ensures every recommendation aligns with your organization’s culture and long-term goals.
                 </p>
               </div>
