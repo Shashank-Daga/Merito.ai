@@ -23,7 +23,7 @@ export default function HomePage() {
   const handleBookCall = () => {
     try {
       console.log('Opening Calendly in new tab');
-      window.open('https://calendly.com/merito-discovery-call', '_blank');
+      window.open(process.env.NEXT_PUBLIC_CALENDLY_URL, '_blank');
     } catch (error) {
       console.error('Error opening Calendly:', error);
       alert('Failed to open scheduling page. Please contact us directly.');
