@@ -7,7 +7,7 @@ export function AboutIntro() {
 
   return (
     <>
-      <section className="bg-white">
+      <section className="bg-secondary pb-16">
         <div className="mx-auto max-w-7xl px-4 py-12 md:py-20">
           {/* Our Origin */}
           <div className="text-center mb-16">
@@ -120,7 +120,7 @@ export function AboutIntro() {
       </section>
 
       {/* Values */}
-      <section className="bg-white">
+      <section className="bg-secondary">
         <div className="mx-auto max-w-7xl px-4 py-16">
           <div className="text-center mb-12">
             <h1 className="reveal-element text-3xl md:text-4xl font-semibold text-balance">

@@ -11,7 +11,7 @@ export function CTA({ onBookCall }: CTAProps) {
   useRevealAnimation({ stagger: true })
 
   return (
-    <section className="border-t bg-white">
+    <section className="border-t bg-secondary">
       <div className="mx-auto max-w-7xl px-4 py-14 md:py-20">
         <div className="reveal-element rounded-2xl border bg-card p-8 md:p-12 bg-gradient-to-br from-accent-foreground to-primary">
           <div className="grid items-center gap-6 md:grid-cols-3">

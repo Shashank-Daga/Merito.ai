@@ -94,9 +94,9 @@ export default function ApplyPage() {
   }
 
   return (
-    <section className="bg-white py-16">
+    <section className="bg-secondary py-16">
       <div className="container mx-auto px-4 max-w-2xl">
-        <div className="rounded-2xl border bg-secondary p-8 md:p-12">
+        <div className="rounded-2xl border bg-white p-8 md:p-12">
           <h1 className="text-4xl font-bold text-center mb-8">Apply Form</h1>
 
           <form onSubmit={handleSubmit} className="space-y-6">

@@ -57,7 +57,7 @@ export function Testimonials() {
   useRevealAnimation()
 
   return (
-    <section className="bg-merito-pink py-20 px-6 overflow-hidden">
+    <section className="bg-secondary py-20 px-6 overflow-hidden">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="reveal-element text-4xl md:text-5xl font-semibold text-merito-deep mb-12">
           Voices of <span className="text-[#EC2229]">Trust</span>

@@ -25,7 +25,7 @@ export function Articles() {
   ]
 
   return (
-    <section className="py-16 px-4 md:px-8 bg-white">
+    <section className="py-16 px-4 md:px-8 bg-secondary">
       <div className="mx-auto max-w-7xl">
         <h2 className="reveal-element text-3xl md:text-4xl font-semibold text-center text-foreground mb-12">
           Latest Articles

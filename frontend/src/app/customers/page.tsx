@@ -10,7 +10,7 @@ export default function CustomersPage() {
 
   return (
     <>
-      <section className="py-16 px-4 md:px-8 bg-gradient-to-br from-primary to-accent-foreground">
+      <section className="py-16 px-4 md:px-8 bg-secondary">
         <div className="mx-auto max-w-7xl text-center text-foreground">
           <h1 className="reveal-element text-5xl md:text-6xl font-bold mb-4 tracking-tight">
             Our Customers

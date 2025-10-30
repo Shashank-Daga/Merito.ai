@@ -17,7 +17,7 @@ const TalentSection: React.FC = () => {
   useRevealAnimation({ stagger: true })
 
   return (
-    <section className="py-15 px-4 md:px-8 bg-white">
+    <section className="py-15 px-4 md:px-8 bg-secondary">
       <div className="mx-auto max-w-7xl">
         {/* Page heading */}
         <h2

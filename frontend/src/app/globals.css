@@ -23,7 +23,7 @@
   --primary: #178582;
   --primary-foreground: #ffffff;
 
-  --secondary: #faede9;
+  --secondary: #E8E7DE;
   --secondary-foreground: #ffffff;
 
   --muted: #f8f0ff; /* lighter purple */
@@ -72,7 +72,7 @@
   --primary: #178582; /* teal primary in dark mode */
   --primary-foreground: #ffffff;
 
-  --secondary: #faede9; /* dark blue secondary in dark mode */
+  --secondary: #E8E7DE; /* dark blue secondary in dark mode */
   --secondary-foreground: #ffffff;
 
   --muted: #3a2a4d; /* muted dark purple */

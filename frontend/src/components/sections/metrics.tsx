@@ -20,7 +20,7 @@ export function Metrics() {
     <section className="bg-secondary">
       <div className="mx-auto max-w-7xl px-4 py-12 md:py-16 text-center">
         <h2 className="reveal-element text-2xl md:text-3xl font-semibold text-balance text-[#121212]"><span className="text-[#EC2229]">Impact</span> in Numbers</h2>
-        <div className="reveal-element mt-8 grid gap-4 sm:grid-cols-2 md:grid-cols-4">
+        <div className="reveal-element mt-8 grid gap-4 sm:grid-cols-2 md:grid-cols-4 text-white">
           {METRICS.map((m) => (
             <CounterCard key={m.label} metric={m} />
           ))}
@@ -68,12 +68,12 @@ function CounterCard({ metric }: { metric: Metric }) {
   }, [visible, metric.value, metric.duration])
 
   return (
-    <div ref={ref} className="rounded-xl border bg-[#83b6b3] p-5">
+    <div ref={ref} className="rounded-xl border bg-[#004250] p-5">
       <div className="text-3xl font-semibold">
         {value}
         {metric.suffix || ""}
       </div>
-      <div className="mt-1 text-sm text-foreground/70">{metric.label}</div>
+      <div className="mt-1 text-sm text-white">{metric.label}</div>
     </div>
   )
 }

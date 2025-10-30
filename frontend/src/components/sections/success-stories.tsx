@@ -6,7 +6,7 @@ export function SuccessStories() {
   useRevealAnimation({ stagger: true })
 
   return (
-    <section className="py-16 px-4 md:px-8 bg-gray-50">
+    <section className="py-16 px-4 md:px-8 bg-secondary">
       <div className="mx-auto max-w-7xl">
         <h1 className="reveal-element text-4xl md:text-5xl font-semibold text-center text-foreground mb-12">
           Success Stories

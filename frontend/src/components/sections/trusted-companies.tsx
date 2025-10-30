@@ -39,7 +39,7 @@ export function TrustedCompanies() {
     { name: "WCP", src: "/logos/Tech & IT/WCP.png", alt: "WCP logo" },
   ]
   return (
-    <section aria-labelledby="trusted-heading" className="border-t border-b bg-white">
+    <section aria-labelledby="trusted-heading" className="border-t border-b bg-secondary">
       <div className="mx-auto max-w-7xl px-4 py-10">
         <h2 id="trusted-heading" className="reveal-element text-2xl md:text-3xl font-semibold text-balance text-center mb-10">
           Trusted by <span className="text-[#EC2229]">Growth Companies</span>

@@ -63,7 +63,7 @@ export default function TalentPage() {
   }
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-secondary">
       <div className="mx-auto max-w-7xl px-4 py-4">
         {/* Back to Home Link */}
         <div className="mb-4">

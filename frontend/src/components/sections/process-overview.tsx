@@ -34,7 +34,7 @@ export function ProcessOverview() {
   ]
 
   return (
-    <section className="bg-merito-pink">
+    <section className="bg-secondary">
       <div className="mx-auto max-w-7xl">
         {/* Page heading */}
         <h2 className="reveal-element text-4xl md:text-5xl font-semibold text-center text-merito-deep">

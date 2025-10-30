@@ -10,7 +10,7 @@ export default function TrustedHiringPartner() {
     useRevealAnimation({ stagger: true })
 
     return (
-        <section className="py-20 bg-white overflow-hidden">
+        <section className="py-20 bg-secondary overflow-hidden">
             <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between gap-16">
                 {/* Left Image Section */}
                 <div className="reveal-element relative w-full lg:w-1/2 flex justify-center">

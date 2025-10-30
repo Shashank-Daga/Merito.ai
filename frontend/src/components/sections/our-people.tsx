@@ -17,7 +17,7 @@ export function OurPeople() {
   ]
 
   return (
-    <section className="bg-[#FFEFE4] py-16">
+    <section className="bg-secondary py-16">
       <div className="max-w-7xl mx-auto px-4">
         {/* Section Title */}
         <div className="text-center mb-12">
