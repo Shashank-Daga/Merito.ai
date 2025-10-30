@@ -55,7 +55,7 @@ const WhyChooseUs: React.FC = () => {
         {/* Comparison Table */}
         <div className="reveal-element grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Traditional Hiring Column */}
-          <div className="bg-white rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 p-6">
+          <div className="bg-secondary rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 p-6">
             <h3 className="text-xl font-semibold text-foreground mb-6 text-center">Traditional Hiring</h3>
             <div className="divide-y divide-gray-200">
               {comparisonData.map((item, index) => (
@@ -67,19 +67,19 @@ const WhyChooseUs: React.FC = () => {
           </div>
 
           {/* Merito Column */}
-          <div className="bg-[#B3D3D1] rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 p-6 border-2 border-[#00ADEF]">
-            <h3 className="text-xl font-semibold text-foreground mb-6 text-center"><span className="text-[#EC2229]">M</span>erito</h3>
+          <div className="bg-[#004250] rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 p-6 border-2 border-[#00ADEF]">
+            <h3 className="text-xl font-semibold text-white mb-6 text-center"><span className="text-[#EC2229]">M</span>erito</h3>
             <div className="divide-y divide-gray-200">
               {comparisonData.map((item, index) => (
                 <div key={index} className="py-4 text-center">
-                  <p className="text-black font-medium">{item.merito}</p>
+                  <p className="text-white font-medium">{item.merito}</p>
                 </div>
               ))}
             </div>
           </div>
 
           {/* In-House Hiring Column */}
-          <div className="bg-white rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 p-6">
+          <div className="bg-secondary rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 p-6">
             <h3 className="text-xl font-semibold text-foreground mb-6 text-center">In-House Hiring</h3>
             <div className="divide-y divide-gray-200">
               {comparisonData.map((item, index) => (

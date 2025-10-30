@@ -34,10 +34,10 @@ export default function HomePage() {
     <>
       <Hero onBookCall={handleBookCall} />
       <Metrics />
-      <TrustedCompanies />
       <TrustedHiringPartner />
       <Approach />
       <TalentSection />
+      <TrustedCompanies />
       <WhyChooseUs />
       <CTA onBookCall={handleBookCall} />
     </>

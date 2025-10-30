@@ -20,7 +20,7 @@ export function Metrics() {
     <section className="bg-secondary">
       <div className="mx-auto max-w-7xl px-4 py-12 md:py-16 text-center">
         <h2 className="reveal-element text-2xl md:text-3xl font-semibold text-balance text-[#121212]"><span className="text-[#EC2229]">Impact</span> in Numbers</h2>
-        <div className="reveal-element mt-8 grid gap-4 sm:grid-cols-2 md:grid-cols-4 text-white">
+        <div className="reveal-element mt-12 grid gap-4 sm:grid-cols-2 md:grid-cols-4 text-white">
           {METRICS.map((m) => (
             <CounterCard key={m.label} metric={m} />
           ))}
