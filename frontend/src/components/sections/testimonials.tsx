@@ -1,114 +1,104 @@
 "use client"
 
-import { motion } from "framer-motion"
-import { useRevealAnimation } from "@/hooks/useRevealAnimation"
+import { useState } from "react"
+import { ArrowLeft, ArrowRight } from "lucide-react"
 
 const DATA = [
   {
-    quote:
-      "We have worked with Merito for various roles across the levels and had a really good experience with them. They are a professional team, quick to act and incorporate our feedback to help us hire great candidates. There assessments helped us to ensure quality of hires.",
-    author: "Dhyanesh Shah",
+    image: "/placeholder-user.jpg",
+    name: "Dhyanesh Shah",
     position: "Co-founder",
     company: "Mosaic Wellness",
-    color: "red",
-    rotation: "-3deg",
+    quote:
+      "We have worked with Merito for various roles across the levels and had a really good experience with them. They are a professional team, quick to act and incorporate our feedback to help us hire great candidates. Their assessments helped us ensure quality hires.",
   },
   {
-    quote:
-      "I am really impressed with the way Merito team has helped us with our hiring. From understanding our hiring needs to identifying the RIGHT fit candidates they have taken focused efforts which helped us to meet our hiring needs in time bound manner.",
-    author: "Sameer Bhapkar",
+    image: "/placeholder-user.jpg",
+    name: "Sameer Bhapkar",
     position: "DGM Corp Development",
     company: "Shyam Steel",
-    color: "purple",
-    rotation: "2deg",
+    quote:
+      "I am really impressed with the way Merito team has helped us with our hiring. From understanding our hiring needs to identifying the RIGHT fit candidates, they took focused efforts which helped us meet our hiring goals on time.",
   },
   {
-    quote:
-      "As a part of our growth we were looking to build strong our D2C presence and hire few key roles for the same. Merito helped us to hire leadership roles across Finance, Operations and Marketing. The time to hire for all these roles were simply amazing.",
-    author: "Sneh Jain",
+    image: "/placeholder-user.jpg",
+    name: "Sneh Jain",
     position: "Co-founder",
     company: "The Bakers Dozen",
-    color: "blue",
-    rotation: "-2deg",
+    quote:
+      "As a part of our growth we were looking to build strong D2C presence and hire key roles. Merito helped us hire leadership roles across Finance, Operations and Marketing. The time-to-hire was simply amazing.",
   },
   {
-    quote:
-      "As a growth company we are always searching for great talent. We were looking to hire key roles in our Tech and HR teams and thats when we were introduced to Merito. The Merito team with their assessment-driven recruitment helped us to engage with RIGHT candidates and close these positions in just 2 weeks.",
-    author: "Darshan Teredesai",
+    image: "/placeholder-user.jpg",
+    name: "Darshan Teredesai",
     position: "Co-founder",
     company: "Olous App",
-    color: "purple",
-    rotation: "2deg",
+    quote:
+      "As a growth company, we are always searching for great talent. Merito helped us engage with the right candidates and close key tech and HR positions in just two weeks.",
   },
   {
-    quote:
-      "We loved how the leadership at Merito is aligned with our needs. The genuine intention and consistent follow up of the team has helped us with hiring.",
-    author: "Anuja Kishore",
-    position: "Cheif Corporate Development Officer",
+    image: "/placeholder-user.jpg",
+    name: "Anuja Kishore",
+    position: "Chief Corporate Development Officer",
     company: "Lighthouse",
-    color: "blue",
-    rotation: "-2deg",
+    quote:
+      "We loved how the leadership at Merito is aligned with our needs. The genuine intention and consistent follow-up of the team helped us hire efficiently.",
   },
 ]
 
-const duplicatedData = [...DATA, ...DATA]
-
 export function Testimonials() {
-  useRevealAnimation()
+  const [index, setIndex] = useState(0)
+  const next = () => setIndex((index + 1) % DATA.length)
+  const prev = () => setIndex((index - 1 + DATA.length) % DATA.length)
+
+  const t = DATA[index]
 
   return (
-    <section className="bg-secondary py-20 px-6 overflow-hidden">
-      <div className="max-w-6xl mx-auto text-center">
-        <h2 className="reveal-element text-4xl md:text-5xl font-semibold text-merito-deep mb-12">
-          Voices of <span className="text-[#EC2229]">Trust</span>
+    <section className="bg-secondary py-16 md:py-24">
+      <div className="max-w-5xl mx-auto px-4 text-center">
+        <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-10">
+          Client testimonials and success stories
         </h2>
 
-        {/* Scrollable container */}
-        <motion.div
-          className="flex gap-8 pb-10"
-          animate={{ x: ["0%", "-100%"] }}
-          transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-        >
-          {duplicatedData.map((t, i) => (
-            <motion.div
-              key={i}
-              whileHover={{ scale: 1.05 }}
-              className={`relative flex-shrink-0 snap-center bg-white rounded-2xl shadow-xl p-8 w-[320px] md:w-[360px] transition-transform duration-300`}
-              style={{ rotate: t.rotation }}
-            >
-              {/* Push pin icon */}
-              <div className="absolute -top-4 right-10">
-                {t.color === "red" && (
-                  <svg width="36" height="36" viewBox="0 0 24 24" fill="#EC2229">
-                    <path d="M9 4l6 6-2 2-6-6 2-2zm7.5 1.5L12 10l-2-2 4.5-4.5a2.5 2.5 0 113.5 3.5zM4 13l7 7v-3l3-3-7-7-3 3v3z" />
-                  </svg>
-                )}
-                {t.color === "blue" && (
-                  <svg width="36" height="36" viewBox="0 0 24 24" fill="#2563eb">
-                    <path d="M9 4l6 6-2 2-6-6 2-2zm7.5 1.5L12 10l-2-2 4.5-4.5a2.5 2.5 0 113.5 3.5zM4 13l7 7v-3l3-3-7-7-3 3v3z" />
-                  </svg>
-                )}
-                {t.color === "purple" && (
-                  <svg width="36" height="36" viewBox="0 0 24 24" fill="#8b5cf6">
-                    <path d="M9 4l6 6-2 2-6-6 2-2zm7.5 1.5L12 10l-2-2 4.5-4.5a2.5 2.5 0 113.5 3.5zM4 13l7 7v-3l3-3-7-7-3 3v3z" />
-                  </svg>
-                )}
-              </div>
+        <div className="bg-white rounded-2xl shadow-sm p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 justify-center">
+          {/* Profile Image */}
+          <div className="flex-shrink-0">
+            <img
+              src={t.image}
+              alt={t.name}
+              className="w-40 h-40 rounded-xl object-cover"
+            />
+          </div>
 
-              {/* Testimonial text */}
-              <blockquote className="text-base leading-relaxed text-gray-800 italic mb-6">
-                &ldquo;{t.quote}&rdquo;
-              </blockquote>
-              <div className="flex items-center justify-center gap-3">
-                <div className="text-left">
-                  <div className="font-semibold text-merito-deep text-sm">{t.author}</div>
-                  <div className="text-xs text-gray-600">{t.position}</div>
-                  <div className="text-xs text-gray-600">{t.company}</div>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
+          {/* Testimonial Content */}
+          <div className="text-left flex-1">
+            <h3 className="text-lg font-semibold text-gray-900">{t.name}</h3>
+            <p className="text-sm text-gray-500 mb-4">
+              {t.position}, {t.company}
+            </p>
+            <p className="text-lg text-gray-800 leading-relaxed mb-6">
+              {t.quote}
+            </p>
+
+            {/* Navigation Arrows */}
+            <div className="flex items-center gap-4">
+              <button
+                onClick={prev}
+                aria-label="Previous testimonial"
+                className="p-2 rounded-md bg-gray-900 text-white hover:bg-gray-800 transition"
+              >
+                <ArrowLeft className="w-5 h-5" />
+              </button>
+              <button
+                onClick={next}
+                aria-label="Next testimonial"
+                className="p-2 rounded-md bg-gray-900 text-white hover:bg-gray-800 transition"
+              >
+                <ArrowRight className="w-5 h-5" />
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   )
