@@ -9,7 +9,6 @@ const METRICS: Metric[] = [
   { label: "Specialists hired", value: 1000, suffix: "+" },
   { label: "Avg. time-to-hire (days)", value: 20 },
   { label: "Clients served", value: 50, suffix: "+" },
-  // { label: "Client satisfaction (NPS)", value: 74 },
   { label: "Hiring accuracy", value: 90, suffix: "%" },
 ]
 
@@ -19,10 +18,12 @@ export function Metrics() {
   return (
     <section className="bg-secondary">
       <div className="mx-auto max-w-7xl px-4 py-12 md:py-16 text-center">
-        <h2 className="reveal-element text-2xl md:text-3xl font-semibold text-balance text-[#121212]"><span className="text-[#EC2229]">Impact</span> in Numbers</h2>
+        <h2 className="reveal-element text-2xl md:text-3xl font-semibold text-balance text-[#121212]">
+          <span className="text-[#EC2229]">Impact</span> in Numbers
+        </h2>
         <div className="reveal-element mt-12 grid gap-4 sm:grid-cols-2 md:grid-cols-4 text-white">
-          {METRICS.map((m) => (
-            <CounterCard key={m.label} metric={m} />
+          {METRICS.map((m, index) => (
+            <CounterCard key={m.label} metric={m} index={index} />
           ))}
         </div>
       </div>
@@ -30,7 +31,7 @@ export function Metrics() {
   )
 }
 
-function CounterCard({ metric }: { metric: Metric }) {
+function CounterCard({ metric, index }: { metric: Metric; index: number }) {
   const ref = useRef<HTMLDivElement | null>(null)
   const [visible, setVisible] = useState(false)
   const [value, setValue] = useState(0)
@@ -38,17 +39,24 @@ function CounterCard({ metric }: { metric: Metric }) {
   useEffect(() => {
     const el = ref.current
     if (!el) return
-    const obs = new IntersectionObserver(
+
+    const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) setVisible(true)
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Add stagger delay here
+            const delay = index * 600 // 0.6s delay between each card
+            setTimeout(() => setVisible(true), delay)
+            observer.unobserve(entry.target)
+          }
         })
       },
-      { threshold: 0.3 },
+      { threshold: 0.3 }
     )
-    obs.observe(el)
-    return () => obs.disconnect()
-  }, [])
+
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [index])
 
   useEffect(() => {
     if (!visible) return
@@ -57,18 +65,24 @@ function CounterCard({ metric }: { metric: Metric }) {
     const from = 0
     const to = metric.value
     let raf = 0
+
     const tick = (now: number) => {
       const t = Math.min(1, (now - start) / duration)
       const eased = 1 - Math.pow(1 - t, 3)
       setValue(Math.round(from + (to - from) * eased))
       if (t < 1) raf = requestAnimationFrame(tick)
     }
+
     raf = requestAnimationFrame(tick)
     return () => cancelAnimationFrame(raf)
   }, [visible, metric.value, metric.duration])
 
   return (
-    <div ref={ref} className="rounded-xl border bg-[#004250] p-5">
+    <div
+      ref={ref}
+      className={`rounded-xl border bg-[#004250] p-5 transition-all duration-700 transform 
+        ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
+    >
       <div className="text-3xl font-semibold">
         {value}
         {metric.suffix || ""}

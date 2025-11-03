@@ -33,11 +33,11 @@ export default function HomePage() {
   return (
     <>
       <Hero onBookCall={handleBookCall} />
+      <TrustedCompanies />
       <Metrics />
       <TrustedHiringPartner />
       <Approach />
       <TalentSection />
-      <TrustedCompanies />
       <WhyChooseUs />
       <CTA onBookCall={handleBookCall} />
     </>

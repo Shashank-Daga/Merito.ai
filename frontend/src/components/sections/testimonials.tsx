@@ -5,7 +5,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react"
 
 const DATA = [
   {
-    image: "/placeholder-user.jpg",
+    image: "/Peoples/dhaynesh.jpg",
     name: "Dhyanesh Shah",
     position: "Co-founder",
     company: "Mosaic Wellness",
@@ -13,7 +13,7 @@ const DATA = [
       "We have worked with Merito for various roles across the levels and had a really good experience with them. They are a professional team, quick to act and incorporate our feedback to help us hire great candidates. Their assessments helped us ensure quality hires.",
   },
   {
-    image: "/placeholder-user.jpg",
+    image: "/Peoples/sameer.jpg",
     name: "Sameer Bhapkar",
     position: "DGM Corp Development",
     company: "Shyam Steel",
@@ -21,7 +21,7 @@ const DATA = [
       "I am really impressed with the way Merito team has helped us with our hiring. From understanding our hiring needs to identifying the RIGHT fit candidates, they took focused efforts which helped us meet our hiring goals on time.",
   },
   {
-    image: "/placeholder-user.jpg",
+    image: "/Peoples/sneh.jpg",
     name: "Sneh Jain",
     position: "Co-founder",
     company: "The Bakers Dozen",
@@ -29,7 +29,7 @@ const DATA = [
       "As a part of our growth we were looking to build strong D2C presence and hire key roles. Merito helped us hire leadership roles across Finance, Operations and Marketing. The time-to-hire was simply amazing.",
   },
   {
-    image: "/placeholder-user.jpg",
+    image: "/Peoples/darshan.jpg",
     name: "Darshan Teredesai",
     position: "Co-founder",
     company: "Olous App",
@@ -37,7 +37,7 @@ const DATA = [
       "As a growth company, we are always searching for great talent. Merito helped us engage with the right candidates and close key tech and HR positions in just two weeks.",
   },
   {
-    image: "/placeholder-user.jpg",
+    image: "/Peoples/anuja.jpg",
     name: "Anuja Kishore",
     position: "Chief Corporate Development Officer",
     company: "Lighthouse",
@@ -57,10 +57,22 @@ export function Testimonials() {
     <section className="bg-secondary py-16 md:py-24">
       <div className="max-w-5xl mx-auto px-4 text-center">
         <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-10">
-          Client testimonials and success stories
+          Client testimonials
         </h2>
 
         <div className="bg-white rounded-2xl shadow-sm p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 justify-center">
+
+
+          {/* Navigation Arrows */}
+          <div className="flex items-center gap-4">
+            <button
+              onClick={prev}
+              aria-label="Previous testimonial"
+              className="p-2 rounded-md bg-gray-900 text-white hover:bg-gray-800 transition"
+            >
+              <ArrowLeft className="w-5 h-5" />
+            </button>
+          </div>
           {/* Profile Image */}
           <div className="flex-shrink-0">
             <img
@@ -79,24 +91,16 @@ export function Testimonials() {
             <p className="text-lg text-gray-800 leading-relaxed mb-6">
               {t.quote}
             </p>
+          </div>
 
-            {/* Navigation Arrows */}
-            <div className="flex items-center gap-4">
-              <button
-                onClick={prev}
-                aria-label="Previous testimonial"
-                className="p-2 rounded-md bg-gray-900 text-white hover:bg-gray-800 transition"
-              >
-                <ArrowLeft className="w-5 h-5" />
-              </button>
-              <button
-                onClick={next}
-                aria-label="Next testimonial"
-                className="p-2 rounded-md bg-gray-900 text-white hover:bg-gray-800 transition"
-              >
-                <ArrowRight className="w-5 h-5" />
-              </button>
-            </div>
+          <div className="flex items-center gap-4">
+            <button
+              onClick={next}
+              aria-label="Next testimonial"
+              className="p-2 rounded-md bg-gray-900 text-white hover:bg-gray-800 transition"
+            >
+              <ArrowRight className="w-5 h-5" />
+            </button>
           </div>
         </div>
       </div>
