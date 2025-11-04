@@ -1,6 +1,7 @@
 "use client"
 
 import Image from "next/image"
+import Link from "next/link"
 import { useRevealAnimation } from "@/hooks/useRevealAnimation"
 
 export function Podcasts() {
@@ -10,17 +11,26 @@ export function Podcasts() {
     {
       id: 1,
       title: "Acquired Intelliegence for Talent Problems",
-      image: "/placeholder.jpg"
+      image: "/Insights/Podcasts/1.webp",
+      link: "https://open.spotify.com/episode/1mKswVgdGkbh77IoPtYlcq?go=1&sp_cid=2e073532847d39d3b16ff885f12a933d&utm_source=embed_player_p&utm_medium=desktop&si=a9c25f900a6745fa&nd=1&dlsi=fcd06aa6228b42d4"
     },
     {
       id: 2,
       title: "Think of Recuritment as Sales",
-      image: "/placeholder.jpg"
+      image: "/Insights/Podcasts/2.webp",
+      link: "https://open.spotify.com/episode/3ORlXjmVcNJ6DIApUgyTva?go=1&sp_cid=2e073532847d39d3b16ff885f12a933d&utm_source=embed_player_p&utm_medium=desktop&si=a628a84a79ed41cb&nd=1&dlsi=989fdb8c1047408f"
     },
     {
       id: 3,
       title: "Do you have ICE in your hiring?",
-      image: "/placeholder.jpg"
+      image: "/Insights/Podcasts/3.webp",
+      link: "https://open.spotify.com/episode/204wN9LEAxdE9tvmWz69ne?go=1&sp_cid=2e073532847d39d3b16ff885f12a933d&utm_source=embed_player_p&utm_medium=desktop&si=4493fa0553db4867&nd=1&dlsi=aa1369e99a8840e5"
+    },
+    {
+      id: 4,
+      title: "Candidate Experience and What Companies Can Do to Ensure It?",
+      image: "/Insights/Podcasts/4.webp",
+      link: "https://open.spotify.com/episode/1mKswVgdGkbh77IoPtYlcq?go=1&sp_cid=2e073532847d39d3b16ff885f12a933d&utm_source=embed_player_p&utm_medium=desktop&si=a9c25f900a6745fa&nd=1&dlsi=e6891225a7d94cf7"
     }
   ]
 
@@ -43,21 +53,19 @@ export function Podcasts() {
                   fill
                   className="object-cover"
                 />
-                <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
-                  <button className="w-16 h-16 bg-accent-foreground rounded-full flex items-center justify-center hover:bg-accent transition-colors">
-                    <svg className="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
-                    </svg>
-                  </button>
-                </div>
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-foreground mb-3 line-clamp-2">
                   {podcast.title}
                 </h3>
-                <button className="mt-4 text-[#263238] font-medium hover:text-accent transition-colors">
+                <Link
+                  href={podcast.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 text-[#263238] font-medium hover:text-accent transition-colors inline-block"
+                >
                   Listen Now →
-                </button>
+                </Link>
               </div>
             </article>
           ))}
