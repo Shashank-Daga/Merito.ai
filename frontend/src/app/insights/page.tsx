@@ -9,7 +9,7 @@ export default function InsightsPage() {
   useRevealAnimation({ stagger: true })
 
   return (
-    <>
+    <div className="mx-auto max-w-7xl px-8">
       <section className="py-16 px-4 md:px-8 bg-secondary">
         <div className="mx-auto max-w-7xl text-center text-foreground">
           <h1 className="reveal-element text-5xl md:text-6xl font-bold mb-4 tracking-tight">
@@ -26,6 +26,6 @@ export default function InsightsPage() {
       <Articles />
       <Podcasts />
       <CTA />
-    </>
+    </div>
   )
 }

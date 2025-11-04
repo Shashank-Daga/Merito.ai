@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import { OurPeople } from "./our-people"
 
 export function AboutIntro() {
   // const [activeValue, setActiveValue] = useState<string | null>(null)
@@ -207,6 +208,9 @@ export function AboutIntro() {
           </div>
         </div>
       </section>
+
+      {/* Our People */}
+      <OurPeople />
     </>
   )
 }

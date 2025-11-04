@@ -33,13 +33,15 @@ export default function HomePage() {
   return (
     <>
       <Hero onBookCall={handleBookCall} />
-      <TrustedCompanies />
-      <Metrics />
-      <TrustedHiringPartner />
-      <Approach />
-      <TalentSection />
-      <WhyChooseUs />
-      <CTA onBookCall={handleBookCall} />
+      <div className="mx-auto max-w-7xl px-8">
+        <TrustedCompanies />
+        <Metrics />
+        <TrustedHiringPartner />
+        <Approach />
+        <TalentSection />
+        <WhyChooseUs />
+        <CTA onBookCall={handleBookCall} />
+      </div>
     </>
   )
 }

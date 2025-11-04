@@ -7,8 +7,8 @@ export function OurPeople() {
   useRevealAnimation({ stagger: true })
 
   const teamMembers = [
-    { name: "John Doe", position: "Founder", image: "/placeholder-user.jpg" },
-    { name: "Jane Smith", position: "Head HR", image: "/placeholder-user.jpg" },
+    { name: "Rushikesh Humne", position: "Founder", image: "/placeholder-user.jpg" },
+    { name: "Abhi Karn", position: "Vice President", image: "/Team/abhi.png" },
     { name: "Alice Johnson", position: "HR Manager", image: "/placeholder-user.jpg" },
     { name: "Bob Brown", position: "HR Specialist", image: "/placeholder-user.jpg" },
     { name: "Charlie Davis", position: "HR Coordinator", image: "/placeholder-user.jpg" },
@@ -34,9 +34,9 @@ export function OurPeople() {
           {teamMembers.map((member, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl shadow-lg overflow-hidden w-full max-w-xs text-center transition-transform transform hover:scale-105"
+              className="bg-white rounded-2xl shadow-lg overflow-hidden w-full max-w-xs text-center transition-transform transform hover:scale-105 border-5 border-gray-200"
             >
-              <div className="bg-gray-100 p-6 relative h-80">
+              <div className="bg-gray-100 p-4 relative h-64">
                 <Image
                   src={member.image}
                   alt={`${member.name} - ${member.position}`}
@@ -44,9 +44,9 @@ export function OurPeople() {
                   className="object-cover rounded-xl"
                 />
               </div>
-              <div className="py-4">
-                <h3 className="text-lg font-semibold text-gray-900">{member.name}</h3>
-                <p className="text-sm text-red-600 font-medium mt-1">{member.position}</p>
+              <div className="py-3">
+                <h3 className="text-base font-semibold text-gray-900">{member.name}</h3>
+                <p className="text-xs text-red-600 font-medium mt-1">{member.position}</p>
               </div>
             </div>
           ))}

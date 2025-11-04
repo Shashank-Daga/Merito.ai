@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Check } from "lucide-react"
+import { useRevealAnimation } from "@/hooks/useRevealAnimation"
 
 const comparisonData = [
   {
@@ -55,13 +55,13 @@ export default function WhyChooseUs() {
     <section className="bg-secondary py-16 px-4 md:px-8">
       <div className="mx-auto max-w-6xl">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 text-balance">Why Choose Us</h2>
-          <p className="text-lg text-foreground/70 text-balance">
+          <h2 className="reveal-element text-4xl md:text-5xl font-bold text-foreground mb-4 text-balance">Why Choose Us</h2>
+          <p className="reveal-element text-lg text-foreground/70 text-balance">
             See how we outperform traditional hiring and in-house teams across every dimension
           </p>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-3 mb-8">
+        <div className="reveal-element flex flex-wrap justify-center gap-3 mb-8">
           <button
             onClick={() => setActiveTab("traditional")}
             className={`px-6 py-2 rounded-lg font-medium transition-all duration-300 ${activeTab === "traditional"
@@ -95,7 +95,7 @@ export default function WhyChooseUs() {
           {comparisonData.map((item, index) => (
             <div
               key={index}
-              className="group rounded-lg border border-border p-5 hover:border-primary/60 hover:shadow-md transition-all duration-300 cursor-pointer"
+              className="reveal-element group rounded-lg border border-border p-5 hover:border-primary/60 hover:shadow-md transition-all duration-300 cursor-pointer"
             >
               <div className="flex items-start gap-4 md:gap-6">
                 {/* Category Label */}

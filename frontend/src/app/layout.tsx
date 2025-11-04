@@ -25,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="antialiased" suppressHydrationWarning={true}>
-      <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`} suppressHydrationWarning={true}>
+      <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} bg-secondary`} suppressHydrationWarning={true}>
         {/* Calendly script */}
         <Script
           src="https://assets.calendly.com/assets/external/widget.js"
