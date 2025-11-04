@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useEffect, useState, useRef } from "react"
 import Image from "next/image"
 import { useRevealAnimation } from "@/hooks/useRevealAnimation"
 
@@ -85,12 +85,16 @@ export function OurImpact() {
         }
       }
     }
-  }, [])
+  }, [allIndustries])
 
   return (
     <section className="py-16 px-4 md:px-8 bg-secondary">
       <div className="mx-auto max-w-7xl">
-        <h2 className="reveal-element text-4xl md:text-5xl font-semibold text-center text-foreground mb-12">
+        <h2
+          className="reveal-element text-4xl md:text-5xl font-semibold text-center text-foreground mb-12"
+          tabIndex={0}
+          aria-label="Our Impact"
+        >
           Our Impact
         </h2>
 
@@ -99,28 +103,18 @@ export function OurImpact() {
           <div className="md:col-span-1">
             <h3 className="text-2xl font-semibold text-[#121212] mb-6">Industries</h3>
             <div className="space-y-3">
-              {allIndustries.map((type) => {
+              {allIndustries.map((type, index) => {
                 const hash = type.toLowerCase().replace(/[^a-z0-9]+/g, "-")
                 return (
-                  <button
-                    id={hash}
+                  <AnimatedIndustryButton
                     key={type}
+                    type={type}
+                    hash={hash}
+                    count={clientsByType[type as keyof typeof clientsByType].length}
+                    isSelected={selectedType === type}
                     onClick={() => setSelectedType(type)}
-                    className={`w-full text-left px-6 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 ${
-                      selectedType === type
-                        ? "bg-[#004250] text-white shadow-lg"
-                        : "bg-gradient-to-r from-gray-50 to-gray-100 text-gray-700 hover:from-gray-100 hover:to-gray-200 hover:shadow-md"
-                    }`}
-                  >
-                    <span className="font-medium">{type}</span>
-                    <span
-                      className={`ml-2 text-sm ${
-                        selectedType === type ? "text-white/80" : "text-gray-500"
-                      }`}
-                    >
-                      ({clientsByType[type as keyof typeof clientsByType].length})
-                    </span>
-                  </button>
+                    index={index}
+                  />
                 )
               })}
             </div>
@@ -130,31 +124,18 @@ export function OurImpact() {
           <div className="md:col-span-2">
             <h3
               id={selectedType.toLowerCase().replace(/[^a-z0-9]+/g, "-")}
-              className="text-2xl font-semibold text-[#121212] mb-6"
+              className="text-2xl font-semibold text-[#121212] mb-6 reveal-element"
             >
               {selectedType} Clients
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {clientsByType[selectedType as keyof typeof clientsByType].map(
                 (client, index) => (
-                  <div
+                  <AnimatedClientLogo
                     key={index}
-                    className="relative"
-                    style={{
-                      padding: "20px",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      height: "100px",
-                    }}
-                  >
-                    <Image
-                      src={client.logo}
-                      alt={`${client.name} logo`}
-                      fill
-                      className="rounded object-contain p-4"
-                    />
-                  </div>
+                    client={client}
+                    index={index}
+                  />
                 )
               )}
             </div>
@@ -162,5 +143,110 @@ export function OurImpact() {
         </div>
       </div>
     </section>
+  )
+}
+
+function AnimatedIndustryButton({
+  type,
+  hash,
+  count,
+  isSelected,
+  onClick,
+  index,
+}: {
+  type: string
+  hash: string
+  count: number
+  isSelected: boolean
+  onClick: () => void
+  index: number
+}) {
+  const ref = useRef<HTMLButtonElement | null>(null)
+  const [visible, setVisible] = useState(false)
+
+  useEffect(() => {
+    const el = ref.current
+    if (!el) return
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // stagger based on index
+            setTimeout(() => {
+              setVisible(true)
+            }, index * 150)
+            observer.unobserve(entry.target)
+          }
+        })
+      },
+      { threshold: 0.3 }
+    )
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [index])
+
+  return (
+    <button
+      id={hash}
+      ref={ref}
+      onClick={onClick}
+      className={`w-full text-left px-6 py-4 rounded-xl transition-all duration-300 transform ${
+        isSelected
+          ? "bg-[#004250] text-white shadow-lg"
+          : "bg-gradient-to-r from-gray-50 to-gray-100 text-gray-700 hover:from-gray-100 hover:to-gray-200 hover:shadow-md"
+      } ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+    >
+      <span className="font-medium">{type}</span>
+      <span className={`ml-2 text-sm ${isSelected ? "text-white/80" : "text-gray-500"}`}>
+        ({count})
+      </span>
+    </button>
+  )
+}
+
+function AnimatedClientLogo({
+  client,
+  index,
+}: {
+  client: { name: string; logo: string }
+  index: number
+}) {
+  const ref = useRef<HTMLDivElement | null>(null)
+  const [visible, setVisible] = useState(false)
+
+  useEffect(() => {
+    const el = ref.current
+    if (!el) return
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => {
+              setVisible(true)
+            }, index * 100)
+            observer.unobserve(entry.target)
+          }
+        })
+      },
+      { threshold: 0.3 }
+    )
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [index])
+
+  return (
+    <div
+      ref={ref}
+      className={`relative p-4 flex justify-center items-center h-24 rounded transition-all duration-500 transform ${
+        visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+      }`}
+    >
+      <Image
+        src={client.logo}
+        alt={`${client.name} logo`}
+        fill
+        className="rounded object-contain"
+      />
+    </div>
   )
 }

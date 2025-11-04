@@ -2,10 +2,13 @@
 
 import Image from "next/image"
 import Link from "next/link"
+import { useState } from "react"
 import { useRevealAnimation } from "@/hooks/useRevealAnimation"
 
 export function Podcasts() {
   useRevealAnimation({ stagger: true })
+
+  const [visibleCount, setVisibleCount] = useState(3)
 
   const podcasts = [
     {
@@ -41,7 +44,7 @@ export function Podcasts() {
           Featured Podcasts
         </h2>
         <div className="reveal-element grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {podcasts.map((podcast) => (
+          {podcasts.slice(0, visibleCount).map((podcast) => (
             <article
               key={podcast.id}
               className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-200 overflow-hidden"
@@ -70,6 +73,16 @@ export function Podcasts() {
             </article>
           ))}
         </div>
+        {visibleCount < podcasts.length && (
+          <div className="text-center mt-8">
+            <button
+              onClick={() => setVisibleCount(prev => prev + 3)}
+              className="bg-[#263238] text-white px-6 py-3 rounded-lg hover:bg-[#1a252f] transition-colors"
+            >
+              Load More
+            </button>
+          </div>
+        )}
       </div>
     </section>
   )

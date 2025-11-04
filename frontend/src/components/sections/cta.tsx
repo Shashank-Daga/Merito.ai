@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 import { useRevealAnimation } from "@/hooks/useRevealAnimation"
 
 interface CTAProps {
-  onBookCall?: () => void
+  onBookCall: () => void
 }
 
 export function CTA({ onBookCall }: CTAProps) {
