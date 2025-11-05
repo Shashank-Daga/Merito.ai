@@ -13,7 +13,7 @@ export function CTA() {
           Ready to Transform Your Hiring?
         </h2>
         <p className="text-lg md:text-xl mb-8 opacity-90">
-          Let's discuss how we can help you find the perfect talent for your organization.
+          Let&apos;s discuss how we can help you find the perfect talent for your organization.
         </p>
         <button
           onClick={handleBookCall}
