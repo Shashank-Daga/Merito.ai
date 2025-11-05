@@ -1,31 +1,26 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
-import { useRevealAnimation } from "@/hooks/useRevealAnimation"
-
-interface CTAProps {
-  onBookCall: () => void
-}
-
-export function CTA({ onBookCall }: CTAProps) {
-  useRevealAnimation({ stagger: true })
+export function CTA() {
+  const handleBookCall = () => {
+    const url = process.env.NEXT_PUBLIC_CALENDLY_URL || "https://calendly.com/merito"
+    window.open(url, "_blank")
+  }
 
   return (
-    <section className="border-t bg-secondary">
-      <div className="mx-auto max-w-7xl px-4 py-14 md:py-20">
-        <div className="reveal-element rounded-2xl border p-8 md:p-12 bg-white">
-          <div className="grid items-center gap-6 md:grid-cols-3">
-            <div className="md:col-span-2 text-black">
-              <h2 className="text-2xl md:text-3xl font-semibold text-balance ">Consult Our Recruitment Expert</h2>
-              <p className="mt-2">Get in touch with our team for your professionalized recruitment plan and hire highly qualified candidates.</p>
-            </div>
-            <div className="md:text-right">
-              <Button size="lg" onClick={onBookCall}>
-                Book a Discovery Call
-              </Button>
-            </div>
-          </div>
-        </div>
+    <section className="py-16 px-4 md:px-8 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+      <div className="mx-auto max-w-4xl text-center">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          Ready to Transform Your Hiring?
+        </h2>
+        <p className="text-lg md:text-xl mb-8 opacity-90">
+          Let's discuss how we can help you find the perfect talent for your organization.
+        </p>
+        <button
+          onClick={handleBookCall}
+          className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 shadow-lg"
+        >
+          Book a Call
+        </button>
       </div>
     </section>
   )
