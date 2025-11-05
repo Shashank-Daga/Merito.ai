@@ -40,7 +40,7 @@ export default function HomePage() {
         <Approach />
         <TalentSection />
         <WhyChooseUs />
-        <CTA onBookCall={handleBookCall} />
+        <CTA />
       </div>
     </>
   )
