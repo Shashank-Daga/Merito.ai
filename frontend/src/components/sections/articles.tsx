@@ -1,10 +1,10 @@
+// src/components/sections/articles.tsx  ← NO "use client"
 import Image from "next/image"
 import Link from "next/link"
 
 interface ArticleMetadata {
   id: string
   title: string
-  excerpt: string
   image: string
   category?: string
 }
@@ -16,7 +16,7 @@ export function Articles({ articles }: { articles: ArticleMetadata[] }) {
         <h2 className="text-3xl md:text-4xl font-semibold text-center text-foreground mb-12">
           Latest Articles
         </h2>
-        
+
         {articles.length === 0 ? (
           <div className="text-center text-gray-500 py-12">
             <p className="text-xl">No articles available yet.</p>
@@ -39,20 +39,20 @@ export function Articles({ articles }: { articles: ArticleMetadata[] }) {
                     />
                   </div>
                 </Link>
-                
+
                 <div className="p-6 flex flex-col flex-grow">
                   {article.category && (
                     <span className="text-xs font-medium text-accent-foreground bg-accent px-2 py-1 rounded-full w-fit mb-3">
                       {article.category}
                     </span>
                   )}
-                  
+
                   <Link href={`/insights/${article.id}`}>
                     <h3 className="text-xl font-semibold text-foreground mb-3 line-clamp-2 hover:text-accent transition-colors">
                       {article.title}
                     </h3>
                   </Link>
-                  
+
                   <Link
                     href={`/insights/${article.id}`}
                     className="mt-4 text-[#263238] dark:text-accent font-medium hover:text-accent transition-colors inline-block"

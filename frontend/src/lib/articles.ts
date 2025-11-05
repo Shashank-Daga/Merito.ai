@@ -5,8 +5,8 @@ import matter from 'gray-matter';
 export interface Article {
   id: string;
   title: string;
-  excerpt: string;
   image: string;
+  date?: string;
   category?: string;
   content: string;
 }
@@ -22,22 +22,22 @@ export function getAllArticles(): Article[] {
 
   // Get all MDX files
   const fileNames = fs.readdirSync(articlesDirectory);
-  
+
   const articles = fileNames
     .filter(fileName => fileName.endsWith('.mdx'))
     .map(fileName => {
       const id = fileName.replace(/\.mdx$/, '');
       const fullPath = path.join(articlesDirectory, fileName);
       const fileContents = fs.readFileSync(fullPath, 'utf8');
-      
+
       // Parse frontmatter
       const { data, content } = matter(fileContents);
-      
+
       return {
         id,
         title: data.title || 'Untitled',
-        excerpt: data.excerpt || '',
         image: data.image || '/Insights/Articles/default.png',
+        date: data.date,
         category: data.category,
         content,
       };
@@ -49,19 +49,19 @@ export function getAllArticles(): Article[] {
 export function getArticleById(id: string): Article | null {
   try {
     const fullPath = path.join(articlesDirectory, `${id}.mdx`);
-    
+
     if (!fs.existsSync(fullPath)) {
       return null;
     }
-    
+
     const fileContents = fs.readFileSync(fullPath, 'utf8');
     const { data, content } = matter(fileContents);
-    
+
     return {
       id,
       title: data.title || 'Untitled',
-      excerpt: data.excerpt || '',
       image: data.image || '/Insights/Articles/default.png',
+      date: data.date,
       category: data.category,
       content,
     };
