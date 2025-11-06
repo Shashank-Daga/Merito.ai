@@ -19,8 +19,10 @@ const nonTechRoles = [
   "Key Account Manager", "SEO Manager", "Head Finance", "SEM Head", "Category Manager / Head",
 ]
 
+type TabType = "all" | "tech" | "nontech"
+
 export default function TalentPage() {
-  const [activeTab, setActiveTab] = useState<"tech" | "nontech" | "all">("all")
+  const [activeTab, setActiveTab] = useState<TabType>("all")
 
   const handleBookCall = () => {
     try {
@@ -70,10 +72,10 @@ export default function TalentPage() {
 
         {/* Tabs */}
         <div className="flex justify-center gap-3 mb-12">
-          {["all", "tech", "nontech"].map((tab) => (
+          {(["all", "tech", "nontech"] as TabType[]).map((tab) => (
             <button
               key={tab}
-              onClick={() => setActiveTab(tab as any)}
+              onClick={() => setActiveTab(tab)}
               className={`px-5 py-2 rounded-full font-medium transition-all duration-300 ${
                 activeTab === tab
                   ? "bg-[#004250] text-white shadow-md"
@@ -112,7 +114,7 @@ export default function TalentPage() {
             ))}
           </AnimatePresence>
 
-          {/* "And many more" tag */}
+          {/* “And many more” tag */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
