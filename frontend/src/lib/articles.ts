@@ -41,6 +41,11 @@ export function getAllArticles(): Article[] {
         category: data.category,
         content,
       };
+    })
+    .sort((a, b) => {
+      const aNum = parseInt(a.id, 10);
+      const bNum = parseInt(b.id, 10);
+      return aNum - bNum;
     });
 
   return articles;
