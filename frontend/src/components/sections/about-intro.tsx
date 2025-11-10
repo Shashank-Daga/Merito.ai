@@ -36,10 +36,6 @@ export function AboutIntro() {
                   title: "Merito.ai Era",
                   text: "We realized the need for leveraging technology to transform people functions and that's how Merito.ai was born. We support organizations in the growth phase by streamlining their recruitment, improving employee engagement, skill mapping, and performance management.",
                 },
-                {
-                  title: "Hub Platform",
-                  text: "Under our Hub platform, we help educational institutions train their students for entrepreneurship and employment. Our programs such as C2C and EDP have helped thousands of students find the right job.",
-                },
               ].map((item, idx) => (
                 <StoryCard key={idx} title={item.title} text={item.text} index={idx} />
               ))}

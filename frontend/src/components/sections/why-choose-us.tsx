@@ -106,7 +106,7 @@ export default function WhyChooseUs() {
                 </div>
 
                 {/* Comparison View */}
-                <div className="flex-1 grid md:grid-cols-3 gap-4">
+                <div className="text-center flex-1 grid md:grid-cols-3 gap-4">
                   {/* Traditional */}
                   <div
                     className={`p-3 rounded-lg transition-all duration-300 ${activeTab === "traditional"
