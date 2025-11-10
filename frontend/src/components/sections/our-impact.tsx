@@ -45,7 +45,7 @@ export function OurImpact() {
     ],
     "Technology & IT": [
       { name: "Cuepilot AI", logo: "/logos/Tech & IT/cuepilot.png" },
-      { name: "DQ", logo: "/logos/Tech & IT/" },
+      { name: "DQ", logo: "/logos/Tech & IT/DQ.png" },
       { name: "Dynamind", logo: "/logos/Tech & IT/dynamind.svg" },
       { name: "Exxat", logo: "/logos/Tech & IT/Exxat.jpeg" },
       { name: "GTT", logo: "/logos/Tech & IT/GTT.png" },

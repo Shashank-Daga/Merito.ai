@@ -65,7 +65,7 @@ export default function WhyChooseUs() {
           <button
             onClick={() => setActiveTab("traditional")}
             className={`px-6 py-2 rounded-lg font-medium transition-all duration-300 ${activeTab === "traditional"
-                ? "bg-destructive text-destructive-foreground shadow-md scale-105"
+                ? "bg-primary text-primary-foreground shadow-md scale-105"
                 : "bg-muted text-foreground hover:bg-muted/80"
               }`}
           >
@@ -74,7 +74,7 @@ export default function WhyChooseUs() {
           <button
             onClick={() => setActiveTab("merito")}
             className={`px-6 py-2 rounded-lg font-medium transition-all duration-300 ${activeTab === "merito"
-                ? "bg-primary text-primary-foreground shadow-md scale-105"
+                ? "bg-destructive text-destructive-foreground shadow-md scale-105"
                 : "bg-muted text-foreground hover:bg-muted/80"
               }`}
           >
@@ -83,7 +83,7 @@ export default function WhyChooseUs() {
           <button
             onClick={() => setActiveTab("inHouse")}
             className={`px-6 py-2 rounded-lg font-medium transition-all duration-300 ${activeTab === "inHouse"
-                ? "bg-accent text-accent-foreground shadow-md scale-105"
+                ? "bg-primary text-primary-foreground shadow-md scale-105"
                 : "bg-muted text-foreground hover:bg-muted/80"
               }`}
           >
@@ -110,7 +110,7 @@ export default function WhyChooseUs() {
                   {/* Traditional */}
                   <div
                     className={`p-3 rounded-lg transition-all duration-300 ${activeTab === "traditional"
-                        ? "bg-destructive/10 border border-destructive/30"
+                        ? "bg-primary/15 border border-primary/50"
                         : "bg-muted/50 opacity-70 group-hover:opacity-90"
                       }`}
                   >
@@ -120,7 +120,7 @@ export default function WhyChooseUs() {
                   {/* Merito */}
                   <div
                     className={`p-3 rounded-lg transition-all duration-300 ${activeTab === "merito"
-                        ? "bg-primary/15 border border-primary/50"
+                        ? "bg-destructive/10 border border-destructive/30"
                         : "bg-muted/50 opacity-70 group-hover:opacity-90"
                       }`}
                   >
@@ -130,7 +130,7 @@ export default function WhyChooseUs() {
                   {/* In-House */}
                   <div
                     className={`p-3 rounded-lg transition-all duration-300 ${activeTab === "inHouse"
-                        ? "bg-accent/15 border border-accent/50"
+                        ? "bg-primary/15 border border-primary/50"
                         : "bg-muted/50 opacity-70 group-hover:opacity-90"
                       }`}
                   >
