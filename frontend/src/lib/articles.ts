@@ -79,5 +79,5 @@ export function getArticleById(id: string): Article | null {
 // Helper to get articles without content (lighter for client components)
 export function getAllArticlesMetadata(): Omit<Article, 'content'>[] {
   const articles = getAllArticles();
-  return articles.map(({ content, ...metadata }) => metadata);
+  return articles.map(({ content: _, ...metadata }) => metadata);
 }

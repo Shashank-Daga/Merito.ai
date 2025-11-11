@@ -112,6 +112,8 @@ export default function ApplyPage() {
                 type="text"
                 value={formData.fullName}
                 onChange={(e) => handleInputChange("fullName", e.target.value)}
+                placeholder="Shashank Daga"
+                className="placeholder:text-gray-500"
                 required
               />
             </div>
@@ -126,6 +128,8 @@ export default function ApplyPage() {
                 type="tel"
                 value={formData.contactNo}
                 onChange={(e) => handleInputChange("contactNo", e.target.value)}
+                placeholder="1234567890"
+                className="placeholder:text-gray-500"
                 required
               />
             </div>
@@ -140,6 +144,8 @@ export default function ApplyPage() {
                 type="email"
                 value={formData.email}
                 onChange={(e) => handleInputChange("email", e.target.value)}
+                placeholder="example@gmail.com"
+                className="placeholder:text-gray-500"
                 required
               />
             </div>
@@ -154,6 +160,8 @@ export default function ApplyPage() {
                 type="text"
                 value={formData.position}
                 onChange={(e) => handleInputChange("position", e.target.value)}
+                placeholder="Software Engineer"
+                className="placeholder:text-gray-500"
                 required
               />
             </div>
@@ -190,6 +198,8 @@ export default function ApplyPage() {
                 type="text"
                 value={formData.currentLocation}
                 onChange={(e) => handleInputChange("currentLocation", e.target.value)}
+                placeholder="Pune"
+                className="placeholder:text-gray-500"
                 required
               />
             </div>
@@ -204,6 +214,8 @@ export default function ApplyPage() {
                 type="text"
                 value={formData.currentCtc}
                 onChange={(e) => handleInputChange("currentCtc", e.target.value)}
+                placeholder="25 LPA"
+                className="placeholder:text-gray-500"
                 required
               />
             </div>
@@ -218,6 +230,8 @@ export default function ApplyPage() {
                 type="text"
                 value={formData.expectedCtc}
                 onChange={(e) => handleInputChange("expectedCtc", e.target.value)}
+                placeholder="30 LPA"
+                className="placeholder:text-gray-500"
                 required
               />
             </div>
@@ -254,6 +268,7 @@ export default function ApplyPage() {
                 value={formData.resumeLink || ""}
                 onChange={(e) => handleInputChange("resumeLink", e.target.value)}
                 placeholder="https://drive.google.com/..."
+                className="placeholder:text-gray-500"
                 required
               />
             </div>

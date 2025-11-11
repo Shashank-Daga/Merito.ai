@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { ArrowLeft, ArrowRight } from "lucide-react"
+import Image from "next/image"
 
 const DATA = [
   {
@@ -75,9 +76,11 @@ export function Testimonials() {
           </div>
           {/* Profile Image */}
           <div className="flex-shrink-0">
-            <img
+            <Image
               src={t.image}
               alt={t.name}
+              width={160}
+              height={160}
               className="w-40 h-40 rounded-xl object-cover"
             />
           </div>

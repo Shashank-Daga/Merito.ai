@@ -220,20 +220,11 @@ function StoryCard({
   text: string
   index: number
 }) {
-  const [isHovered, setIsHovered] = useState(false)
-
   return (
     <div
       className="group relative overflow-hidden rounded-xl border-2 border-border/40 bg-card p-6 transition-all duration-300 hover:border-[#EC2229]/50 hover:shadow-lg cursor-pointer"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
     >
-      <div
-        className={`absolute left-0 top-0 h-full w-1 bg-[#EC2229] transition-all duration-500 ${
-          isHovered ? "scale-y-100" : "scale-y-0"
-        }`}
-        style={{ transformOrigin: "top" }}
-      ></div>
+      <div className="absolute left-0 top-0 h-full w-1 bg-[#EC2229] scale-y-0 group-hover:scale-y-100 transition-all duration-500" style={{ transformOrigin: "top" }}></div>
 
       <div className="flex gap-4">
         <div className="flex-shrink-0">

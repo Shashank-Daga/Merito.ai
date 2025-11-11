@@ -27,7 +27,7 @@ export default function TalentPage() {
   const handleBookCall = () => {
     try {
       window.open(process.env.NEXT_PUBLIC_CALENDLY_URL, "_blank")
-    } catch (error) {
+    } catch {
       alert("Failed to open scheduling page. Please contact us directly.")
     }
   }

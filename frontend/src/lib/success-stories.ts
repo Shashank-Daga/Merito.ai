@@ -67,5 +67,5 @@ export function getSuccessStoryById(id: string): SuccessStory | null {
 // Helper to get stories without content (lighter for client components)
 export function getAllSuccessStoriesMetadata(): Omit<SuccessStory, 'content'>[] {
   const stories = getAllSuccessStories();
-  return stories.map(({ content, ...metadata }) => metadata);
+  return stories.map(({ content: _, ...metadata }) => metadata);
 }

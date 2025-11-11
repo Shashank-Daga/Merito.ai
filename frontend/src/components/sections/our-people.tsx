@@ -9,11 +9,11 @@ export function OurPeople() {
   const teamMembers = [
     { name: "Rushikesh Humne", position: "Founder", image: "/placeholder-user.jpg" },
     { name: "Abhi Karn", position: "Vice President", image: "/Team/abhi.png" },
-    { name: "Alice Johnson", position: "HR Manager", image: "/placeholder-user.jpg" },
-    { name: "Bob Brown", position: "HR Specialist", image: "/placeholder-user.jpg" },
-    { name: "Charlie Davis", position: "HR Coordinator", image: "/placeholder-user.jpg" },
-    { name: "Diana Evans", position: "HR Analyst", image: "/placeholder-user.jpg" },
-    { name: "Eve Foster", position: "HR Assistant", image: "/placeholder-user.jpg" },
+    { name: "Nabamita", position: "HR Manager", image: "/placeholder-user.jpg" },
+    { name: "Ayushi", position: "HR Specialist", image: "/placeholder-user.jpg" },
+    { name: "Anish", position: "HR Coordinator", image: "/placeholder-user.jpg" },
+    { name: "Sharanya", position: "HR Analyst", image: "/placeholder-user.jpg" },
+    { name: "Neha", position: "HR Assistant", image: "/placeholder-user.jpg" },
   ]
 
   return (

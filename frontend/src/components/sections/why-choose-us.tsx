@@ -1,7 +1,6 @@
 "use client"
 
 import { useState } from "react"
-import { useRevealAnimation } from "@/hooks/useRevealAnimation"
 
 const comparisonData = [
   {
