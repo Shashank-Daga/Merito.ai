@@ -53,14 +53,6 @@ export default async function SuccessStoryPage({ params }: PageProps) {
             priority
           />
         </div>
-        
-        <div className="mb-6">
-          {story.category && (
-            <span className="text-sm font-medium text-accent-foreground bg-accent px-3 py-1 rounded-full">
-              {story.category}
-            </span>
-          )}
-        </div>
 
         <h1 className="text-4xl font-bold mb-8 text-foreground">{story.title}</h1>
 
