@@ -8,7 +8,6 @@ interface SuccessStoryMetadata {
   id: string
   title: string
   image: string
-  category: string
 }
 
 export function SuccessStories({ stories }: { stories: SuccessStoryMetadata[] }) {
@@ -33,11 +32,6 @@ export function SuccessStories({ stories }: { stories: SuccessStoryMetadata[] })
                 key={story.id} 
                 className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col border border-gray-200 dark:border-gray-700"
               >
-                {story.category && (
-                  <span className="text-xs font-medium text-accent-foreground bg-accent px-2 py-1 rounded-full w-fit mb-4">
-                    {story.category}
-                  </span>
-                )}
                 
                 <h3 className="text-xl font-semibold text-foreground mb-4">
                   {story.title}

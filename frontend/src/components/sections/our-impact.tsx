@@ -91,7 +91,7 @@ export function OurImpact() {
     <section className="py-16 px-4 md:px-8 bg-secondary">
       <div className="mx-auto max-w-7xl">
         <h2
-          className="reveal-element text-4xl md:text-4xl font-semibold text-center text-foreground mb-12"
+          className="reveal-element text-5xl md:text-4xl font-semibold text-center text-foreground mb-12"
           tabIndex={0}
           aria-label="Our Impact"
         >
@@ -101,7 +101,7 @@ export function OurImpact() {
         <div className="reveal-element grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Industry Types List */}
           <div className="md:col-span-1">
-            <h3 className="text-2xl font-semibold text-[#121212] mb-6">Industries</h3>
+            <h3 className="text-3xl font-semibold text-[#121212] mb-10">Industries</h3>
             <div className="space-y-3">
               {allIndustries.map((type, index) => {
                 const hash = type.toLowerCase().replace(/[^a-z0-9]+/g, "-")
@@ -124,7 +124,7 @@ export function OurImpact() {
           <div className="md:col-span-2">
             <h3
               id={selectedType.toLowerCase().replace(/[^a-z0-9]+/g, "-")}
-              className="text-2xl font-semibold text-[#121212] mb-6 reveal-element"
+              className="text-3xl font-semibold text-[#121212] mb-10 reveal-element"
             >
               {selectedType} Clients
             </h3>
@@ -190,7 +190,7 @@ function AnimatedIndustryButton({
       id={hash}
       ref={ref}
       onClick={onClick}
-      className={`w-full text-left px-6 py-4 rounded-xl transition-all duration-300 transform ${
+      className={`w-full text-left px-6 py-4 transition-all duration-300 transform ${
         isSelected
           ? "bg-[#004250] text-white shadow-lg"
           : "bg-gradient-to-r from-gray-50 to-gray-100 text-gray-700 hover:from-gray-100 hover:to-gray-200 hover:shadow-md"

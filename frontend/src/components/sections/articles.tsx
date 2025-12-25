@@ -1,12 +1,11 @@
 // src/components/sections/articles.tsx  ← NO "use client"
-import Image from "next/image"
-import Link from "next/link"
+import Image from "next/image";
+import Link from "next/link";
 
 interface ArticleMetadata {
-  id: string
-  title: string
-  image: string
-  category?: string
+  id: string;
+  title: string;
+  image: string;
 }
 
 export function Articles({ articles }: { articles: ArticleMetadata[] }) {
@@ -20,7 +19,9 @@ export function Articles({ articles }: { articles: ArticleMetadata[] }) {
         {articles.length === 0 ? (
           <div className="text-center text-gray-500 py-12">
             <p className="text-xl">No articles available yet.</p>
-            <p className="text-sm mt-2">Check back soon for insights and updates.</p>
+            <p className="text-sm mt-2">
+              Check back soon for insights and updates.
+            </p>
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -41,21 +42,16 @@ export function Articles({ articles }: { articles: ArticleMetadata[] }) {
                 </Link>
 
                 <div className="p-6 flex flex-col flex-grow">
-                  {article.category && (
-                    <span className="text-xs font-medium text-accent-foreground bg-accent px-2 py-1 rounded-full w-fit mb-3">
-                      {article.category}
-                    </span>
-                  )}
 
                   <Link href={`/insights/${article.id}`}>
-                    <h3 className="text-xl font-semibold text-foreground mb-3 line-clamp-2 hover:text-accent transition-colors">
+                    <h3 className="text-xl font-semibold text-foreground mb-5 line-clamp-2">
                       {article.title}
                     </h3>
                   </Link>
 
                   <Link
                     href={`/insights/${article.id}`}
-                    className="mt-4 text-[#263238] dark:text-accent font-medium hover:text-accent transition-colors inline-block"
+                    className="mt-auto text-foreground/90 font-medium hover:text-foreground transition-colors"
                   >
                     Read More →
                   </Link>
@@ -66,5 +62,5 @@ export function Articles({ articles }: { articles: ArticleMetadata[] }) {
         )}
       </div>
     </section>
-  )
+  );
 }

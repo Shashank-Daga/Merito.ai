@@ -47,7 +47,7 @@ export function Podcasts() {
           {podcasts.slice(0, visibleCount).map((podcast) => (
             <article
               key={podcast.id}
-              className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-200 overflow-hidden"
+              className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-200 overflow-hidden flex flex-col h-full"
             >
               <div className="aspect-video bg-gray-200 relative">
                 <Image
@@ -57,7 +57,7 @@ export function Podcasts() {
                   className="object-cover"
                 />
               </div>
-              <div className="p-6">
+              <div className="p-6 flex flex-col flex-1">
                 <h3 className="text-xl font-semibold text-foreground mb-3 line-clamp-2">
                   {podcast.title}
                 </h3>
@@ -65,7 +65,7 @@ export function Podcasts() {
                   href={podcast.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-4 text-[#263238] font-medium hover:text-accent transition-colors inline-block"
+                  className="mt-auto text-foreground/90 font-medium hover:text-foreground transition-colors"
                 >
                   Listen Now →
                 </Link>
@@ -77,9 +77,9 @@ export function Podcasts() {
           <div className="text-center mt-8">
             <button
               onClick={() => setVisibleCount(prev => prev + 3)}
-              className="bg-[#263238] text-white px-6 py-3 rounded-lg hover:bg-[#1a252f] transition-colors"
+              className="text-white bg-accent/90 hover:bg-[#004250] transition-colors px-8 py-3 rounded-lg font-medium"
             >
-              Load More
+              More Podcasts
             </button>
           </div>
         )}

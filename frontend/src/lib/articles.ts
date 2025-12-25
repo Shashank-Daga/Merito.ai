@@ -7,7 +7,6 @@ export interface Article {
   title: string;
   image: string;
   date?: string;
-  category?: string;
   content: string;
 }
 
@@ -38,7 +37,6 @@ export function getAllArticles(): Article[] {
         title: data.title || 'Untitled',
         image: data.image || '/Insights/Articles/default.png',
         date: data.date,
-        category: data.category,
         content,
       };
     })
@@ -67,7 +65,6 @@ export function getArticleById(id: string): Article | null {
       title: data.title || 'Untitled',
       image: data.image || '/Insights/Articles/default.png',
       date: data.date,
-      category: data.category,
       content,
     };
   } catch (error) {

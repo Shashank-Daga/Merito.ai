@@ -8,7 +8,6 @@ export interface SuccessStory {
   id: string;
   title: string;
   image: string;
-  category: string;
   content: string;
 }
 
@@ -32,7 +31,6 @@ export function getAllSuccessStories(): SuccessStory[] {
         id,
         title: matterResult.data.title || 'Untitled',
         image: matterResult.data.image || '/images/default-story.png',
-        category: matterResult.data.category || 'General',
         content: matterResult.content,
       };
     });
@@ -55,7 +53,6 @@ export function getSuccessStoryById(id: string): SuccessStory | null {
       id,
       title: matterResult.data.title || 'Untitled',
       image: matterResult.data.image || '/images/default-story.png',
-      category: matterResult.data.category || 'General',
       content: matterResult.content,
     };
   } catch (error) {
