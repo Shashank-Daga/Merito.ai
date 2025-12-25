@@ -77,12 +77,13 @@ function AnimatedStep({
         ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
     >
       {/* Subtle hover gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-secondary/0 to-accent/0 group-hover:from-secondary/10 group-hover:to-accent/10 transition-all duration-300" />
 
       <div className="relative z-10 text-center">
-        <div className="text-sm font-bold text-gray-700 uppercase tracking-wide">{`Step ${index + 1}`}</div>
+        <div className="mb-5 mx-auto flex h-10 w-10 items-center justify-center rounded-full bg-[#EC2229]/10 text-sm font-bold text-[#EC2229]">
+          {index + 1}
+        </div>
         <h3 className="mt-2 text-lg font-semibold text-primary">{step.title}</h3>
-        <p className="mt-3 text-sm leading-relaxed text-foreground/80">{step.desc}</p>
+        <p className="mt-3 text-sm leading-relaxed text-foreground/80 hover:text-gray-800">{step.desc}</p>
       </div>
 
       {/* Bottom accent bar */}

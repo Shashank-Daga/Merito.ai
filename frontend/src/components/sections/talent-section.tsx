@@ -29,7 +29,7 @@ const TalentSection: React.FC = () => {
             Connecting the right people to the roles that matter across every industry.
           </p>
           <Link href="/talent">
-            <Button className="bg-[#EC2229] hover:bg-[#b61a20] text-white px-8 py-6 rounded-lg text-lg">
+            <Button variant="foreground" className="px-8 py-6 text-lg">
               Know more
             </Button>
           </Link>

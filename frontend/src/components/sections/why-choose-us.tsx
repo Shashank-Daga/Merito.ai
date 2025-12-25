@@ -63,7 +63,7 @@ export default function WhyChooseUs() {
         <div className="reveal-element flex flex-wrap justify-center gap-3 mb-8">
           <button
             onClick={() => setActiveTab("traditional")}
-            className={`px-6 py-2 rounded-lg font-medium transition-all duration-300 ${activeTab === "traditional"
+            className={`px-6 py-2 font-medium transition-all duration-300 ${activeTab === "traditional"
                 ? "bg-primary text-primary-foreground shadow-md scale-105"
                 : "bg-muted text-foreground hover:bg-muted/80"
               }`}
@@ -72,7 +72,7 @@ export default function WhyChooseUs() {
           </button>
           <button
             onClick={() => setActiveTab("merito")}
-            className={`px-6 py-2 rounded-lg font-medium transition-all duration-300 ${activeTab === "merito"
+            className={`px-6 py-2 font-medium transition-all duration-300 ${activeTab === "merito"
                 ? "bg-destructive text-destructive-foreground shadow-md scale-105"
                 : "bg-muted text-foreground hover:bg-muted/80"
               }`}
@@ -81,7 +81,7 @@ export default function WhyChooseUs() {
           </button>
           <button
             onClick={() => setActiveTab("inHouse")}
-            className={`px-6 py-2 rounded-lg font-medium transition-all duration-300 ${activeTab === "inHouse"
+            className={`px-6 py-2 font-medium transition-all duration-300 ${activeTab === "inHouse"
                 ? "bg-primary text-primary-foreground shadow-md scale-105"
                 : "bg-muted text-foreground hover:bg-muted/80"
               }`}
@@ -94,7 +94,7 @@ export default function WhyChooseUs() {
           {comparisonData.map((item, index) => (
             <div
               key={index}
-              className="reveal-element group rounded-lg border border-border p-5 hover:border-primary/60 hover:shadow-md transition-all duration-300 cursor-pointer"
+              className="reveal-element group border border-border p-5 hover:border-primary/60 hover:shadow-md transition-all duration-300 cursor-pointer"
             >
               <div className="flex items-start gap-4 md:gap-6">
                 {/* Category Label */}

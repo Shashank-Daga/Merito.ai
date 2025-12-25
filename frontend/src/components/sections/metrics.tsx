@@ -16,12 +16,14 @@ export function Metrics() {
   useRevealAnimation({ stagger: true })
 
   return (
-    <section className="bg-secondary">
-      <div className="mx-auto max-w-7xl px-4 py-12 md:py-16 text-center">
+    <section className="relative bg-secondary overflow-hidden">
+
+      <div className="relative mx-auto max-w-7xl px-4 py-16 md:py-20 text-center">
         <h2 className="reveal-element text-2xl md:text-3xl font-semibold text-balance text-[#121212]">
           <span className="text-[#EC2229]">Impact</span> in Numbers
         </h2>
-        <div className="reveal-element mt-12 grid gap-4 sm:grid-cols-2 md:grid-cols-4 text-white">
+
+        <div className="reveal-element mt-14 grid gap-6 sm:grid-cols-2 md:grid-cols-4">
           {METRICS.map((m, index) => (
             <CounterCard key={m.label} metric={m} index={index} />
           ))}
@@ -44,8 +46,7 @@ function CounterCard({ metric, index }: { metric: Metric; index: number }) {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            // Add stagger delay here
-            const delay = index * 600 // 0.6s delay between each card
+            const delay = index * 600
             setTimeout(() => setVisible(true), delay)
             observer.unobserve(entry.target)
           }
@@ -80,14 +81,26 @@ function CounterCard({ metric, index }: { metric: Metric; index: number }) {
   return (
     <div
       ref={ref}
-      className={`rounded-xl border bg-[#004250] p-5 transition-all duration-700 transform 
-        ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
+      className={`
+        relative rounded-xl p-6
+        bg-gradient-to-br from-[#004250] to-[#00323d]
+        border border-white/10
+        transition-all duration-500 ease-out
+        hover:-translate-y-2
+        ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}
+      `}
     >
-      <div className="text-3xl font-semibold">
+      {/* Accent glow */}
+      <div className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-tr from-[#EC2229]/10 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
+
+      <div className="relative z-10 text-4xl font-bold text-white tracking-tight">
         {value}
         {metric.suffix || ""}
       </div>
-      <div className="mt-1 text-sm text-white">{metric.label}</div>
+
+      <div className="relative z-10 mt-2 text-sm text-white/80">
+        {metric.label}
+      </div>
     </div>
   )
 }

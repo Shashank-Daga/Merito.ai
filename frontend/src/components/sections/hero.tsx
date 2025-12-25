@@ -11,10 +11,10 @@ export function Hero({ onBookCall }: HeroProps) {
   useRevealAnimation({ stagger: true })
 
   return (
-    <section className="relative h-[90vh] flex items-center justify-start overflow-hidden bg-secondary">
+    <section className="relative h-[90vh] flex items-center overflow-hidden bg-secondary">
       {/* Background Video */}
       <video
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover scale-105"
         src="/hero.mp4"
         autoPlay
         loop
@@ -22,25 +22,41 @@ export function Hero({ onBookCall }: HeroProps) {
         playsInline
       />
 
-      {/* Overlay for better text readability */}
-      <div className="absolute inset-0 bg-black/40" />
+      {/* Gradient + Dark Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/40 to-black/60" />
+
+      {/* Subtle Tech Glow */}
+      <div className="pointer-events-none absolute bottom-[-200px] right-[-200px] h-[500px] w-[500px] rounded-full bg-cyan-400/10 blur-[140px]" />
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl px-6 md:px-12">
+      <div className="relative z-10 max-w-7xl px-6 md:px-12 w-full">
         <div className="max-w-xl">
           <h1
-            className="reveal-element text-4xl md:text-5xl font-semibold text-balance text-white"
-            style={{ fontFamily: "Gilroy, sans-serif", fontWeight: 800 }}
+            className="reveal-element text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight"
+            style={{ fontFamily: "Gilroy, sans-serif" }}
           >
-            <span className="text-[#EC2229]">Expedite</span> Hiring
+            <span className="relative text-[#EC2229]">
+              Expedite
+            </span>{" "}
+            Hiring
           </h1>
 
-          <p className="reveal-element mt-4 text-white/90 leading-relaxed text-lg">
-            Human expertise meets intelligent technology to expedite hiring <br /> and connect the right talent with the right role.
+          <p className="reveal-element mt-5 text-white/90 leading-relaxed text-lg md:text-xl">
+            Human expertise meets intelligent technology to <br /> expedite hiring 
+            and <br /> connect the right talent with the right role.
           </p>
 
-          <div className="reveal-element mt-6 flex items-center gap-3">
-            <Button size="lg" onClick={onBookCall}>
+          <div className="reveal-element mt-8 flex items-center gap-4">
+            <Button
+              size="lg"
+              variant="foreground"
+              onClick={onBookCall}
+              className="
+                relative overflow-hidden
+                after:absolute after:inset-0
+                after:bg-white/10 after:opacity-0
+              "
+            >
               Book a Discovery Call
             </Button>
           </div>
