@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { CheckCircle2 } from "lucide-react";
+import { ArrowUpRight, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -91,8 +91,9 @@ export default function TrustedHiringPartner() {
             </div>
 
             <Link href="/about">
-              <Button variant="foreground" className="px-6 py-6 text-base">
+              <Button variant="foreground" className="px-6 py-6 text-base flex items-center gap-2">
                 Learn more about us
+                <ArrowUpRight className="!w-5 !h-6" />
               </Button>
             </Link>
           </div>

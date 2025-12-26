@@ -1,14 +1,15 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import { useRevealAnimation } from "@/hooks/useRevealAnimation"
+import { Button } from "@/components/ui/button";
+import { useRevealAnimation } from "@/hooks/useRevealAnimation";
+import { Calendar } from "lucide-react";
 
 interface HeroProps {
-  onBookCall: () => void
+  onBookCall: () => void;
 }
 
 export function Hero({ onBookCall }: HeroProps) {
-  useRevealAnimation({ stagger: true })
+  useRevealAnimation({ stagger: true });
 
   return (
     <section className="relative h-[90vh] flex items-center overflow-hidden bg-secondary">
@@ -35,15 +36,12 @@ export function Hero({ onBookCall }: HeroProps) {
             className="reveal-element text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight"
             style={{ fontFamily: "Gilroy, sans-serif" }}
           >
-            <span className="relative text-[#EC2229]">
-              Expedite
-            </span>{" "}
-            Hiring
+            <span className="relative text-[#EC2229]">Expedite</span> Hiring
           </h1>
 
           <p className="reveal-element mt-5 text-white/90 leading-relaxed text-lg md:text-xl">
-            Human expertise meets intelligent technology to <br /> expedite hiring 
-            and <br /> connect the right talent with the right role.
+            Human expertise meets intelligent technology to <br /> expedite
+            hiring and <br /> connect the right talent with the right role.
           </p>
 
           <div className="reveal-element mt-8 flex items-center gap-4">
@@ -58,10 +56,18 @@ export function Hero({ onBookCall }: HeroProps) {
               "
             >
               Book a Discovery Call
+              {/* <span
+                className="flex items-center justify-center
+                  w-7 h-7
+                  rounded-md
+                  bg-blue-100"
+              >
+                <Calendar className="w-5 h-5 text-black" />
+              </span> */}
             </Button>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

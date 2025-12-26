@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { useRevealAnimation } from "@/hooks/useRevealAnimation"
+import { ArrowUpRight } from "lucide-react"
 
 const industries = [
   "Finance & Banking",
@@ -29,8 +30,9 @@ const TalentSection: React.FC = () => {
             Connecting the right people to the roles that matter across every industry.
           </p>
           <Link href="/talent">
-            <Button variant="foreground" className="px-8 py-6 text-lg">
+            <Button variant="foreground" className="px-8 py-6 text-lg flex items-center gap-2">
               Know more
+              <ArrowUpRight className="!w-5 !h-6" />
             </Button>
           </Link>
         </div>
