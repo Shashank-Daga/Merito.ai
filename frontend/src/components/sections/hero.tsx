@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { useRevealAnimation } from "@/hooks/useRevealAnimation";
-import { Calendar } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 interface HeroProps {
   onBookCall: () => void;
@@ -56,14 +56,7 @@ export function Hero({ onBookCall }: HeroProps) {
               "
             >
               Book a Discovery Call
-              {/* <span
-                className="flex items-center justify-center
-                  w-7 h-7
-                  rounded-md
-                  bg-blue-100"
-              >
-                <Calendar className="w-5 h-5 text-black" />
-              </span> */}
+              <ArrowUpRight className="!w-5 !h-6" />
             </Button>
           </div>
         </div>

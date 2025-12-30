@@ -38,7 +38,7 @@ export function Header() {
             href="/"
             className="ml-15 flex-shrink-0 font-semibold text-2xl tracking-tight"
           >
-            <span className="text-[#EC2229]">M</span>erito
+            <img src="/Merito.svg" alt="Merito Logo" className="h-10 w-auto" />
             <span className="sr-only">Go to homepage</span>
           </Link>
 
