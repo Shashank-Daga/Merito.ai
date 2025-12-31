@@ -23,7 +23,7 @@ export function Footer() {
             {/* LinkedIn */}
             <div className="pt-2">
               <a
-                href="https://www.linkedin.com/company/merito-ai"
+                href="https://www.linkedin.com/company/meritoplatform/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="

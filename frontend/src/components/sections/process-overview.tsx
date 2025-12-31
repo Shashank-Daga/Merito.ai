@@ -57,7 +57,7 @@ function AnimatedStep({
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const delay = index * 200 // staggered reveal
+            const delay = index * 300 // staggered reveal
             setTimeout(() => setVisible(true), delay)
             observer.unobserve(entry.target)
           }
@@ -73,8 +73,9 @@ function AnimatedStep({
   return (
     <div
       ref={ref}
-      className={`group relative rounded-2xl border-2 border-secondary/20 bg-gradient-to-br from-card via-card/50 to-secondary/5 backdrop-blur p-6 overflow-hidden hover-lift transition-all duration-500 cursor-pointer hover:scale-105 hover:shadow-lg hover:border-accent/50
-        ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+      className={`group relative rounded-xl border-2 border-secondary/20 bg-gradient-to-br from-card via-card/50 to-secondary/5 backdrop-blur p-6 overflow-hidden hover-lift transition-all duration-500 cursor-pointer hover:scale-105 hover:shadow-lg hover:border-accent/50
+        ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}
+        flex flex-col justify-between min-h-[325px]`}
     >
       {/* Subtle hover gradient overlay */}
 

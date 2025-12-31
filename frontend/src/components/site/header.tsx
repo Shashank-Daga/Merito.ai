@@ -27,24 +27,28 @@ export function Header() {
       className={cn(
         "sticky top-0 z-50 transition-all duration-300",
         scrolled
-          ? "bg-white/80 backdrop-blur border-b shadow-sm"
-          : "bg-secondary border-b"
+          ? "bg-white/90 backdrop-blur border-b shadow-sm"
+          : "bg-transparent"
       )}
     >
-      <div className="mx-auto max-w-7xl px-4 py-4 md:py-5">
-        <div className="flex items-center">
+      <div className="mx-auto max-w-7xl px-4 py-3">
+        <div className="flex items-center justify-between">
           {/* Logo */}
           <Link
             href="/"
-            className="ml-15 flex-shrink-0 font-semibold text-2xl tracking-tight"
+            className="flex items-center flex-shrink-0 md:ml-10"
           >
-            <img src="/Merito.svg" alt="Merito Logo" className="h-10 w-auto" />
+            <img
+              src="/Merito.svg"
+              alt="Merito Logo"
+              className="h-9 w-auto"
+            />
             <span className="sr-only">Go to homepage</span>
           </Link>
 
           {/* Desktop Nav */}
           <nav
-            className="flex-1 hidden md:flex justify-center items-center gap-10"
+            className="hidden md:flex items-center gap-10"
             aria-label="Main"
           >
             {navItems.map((item) => (
@@ -52,7 +56,7 @@ export function Header() {
                 key={item.href}
                 href={item.href}
                 className="
-                  relative text-base font-medium text-foreground/80
+                  relative text-sm font-medium text-foreground/80
                   transition-colors duration-200
                   hover:text-foreground
                   after:absolute after:left-0 after:-bottom-1
@@ -67,9 +71,9 @@ export function Header() {
           </nav>
 
           {/* Right actions */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3">
             <Link href="/apply" className="hidden md:block">
-              <Button variant="foreground" className="relative px-6 py-2">
+              <Button variant="foreground" className="px-6 py-2">
                 Apply
               </Button>
             </Link>
@@ -81,28 +85,26 @@ export function Header() {
               onClick={() => setOpen((v) => !v)}
               className="
                 md:hidden inline-flex h-9 w-9 items-center justify-center
-                rounded-md border border-black/10
-                hover:bg-muted transition
+                rounded-md hover:bg-white/10 transition
               "
             >
-              <span className="sr-only">Open menu</span>
-              <div className="h-4 w-4">
-                <div
+              <div className="space-y-1">
+                <span
                   className={cn(
-                    "h-0.5 w-4 bg-foreground transition-transform",
-                    open && "translate-y-1 rotate-45"
+                    "block h-0.5 w-5 bg-foreground transition-transform",
+                    open && "translate-y-1.5 rotate-45"
                   )}
                 />
-                <div
+                <span
                   className={cn(
-                    "mt-1 h-0.5 w-4 bg-foreground transition-opacity",
+                    "block h-0.5 w-5 bg-foreground transition-opacity",
                     open && "opacity-0"
                   )}
                 />
-                <div
+                <span
                   className={cn(
-                    "mt-1 h-0.5 w-4 bg-foreground transition-transform",
-                    open && "-translate-y-1 -rotate-45"
+                    "block h-0.5 w-5 bg-foreground transition-transform",
+                    open && "-translate-y-1.5 -rotate-45"
                   )}
                 />
               </div>
@@ -112,20 +114,25 @@ export function Header() {
 
         {/* Mobile Nav */}
         {open && (
-          <div className="md:hidden mt-4 rounded-xl border bg-white shadow-lg animate-in fade-in slide-in-from-top-2">
-            <div className="grid gap-2 p-4">
+          <div className="md:hidden mt-3 rounded-xl border bg-white shadow-lg animate-in fade-in slide-in-from-top-2">
+            <div className="grid gap-1 p-4">
               {navItems.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className="rounded-md px-3 py-2 text-sm font-medium hover:bg-muted transition"
+                  className="
+                    rounded-md px-3 py-2.5
+                    text-base font-medium
+                    hover:bg-muted transition
+                  "
                 >
                   {item.label}
                 </Link>
               ))}
+
               <Link href="/apply" onClick={() => setOpen(false)}>
-                <Button className="mt-2 w-full rounded-xl px-6 py-2 text-white">
+                <Button className="mt-3 w-full rounded-xl py-3">
                   Apply
                 </Button>
               </Link>
