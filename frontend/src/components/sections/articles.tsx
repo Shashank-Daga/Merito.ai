@@ -10,16 +10,16 @@ interface ArticleMetadata {
 
 export function Articles({ articles }: { articles: ArticleMetadata[] }) {
   return (
-    <section className="py-16 px-4 md:px-8 bg-secondary">
+    <section className="py-4 px-4 md:px-8 bg-secondary">
       <div className="mx-auto max-w-7xl">
-        <h2 className="text-3xl md:text-4xl font-semibold text-center text-foreground mb-12">
+        <h2 className="text-4xl md:text-5xl font-semibold text-center text-foreground mb-12">
           Latest Articles
         </h2>
 
         {articles.length === 0 ? (
           <div className="text-center text-gray-500 py-12">
             <p className="text-xl">No articles available yet.</p>
-            <p className="text-sm mt-2">
+            <p className="text-lg mt-2">
               Check back soon for insights and updates.
             </p>
           </div>
@@ -51,7 +51,7 @@ export function Articles({ articles }: { articles: ArticleMetadata[] }) {
 
                   <Link
                     href={`/insights/${article.id}`}
-                    className="mt-auto text-foreground/90 font-medium hover:text-foreground transition-colors"
+                    className="mt-auto text-lg text-foreground/90 font-medium hover:text-foreground transition-colors"
                   >
                     Read More →
                   </Link>

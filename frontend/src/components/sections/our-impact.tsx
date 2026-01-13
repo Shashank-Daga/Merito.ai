@@ -91,7 +91,7 @@ export function OurImpact() {
     <section className="py-16 px-4 md:px-8 bg-secondary">
       <div className="mx-auto max-w-7xl">
         <h2
-          className="reveal-element text-5xl md:text-4xl font-semibold text-center text-foreground mb-12"
+          className="reveal-element text-4xl md:text-5xl font-semibold text-center text-foreground mb-16"
           tabIndex={0}
           aria-label="Our Impact"
         >
@@ -190,14 +190,14 @@ function AnimatedIndustryButton({
       id={hash}
       ref={ref}
       onClick={onClick}
-      className={`w-full text-left px-6 py-4 transition-all duration-300 transform ${
+      className={`w-full text-left px-6 py-4 transition-all duration-300 rounded-2xl transform ${
         isSelected
           ? "bg-[#004250] text-white shadow-lg"
           : "bg-gradient-to-r from-gray-50 to-gray-100 text-gray-700 hover:from-gray-100 hover:to-gray-200 hover:shadow-md"
       } ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
     >
       <span className="font-medium">{type}</span>
-      <span className={`ml-2 text-sm ${isSelected ? "text-white/80" : "text-gray-500"}`}>
+      <span className={`ml-2 text-lg ${isSelected ? "text-white/80" : "text-gray-500"}`}>
         ({count})
       </span>
     </button>

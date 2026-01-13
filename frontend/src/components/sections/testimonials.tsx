@@ -57,11 +57,11 @@ export function Testimonials() {
   return (
     <section className="bg-secondary py-16 md:py-24">
       <div className="max-w-5xl mx-auto px-4 text-center">
-        <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-10">
+        <h2 className="text-4xl md:text-4xl font-semibold text-gray-900 mb-10">
           Client testimonials
         </h2>
 
-        <div className="bg-white rounded-2xl shadow-sm p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 justify-center">
+        <div className="bg-white rounded-2xl shadow-sm p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 justify-center mh-[360px] md:h-[320px]">
 
 
           {/* Navigation Arrows */}

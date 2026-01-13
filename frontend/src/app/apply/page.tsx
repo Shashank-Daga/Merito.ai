@@ -99,12 +99,12 @@ export default function ApplyPage() {
     <section className="bg-secondary py-16">
       <div className="container mx-auto px-4 max-w-2xl">
         <div className="rounded-2xl border bg-white p-8 md:p-12">
-          <h1 className="text-4xl font-bold text-center mb-8">Apply Form</h1>
+          <h1 className="text-5xl font-bold text-center mb-12">Apply Form</h1>
 
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* Full Name */}
             <div>
-              <label htmlFor="fullName" className="block text-sm font-medium mb-2">
+              <label htmlFor="fullName" className="block text-lg font-medium mb-2">
                 Full Name
               </label>
               <Input
@@ -120,7 +120,7 @@ export default function ApplyPage() {
 
             {/* Contact No */}
             <div>
-              <label htmlFor="contactNo" className="block text-sm font-medium mb-2">
+              <label htmlFor="contactNo" className="block text-lg font-medium mb-2">
                 Contact No.
               </label>
               <Input
@@ -136,7 +136,7 @@ export default function ApplyPage() {
 
             {/* Email */}
             <div>
-              <label htmlFor="email" className="block text-sm font-medium mb-2">
+              <label htmlFor="email" className="block text-lg font-medium mb-2">
                 Email ID
               </label>
               <Input
@@ -152,7 +152,7 @@ export default function ApplyPage() {
 
             {/* Position */}
             <div>
-              <label htmlFor="position" className="block text-sm font-medium mb-2">
+              <label htmlFor="position" className="block text-lg font-medium mb-2">
                 Position Applying For
               </label>
               <Input
@@ -168,7 +168,7 @@ export default function ApplyPage() {
 
             {/* Experience */}
             <div>
-              <label htmlFor="experience" className="block text-sm font-medium mb-2">
+              <label htmlFor="experience" className="block text-lg font-medium mb-2">
                 Year of Experience
               </label>
               <Select
@@ -190,7 +190,7 @@ export default function ApplyPage() {
 
             {/* Current Location */}
             <div>
-              <label htmlFor="currentLocation" className="block text-sm font-medium mb-2">
+              <label htmlFor="currentLocation" className="block text-lg font-medium mb-2">
                 Current Location
               </label>
               <Input
@@ -206,7 +206,7 @@ export default function ApplyPage() {
 
             {/* Current CTC */}
             <div>
-              <label htmlFor="currentCtc" className="block text-sm font-medium mb-2">
+              <label htmlFor="currentCtc" className="block text-lg font-medium mb-2">
                 Current CTC
               </label>
               <Input
@@ -222,7 +222,7 @@ export default function ApplyPage() {
 
             {/* Expected CTC */}
             <div>
-              <label htmlFor="expectedCtc" className="block text-sm font-medium mb-2">
+              <label htmlFor="expectedCtc" className="block text-lg font-medium mb-2">
                 Expected CTC
               </label>
               <Input
@@ -238,7 +238,7 @@ export default function ApplyPage() {
 
             {/* Notice Period */}
             <div>
-              <label htmlFor="noticePeriod" className="block text-sm font-medium mb-2">
+              <label htmlFor="noticePeriod" className="block text-lg font-medium mb-2">
                 Notice Period
               </label>
               <Select
@@ -259,7 +259,7 @@ export default function ApplyPage() {
 
             {/* Resume Link */}
             <div>
-              <label htmlFor="resumeLink" className="block text-sm font-medium mb-2">
+              <label htmlFor="resumeLink" className="block text-lg font-medium mb-2">
                 Resume Link (Google Drive - Publicly Accessible)
               </label>
               <Input
@@ -273,8 +273,8 @@ export default function ApplyPage() {
               />
             </div>
 
-            <div className="flex justify-center">
-              <Button type="submit" className="w-50" disabled={isSubmitting}>
+            <div className="flex justify-center py-4">
+              <Button type="submit" className="text-lg w-40" disabled={isSubmitting}>
                 {isSubmitting ? "Submitting..." : "Submit"}
               </Button>
             </div>

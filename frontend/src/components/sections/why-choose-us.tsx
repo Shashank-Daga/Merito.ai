@@ -55,7 +55,7 @@ export default function WhyChooseUs() {
       <div className="mx-auto max-w-6xl">
         <div className="text-center mb-12">
           <h2 className="reveal-element text-4xl md:text-5xl font-bold text-foreground mb-4 text-balance">Why Choose Us</h2>
-          <p className="reveal-element text-lg text-foreground/70 text-balance">
+          <p className="reveal-element text-xl text-foreground/70 text-balance">
             See how we outperform traditional hiring and in-house teams across every dimension
           </p>
         </div>
@@ -94,7 +94,7 @@ export default function WhyChooseUs() {
           {comparisonData.map((item, index) => (
             <div
               key={index}
-              className="reveal-element group border border-border p-5 hover:border-primary/60 hover:shadow-md transition-all duration-300 cursor-pointer"
+              className="reveal-element group p-5 hover:border-primary/60 hover:shadow-md transition-all duration-300 cursor-pointer"
             >
               <div className="flex items-start gap-4 md:gap-6">
                 {/* Category Label */}

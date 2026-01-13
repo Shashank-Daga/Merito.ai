@@ -39,7 +39,7 @@ export function Hero({ onBookCall }: HeroProps) {
             <span className="relative text-[#EC2229]">Expedite</span> Hiring
           </h1>
 
-          <p className="reveal-element mt-5 text-white/90 leading-relaxed text-lg md:text-xl">
+          <p className="reveal-element mt-5 text-white/90 leading-relaxed text-xl md:text-xl">
             Human expertise meets intelligent technology to <br /> expedite
             hiring and <br /> connect the right talent with the right role.
           </p>
@@ -51,6 +51,7 @@ export function Hero({ onBookCall }: HeroProps) {
               onClick={onBookCall}
               className="
                 relative overflow-hidden
+                px-10 py-6 text-lg
                 after:absolute after:inset-0
                 after:bg-white/10 after:opacity-0
               "

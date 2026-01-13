@@ -15,16 +15,16 @@ export function CTA() {
     <section className="border-t bg-secondary">
       <div className="mx-auto max-w-7xl px-4 py-14 md:py-20">
 
-        <div className="reveal-element border p-8 md:p-12 bg-white">
+        <div className="reveal-element border p-8 md:p-12 bg-white rounded-2xl">
           <div className="grid items-center gap-6 md:grid-cols-3">
 
             <div className="md:col-span-2 text-black">
-              <h2 className="text-2xl md:text-3xl font-semibold text-balance ">Consult Our Recruitment Expert</h2>
-              <p className="mt-2">Get in touch with our team for your professionalized recruitment plan and hire highly qualified candidates.</p>
+              <h2 className="text-4xl md:text-4xl font-semibold text-balance ">Consult Our Recruitment Expert</h2>
+              <p className="text-xl mt-2">Get in touch with our team for your professionalized recruitment plan and hire highly qualified candidates.</p>
             </div>
 
             <div className="md:text-right md:justify-self-end">
-              <Button size="lg" variant="foreground" onClick={onBookCall}>
+              <Button size="lg" variant="foreground" onClick={onBookCall} className="px-8 py-6 text-lg">
                 Book a Discovery Call
               </Button>
             </div>

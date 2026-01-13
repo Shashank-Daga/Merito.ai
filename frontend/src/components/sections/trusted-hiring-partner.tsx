@@ -82,17 +82,17 @@ export default function TrustedHiringPartner() {
         {/* ================= */}
         <div className="reveal-element w-full lg:w-1/2">
           <div className="relative bg-white border border-black/10 shadow-lg p-10 rounded-xl">
-            <h2 className="text-4xl font-semibold leading-tight text-gray-900 mb-4">
-              Your Trusted Hiring Partner
+            <h2 className="text-4xl md:text-4xl font-semibold leading-tight text-gray-900 mb-6">
+              Your Trusted <span className="text-[#EC2229]">Hiring Partner</span>
             </h2>
 
-            <p className="text-gray-600 mb-8">
+            <p className="text-gray-600 mb-4">
               At Merito, we bring strategy, data, and domain expertise together
               to simplify recruitment and help businesses scale with the right
               people.
             </p>
 
-            <ul className="space-y-4 mb-8">
+            <ul className="space-y-4 mb-4">
               {[
                 "AI-Enhanced Talent Search",
                 "Human-Led Decision Making",
@@ -106,7 +106,7 @@ export default function TrustedHiringPartner() {
               ))}
             </ul>
 
-            <div className="mb-8">
+            <div className="mb-6">
               <h3 className="text-3xl font-semibold text-gray-900">20+</h3>
               <p className="text-gray-600">Years of Experience</p>
             </div>

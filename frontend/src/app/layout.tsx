@@ -1,7 +1,5 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { GeistSans } from "geist/font/sans"
-import { GeistMono } from "geist/font/mono"
 import { Analytics } from "@vercel/analytics/next"
 import Script from "next/script"
 import "./globals.css"
@@ -25,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="antialiased" suppressHydrationWarning={true}>
-      <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} bg-secondary`} suppressHydrationWarning={true}>
+      <body className={`font-sans bg-secondary`} suppressHydrationWarning={true}>
         {/* Calendly script */}
         <Script
           src="https://assets.calendly.com/assets/external/widget.js"

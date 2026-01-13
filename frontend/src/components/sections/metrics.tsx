@@ -18,8 +18,8 @@ export function Metrics() {
   return (
     <section className="relative bg-secondary overflow-hidden">
 
-      <div className="relative mx-auto max-w-7xl px-4 py-16 md:py-20 text-center">
-        <h2 className="reveal-element text-2xl md:text-3xl font-semibold text-balance text-[#121212]">
+      <div className="relative mx-auto max-w-7xl px-4 py-16 md:py-12 text-center">
+        <h2 className="reveal-element text-4xl md:text-4xl font-semibold text-balance text-[#121212] mb-16">
           <span className="text-[#EC2229]">Impact</span> in Numbers
         </h2>
 
@@ -98,7 +98,7 @@ function CounterCard({ metric, index }: { metric: Metric; index: number }) {
         {metric.suffix || ""}
       </div>
 
-      <div className="relative z-10 mt-2 text-sm text-white/80">
+      <div className="relative z-10 mt-2 text-xl text-white">
         {metric.label}
       </div>
     </div>

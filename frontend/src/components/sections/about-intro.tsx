@@ -10,7 +10,7 @@ export function AboutIntro() {
     <>
       {/* Origin Section */}
       <section className="relative bg-secondary overflow-hidden">
-        <div className="mx-auto max-w-7xl px-4 py-16 md:py-24">
+        <div className="mx-auto max-w-7xl px-4 py-16 md:py-16">
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-balance mb-4">
@@ -52,8 +52,8 @@ export function AboutIntro() {
       {/* Mission & Vision Section */}
       <section className="bg-secondary py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-balance">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-balance">
               Mission <span className="text-[#EC2229]">&</span> Vision
             </h2>
           </div>
@@ -85,8 +85,8 @@ export function AboutIntro() {
                   {item.icon}
                 </div>
 
-                <h3 className={`text-2xl font-bold ${item.textColor} mb-4`}>{item.label}</h3>
-                <p className={`${item.textColor} text-lg leading-relaxed`}>{item.text}</p>
+                <h3 className={`text-3xl font-bold ${item.textColor} mb-4`}>{item.label}</h3>
+                <p className={`${item.textColor} text-xl leading-relaxed`}>{item.text}</p>
 
                 {/* Animated accent line */}
                 <div className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-transparent via-[#EC2229] to-transparent w-0 group-hover:w-full transition-all duration-700"></div>
@@ -97,13 +97,13 @@ export function AboutIntro() {
       </section>
 
       {/* Values Section */}
-      <section className="bg-secondary py-16 md:py-24">
+      <section className="bg-secondary py-16 md:py-16">
         <div className="mx-auto max-w-7xl px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-balance mb-4">
               Our <span className="text-[#EC2229]">Values</span>
             </h2>
-            <p className="text-foreground/60 text-lg">The principles that guide every decision we make</p>
+            <p className="text-xl text-gray-700">The principles that guide every decision we make</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -141,13 +141,13 @@ export function AboutIntro() {
       </section>
 
       {/* Approach Section */}
-      <section className="bg-secondary py-16 md:py-24">
+      <section className="bg-secondary py-16 md:py-16">
         <div className="mx-auto max-w-7xl px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-balance mb-4">
               Our <span className="text-[#EC2229]">Approach</span>
             </h2>
-            <p className="text-foreground/70 text-lg max-w-2xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-2xl mx-auto">
               We combine human expertise with intelligent technology to make hiring smarter, faster, and more reliable.
             </p>
           </div>
@@ -183,16 +183,16 @@ export function AboutIntro() {
                 ></div>
 
                 {/* Number Badge */}
-                <div className="absolute top-4 right-4 text-5xl font-bold text-foreground/5 group-hover:text-foreground/10 transition-colors duration-500">
+                <div className="absolute top-4 right-4 text-5xl font-bold text-foreground/10 group-hover:text-foreground/40 transition-colors duration-500">
                   {item.number}
                 </div>
 
                 {/* Content */}
                 <div className="relative z-10">
-                  <h3 className="text-2xl font-bold mb-3 text-foreground group-hover:text-[#EC2229] transition-colors duration-300">
+                  <h3 className="text-3xl font-bold mb-3 text-foreground group-hover:text-[#EC2229] transition-colors duration-300">
                     {item.title}
                   </h3>
-                  <p className="text-foreground/70 leading-relaxed group-hover:text-foreground/80 transition-colors duration-300">
+                  <p className="text-lg text-foreground/70 leading-relaxed group-hover:text-foreground/80 transition-colors duration-300">
                     {item.desc}
                   </p>
 
@@ -233,8 +233,8 @@ function StoryCard({
           </div>
         </div>
         <div className="flex-1">
-          <h3 className="font-bold text-lg text-foreground mb-2">{title}</h3>
-          <p className="text-foreground/70 leading-relaxed text-sm">{text}</p>
+          <h3 className="font-bold text-3xl text-foreground mb-2">{title}</h3>
+          <p className="text-foreground/70 leading-relaxed text-lg">{text}</p>
         </div>
       </div>
     </div>
@@ -296,10 +296,10 @@ function ValueCard({
         <div className="text-4xl mb-4 transform group-hover:scale-110 group-hover:rotate-12 transition-transform duration-300">
           {icon}
         </div>
-        <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-[#EC2229] transition-colors duration-300">
+        <h3 className="text-3xl font-bold text-foreground mb-2 group-hover:text-[#EC2229] transition-colors duration-300">
           {title}
         </h3>
-        <p className="text-foreground/70 leading-relaxed text-sm group-hover:text-foreground/80 transition-colors duration-300">
+        <p className="text-foreground/70 leading-relaxed text-lg group-hover:text-foreground/80 transition-colors duration-300">
           {desc}
         </p>
       </div>

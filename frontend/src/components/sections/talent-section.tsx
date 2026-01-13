@@ -23,10 +23,10 @@ const TalentSection: React.FC = () => {
       <div className="max-w-6xl mx-auto px-6 lg:px-8 grid md:grid-cols-2 gap-16 items-start">
         {/* Left Text Block */}
         <div className="reveal-element">
-          <h2 className="text-5xl font-semibold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-semibold text-gray-900 mb-4">
             <span className="text-[#EC2229]">Industries</span> We Serve
           </h2>
-          <p className="text-gray-600 leading-relaxed mb-8">
+          <p className="text-xl text-gray-600 leading-relaxed mb-8">
             Connecting the right people to the roles that matter across every industry.
           </p>
           <Link href="/talent">
@@ -85,7 +85,7 @@ function AnimatedIndustry({
     <Link href={`/customers#${hash}`}>
       <p
         ref={ref}
-        className={`text-2xl font-semibold text-gray-900 cursor-pointer transition-all duration-700 transform mb-6
+        className={`text-3xl font-semibold text-gray-900 cursor-pointer transition-all duration-700 transform mb-6
           ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}
           hover:text-[#EC2229] hover:scale-105`}
       >

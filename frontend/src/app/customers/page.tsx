@@ -10,14 +10,14 @@ export default function CustomersPage() {
     <div className="mx-auto max-w-7xl px-8">
       <section className="py-16 px-4 md:px-8 bg-secondary">
         <div className="mx-auto max-w-7xl text-center text-foreground">
-          <h2 className="text-5xl md:text-5xl font-bold mb-4 tracking-tight">
-            Our Customers
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight">
+            Our <span className="text-[#EC2229]">Customers</span>
           </h2>
-          <p className="text-xl max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl max-w-2xl mx-auto leading-relaxed">
             Trusted by industry leaders across sectors, we deliver exceptional talent solutions that drive success.
           </p>
           <div className="mt-8 flex justify-center">
-            <div className="w-24 h-1 bg-accent-foreground rounded-full"></div>
+            <div className="w-16 h-1 bg-[#EC2229] mx-auto rounded-full"></div>
           </div>
         </div>
       </section>

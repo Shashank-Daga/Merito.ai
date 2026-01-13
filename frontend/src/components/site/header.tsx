@@ -31,7 +31,7 @@ export function Header() {
           : "bg-transparent"
       )}
     >
-      <div className="mx-auto max-w-7xl px-4 py-3">
+      <div className="mx-auto max-w-7xl px-4 py-5">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link
@@ -41,14 +41,14 @@ export function Header() {
             <img
               src="/Merito.svg"
               alt="Merito Logo"
-              className="h-9 w-auto"
+              className="h-11 w-auto"
             />
             <span className="sr-only">Go to homepage</span>
           </Link>
 
           {/* Desktop Nav */}
           <nav
-            className="hidden md:flex items-center gap-10"
+            className="hidden md:flex items-center gap-12"
             aria-label="Main"
           >
             {navItems.map((item) => (
@@ -56,7 +56,7 @@ export function Header() {
                 key={item.href}
                 href={item.href}
                 className="
-                  relative text-sm font-medium text-foreground/80
+                  relative text-xl font-medium text-foreground/80
                   transition-colors duration-200
                   hover:text-foreground
                   after:absolute after:left-0 after:-bottom-1
@@ -73,7 +73,7 @@ export function Header() {
           {/* Right actions */}
           <div className="flex items-center gap-3">
             <Link href="/apply" className="hidden md:block">
-              <Button variant="foreground" className="px-6 py-2">
+              <Button variant="foreground" className="px-8 py-5 text-base">
                 Apply
               </Button>
             </Link>
@@ -84,7 +84,7 @@ export function Header() {
               aria-expanded={open}
               onClick={() => setOpen((v) => !v)}
               className="
-                md:hidden inline-flex h-9 w-9 items-center justify-center
+                md:hidden inline-flex h-11 w-11 items-center justify-center
                 rounded-md hover:bg-white/10 transition
               "
             >

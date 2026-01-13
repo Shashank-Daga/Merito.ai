@@ -11,10 +11,10 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-10 md:grid-cols-4">
           {/* Brand */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold tracking-tight">
+            <h3 className="text-3xl md:text-3xl font-bold tracking-tight">
               <span className="text-[#EC2229]">M</span>erito
             </h3>
-            <p className="text-[#40444b] text-sm leading-relaxed max-w-sm">
+            <p className="text-[#40444b] text-lg leading-relaxed max-w-sm">
               Merito offers full-stack talent services for people-first
               companies. Our solutions are based on our unique approach of
               Acquired Intelligence (AI).
@@ -32,14 +32,14 @@ export function Footer() {
                   hover:text-black hover:underline
                 "
               >
-                <Linkedin className="h-4 w-4" />
+                <Linkedin className="h-5 w-5" />
               </a>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-5">Quick Links</h3>
+            <h3 className="text-2xl font-semibold mb-5">Quick Links</h3>
             <div className="space-y-3">
               {[
                 { href: "/about", label: "About Us" },
@@ -52,7 +52,7 @@ export function Footer() {
                   key={item.href}
                   href={item.href}
                   className="
-                    block text-sm text-[#40444b]
+                    block text-lg text-[#40444b]
                     transition-all duration-200 ease-out
                     hover:text-black hover:translate-x-1 hover:underline
                   "
@@ -65,12 +65,12 @@ export function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-5">Services</h3>
+            <h3 className="text-2xl font-semibold mb-5">Services</h3>
             <div className="space-y-3">
               <Link
                 href="/apply"
                 className="
-                  block text-sm text-[#40444b]
+                  block text-lg text-[#40444b]
                   transition-all duration-200 ease -out
                   hover:text-black hover:translate-x-1 hover:underline
                 "
@@ -82,9 +82,9 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="text-lg font-semibold mb-5">Contact</h3>
+            <h3 className="text-2xl font-semibold mb-5">Contact</h3>
             <div className="space-y-3">
-              <div className="flex items-start gap-2 text-sm text-[#40444b]">
+              <div className="flex items-start gap-2 text-lg text-[#40444b]">
                 <Mail className="mt-0.5 h-4 w-4 flex-shrink-0" />
                 <a
                   href="mailto:info@merito.com"

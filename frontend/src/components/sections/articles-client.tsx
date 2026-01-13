@@ -26,7 +26,7 @@ export function ArticlesClient({
         <div className="text-center">
           <button
             onClick={() => setVisibleCount((prev) => prev + 3)}
-            className="text-white bg-accent/90 hover:bg-[#004250] transition-colors px-8 py-3 rounded-lg font-medium"
+            className="text-lg text-white bg-accent/90 hover:bg-[#004250] transition-colors px-8 py-3 rounded-lg font-medium"
           >
             More Articles
           </button>

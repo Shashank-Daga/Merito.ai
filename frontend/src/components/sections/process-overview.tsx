@@ -19,10 +19,10 @@ export function ProcessOverview() {
     <section className="bg-secondary py-16">
       <div className="mx-auto max-w-7xl px-4">
         {/* Heading */}
-        <h2 className="reveal-element text-4xl md:text-5xl font-semibold text-center text-merito-deep mb-4">
+        <h2 className="reveal-element text-4xl md:text-4xl font-semibold text-center text-merito-deep mb-4">
           Our Hiring Process, <span className="text-[#EC2229]">Simplified</span>
         </h2>
-        <div className="text-center mb-12">
+        <div className="text-xl text-center mb-12">
           <p className="reveal-element mt-3 text-gray-700">
             A streamlined approach that expedites hiring while ensuring the perfect fit.
           </p>
@@ -83,8 +83,8 @@ function AnimatedStep({
         <div className="mb-5 mx-auto flex h-10 w-10 items-center justify-center rounded-full bg-[#EC2229]/10 text-sm font-bold text-[#EC2229]">
           {index + 1}
         </div>
-        <h3 className="mt-2 text-lg font-semibold text-primary">{step.title}</h3>
-        <p className="mt-3 text-sm leading-relaxed text-foreground/80 hover:text-gray-800">{step.desc}</p>
+        <h3 className="mt-2 text-xl font-semibold text-primary">{step.title}</h3>
+        <p className="mt-4 text-lg leading-relaxed text-foreground/80 hover:text-gray-800">{step.desc}</p>
       </div>
 
       {/* Bottom accent bar */}

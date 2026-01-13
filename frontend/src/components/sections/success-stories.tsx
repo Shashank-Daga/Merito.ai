@@ -14,9 +14,9 @@ export function SuccessStories({ stories }: { stories: SuccessStoryMetadata[] })
   useRevealAnimation({ stagger: true })
 
   return (
-    <section className="py-16 px-4 md:px-8 bg-secondary">
+    <section className="py-8 px-4 md:px-8 bg-secondary">
       <div className="mx-auto max-w-7xl">
-        <h1 className="reveal-element text-4xl md:text-4xl font-semibold text-center text-foreground mb-12">
+        <h1 className="reveal-element text-4xl md:text-5xl font-semibold text-center text-foreground mb-12">
           Success Stories
         </h1>
         
@@ -30,7 +30,7 @@ export function SuccessStories({ stories }: { stories: SuccessStoryMetadata[] })
             {stories.map((story) => (
               <div 
                 key={story.id} 
-                className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col border border-gray-200 dark:border-gray-700"
+                className="bg-white dark:bg-gray-800 p-6 min-h-[380px] rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 flex flex-col border border-gray-200 dark:border-gray-700"
               >
                 
                 <h3 className="text-xl font-semibold text-foreground mb-4">
@@ -50,7 +50,7 @@ export function SuccessStories({ stories }: { stories: SuccessStoryMetadata[] })
                 <div className="flex justify-end mt-auto pt-4 border-t border-gray-200 dark:border-gray-700">
                   <Link
                     href={`/customers/${story.id}`}
-                    className="text-[#263238] dark:text-accent font-medium hover:text-accent transition-colors"
+                    className="text-lg text-[#263238] dark:text-accent font-medium hover:text-accent transition-colors"
                   >
                     Read More →
                   </Link>

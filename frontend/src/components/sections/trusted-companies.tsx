@@ -40,8 +40,8 @@ export function TrustedCompanies() {
   ]
   return (
     <section aria-labelledby="trusted-heading" className="border-t border-b bg-secondary">
-      <div className="mx-auto max-w-7xl px-4 py-10">
-        <h2 id="trusted-heading" className="reveal-element text-2xl md:text-3xl font-semibold text-balance text-center mb-12">
+      <div className="mx-auto max-w-7xl px-6 py-10">
+        <h2 id="trusted-heading" className="reveal-element text-4xl md:text-4xl font-semibold text-balance text-center mb-16">
           Trusted by <span className="text-[#EC2229]">Growth Companies</span>
         </h2>
         <div className="reveal-element mt-12 overflow-hidden">

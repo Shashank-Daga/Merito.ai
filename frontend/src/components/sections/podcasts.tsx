@@ -40,7 +40,7 @@ export function Podcasts() {
   return (
     <section className="py-16 px-4 md:px-8 bg-secondary">
       <div className="mx-auto max-w-7xl">
-        <h2 className="reveal-element text-3xl md:text-4xl font-semibold text-center text-[#121212] mb-12">
+        <h2 className="reveal-element text-4xl md:text-5xl font-semibold text-center text-[#121212] mb-12">
           Featured Podcasts
         </h2>
         <div className="reveal-element grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -65,7 +65,7 @@ export function Podcasts() {
                   href={podcast.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-auto text-foreground/90 font-medium hover:text-foreground transition-colors"
+                  className="text-lg mt-auto text-foreground/90 font-medium hover:text-foreground transition-colors"
                 >
                   Listen Now →
                 </Link>
@@ -77,7 +77,7 @@ export function Podcasts() {
           <div className="text-center mt-8">
             <button
               onClick={() => setVisibleCount(prev => prev + 3)}
-              className="text-white bg-accent/90 hover:bg-[#004250] transition-colors px-8 py-3 rounded-lg font-medium"
+              className="text-lg text-white bg-accent/90 hover:bg-[#004250] transition-colors px-8 py-3 rounded-2xl font-medium"
             >
               More Podcasts
             </button>

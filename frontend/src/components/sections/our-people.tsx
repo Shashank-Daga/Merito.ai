@@ -21,10 +21,10 @@ export function OurPeople() {
       <div className="max-w-7xl mx-auto px-4">
         {/* Section Title */}
         <div className="text-center mb-12">
-          <h2 className="reveal-element text-3xl md:text-4xl font-semibold text-[#1a1a1a]">
+          <h2 className="reveal-element text-4xl md:text-5xl font-semibold text-[#1a1a1a]">
             Our <span className="text-[#EC2229]">People</span>
           </h2>
-          <p className="reveal-element mt-4 text-gray-700 max-w-2xl mx-auto">
+          <p className="text-xl reveal-element mt-4 text-gray-700 max-w-3xl mx-auto">
             Meet the dedicated team behind Merito, committed to connecting talent with opportunity.
           </p>
         </div>
@@ -45,8 +45,8 @@ export function OurPeople() {
                 />
               </div>
               <div className="py-3">
-                <h3 className="text-base font-semibold text-gray-900">{member.name}</h3>
-                <p className="text-xs text-red-600 font-medium mt-1">{member.position}</p>
+                <h3 className="text-xl font-semibold text-gray-900">{member.name}</h3>
+                <p className="text-lg text-red-600 font-medium mt-1">{member.position}</p>
               </div>
             </div>
           ))}
